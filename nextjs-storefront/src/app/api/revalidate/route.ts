@@ -8,8 +8,8 @@ export async function POST(request: NextRequest) {
     const { searchParams } = new URL(request.url)
     const secret = searchParams.get("secret") || request.headers.get("x-revalidate-secret")
     
-    if (secret !== REVALIDATE_SECRET) {
-      return NextResponse.json({ error: "Invalid secret" }, { status: 401 })
+    if (!REVALIDATE_SECRET || secret !== REVALIDATE_SECRET) {
+      return NextResponse.json({ error: "Revalidation is not configured" }, { status: 401 })
     }
 
     const body = await request.json().catch(() => ({}))
@@ -114,9 +114,9 @@ async function logRevalidation(results: string[], payload: any) {
 
 export async function GET(request: NextRequest) {
   return NextResponse.json({ 
-    info: "POST to this endpoint with secret and type/path/tag to revalidate cache",
+    info: "POST to this endpoint with a configured revalidation secret and type/path/tag to revalidate cache",
     example: {
-      secret: "x-revalidate-secret header or ?secret= query param",
+      secret: "send the configured secret via x-revalidate-secret header or secret query parameter",
       body: {
         type: "products | categories | collections | all",
         path: "/ro/products/some-product",

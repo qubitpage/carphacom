@@ -1,4 +1,4 @@
-# Carphacom — Vultr Marketplace App Instructions
+﻿# Carphacom â€” Vultr Marketplace App Instructions
 
 ## General Information
 
@@ -6,11 +6,11 @@
 |---|---|
 | App Name | Carphacom |
 | App Slug | carphacom |
-| Repo URL | https://github.com/msrusu87-web/CarphaCom-Robotised-E-Commerce |
+| Repo URL | https://github.com/qubitpage/carphacom |
 | Support Email | msrusu@qubitpage.com |
 | Support URL | https://carphacom.com |
 | Operating System | Ubuntu 24.04 LTS x64 custom Marketplace snapshot |
-| Edition | Carphacom Standalone — Developer Edition |
+| Edition | Carphacom Standalone â€” Developer Edition |
 
 ## Description
 
@@ -20,7 +20,7 @@ This is an early standalone/root-ready Developer Edition. A newer production lau
 
 ## After Deployment
 
-Wait 2–5 minutes after the instance first boots. The first-boot service configures the instance-specific IP address, generates fresh secrets, creates or updates the Medusa admin user, restarts services, and writes first-login instructions.
+Wait 2â€“5 minutes after the instance first boots. The first-boot service configures the instance-specific IP address, generates fresh secrets, creates or updates the Medusa admin user, restarts services, and writes first-login instructions.
 
 Open the storefront:
 
@@ -124,7 +124,7 @@ Optional admin subdomain:
 carphacom-domain-ssl shop.example.com admin.shop.example.com
 ```
 
-The helper validates DNS, updates Nginx, updates app URLs, reloads services, and uses Certbot/Let’s Encrypt when available.
+The helper validates DNS, updates Nginx, updates app URLs, reloads services, and uses Certbot/Letâ€™s Encrypt when available.
 
 ## Services
 
@@ -173,7 +173,7 @@ DEVELOPER_EDITION_GUIDE.md
 Repository:
 
 ```text
-https://github.com/msrusu87-web/CarphaCom-Robotised-E-Commerce
+https://github.com/qubitpage/carphacom
 ```
 
 Support:
@@ -182,3 +182,4 @@ Support:
 https://carphacom.com
 msrusu@qubitpage.com
 ```
+

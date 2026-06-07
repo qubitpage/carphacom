@@ -1,4 +1,4 @@
-# Vultr Marketplace Fields — Carphacom
+﻿# Vultr Marketplace Fields â€” Carphacom
 
 Use these values in the Vultr Marketplace submission form.
 
@@ -8,11 +8,11 @@ Use these values in the Vultr Marketplace submission form.
 |---|---|
 | App Name | Carphacom |
 | App Slug / Short Name | carphacom |
-| Repo URL | https://github.com/msrusu87-web/CarphaCom-Robotised-E-Commerce |
+| Repo URL | https://github.com/qubitpage/carphacom |
 | Support Email | msrusu@qubitpage.com |
 | Support URL | https://carphacom.com |
 | Operating System | Ubuntu 24.04 LTS x64 |
-| Edition | Carphacom Standalone — Developer Edition |
+| Edition | Carphacom Standalone â€” Developer Edition |
 
 ## Short Description
 
@@ -20,7 +20,7 @@ Carphacom is a self-hosted, robotised e-commerce Developer Edition with Medusa b
 
 ## Long Description
 
-Carphacom Standalone — Developer Edition is an early root-ready, self-hosted commerce platform image for developers, partners, and evaluators. It includes a working Medusa commerce backend, seeded PostgreSQL database, Redis cache, Next.js storefront, Next.js admin UI, warehouse/digital-twin tools, PM2 process management, Nginx routing, first-boot credential generation, domain/SSL helpers, and a verification tool.
+Carphacom Standalone â€” Developer Edition is an early root-ready, self-hosted commerce platform image for developers, partners, and evaluators. It includes a working Medusa commerce backend, seeded PostgreSQL database, Redis cache, Next.js storefront, Next.js admin UI, warehouse/digital-twin tools, PM2 process management, Nginx routing, first-boot credential generation, domain/SSL helpers, and a verification tool.
 
 This Marketplace image is intended for development and evaluation. A newer production launch version is being prepared. Production deployments require domain/SSL setup, SMTP/payment/provider configuration, backups, monitoring, firewall review, and additional hardening.
 
@@ -105,4 +105,5 @@ Ubuntu 24.04 LTS x64
 
 - Product/support URL: https://carphacom.com
 - Support email: msrusu@qubitpage.com
-- Source repository: https://github.com/msrusu87-web/CarphaCom-Robotised-E-Commerce
+- Source repository: https://github.com/qubitpage/carphacom
+

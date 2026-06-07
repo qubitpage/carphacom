@@ -14,12 +14,12 @@ export interface FGOConfig {
   isTest: boolean;
 }
 
-// Default config with your API key
+// Default config. Values must be supplied by the deploying operator.
 let fgoConfig: FGOConfig = {
-  codUnicFurnizor: '',  // Must be set - your company CUI
-  cheiePrivata: '7738274423977A6283EEA57051E7129B',
-  apiUrl: 'https://api.fgo.ro/v1',
-  isTest: false,
+  codUnicFurnizor: process.env.FGO_COD_UNIC_FURNIZOR || '',
+  cheiePrivata: process.env.FGO_CHEIE_PRIVATA || '',
+  apiUrl: process.env.FGO_API_URL || 'https://api.fgo.ro/v1',
+  isTest: process.env.FGO_IS_TEST === 'true',
 };
 
 // Invoice types
