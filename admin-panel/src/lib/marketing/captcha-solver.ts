@@ -339,16 +339,16 @@ async function solveRecaptchaAudio(audioUrl: string): Promise<CaptchaSolveResult
       return { solved: false, strategy: 'unsolvable', error: `Audio download failed: ${audioResp.status}` }
     }
 
-    const audioBuffer = Buffer.from(await audioResp.arrayBuffer())
-    console.log(`[CAPTCHA] Audio downloaded: ${audioBuffer.length} bytes`)
+    const audioArrayBuffer: ArrayBuffer = await audioResp.arrayBuffer()
+    console.log(`[CAPTCHA] Audio downloaded: ${audioArrayBuffer.byteLength} bytes`)
 
-    if (audioBuffer.length < 1000) {
+    if (audioArrayBuffer.byteLength < 1000) {
       return { solved: false, strategy: 'unsolvable', error: 'Audio file too small — likely blocked' }
     }
 
     // 2. Send to Groq Whisper API
     const formData = new FormData()
-    const blob = new Blob([audioBuffer], { type: 'audio/mpeg' })
+    const blob = new Blob([audioArrayBuffer], { type: 'audio/mpeg' })
     formData.append('file', blob, 'captcha.mp3')
     formData.append('model', 'whisper-large-v3-turbo')
     formData.append('language', 'en')

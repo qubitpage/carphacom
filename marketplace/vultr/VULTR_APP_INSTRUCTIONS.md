@@ -1,4 +1,4 @@
-﻿# Carphacom â€” Vultr Marketplace App Instructions
+# Carphacom — Vultr Marketplace App Instructions
 
 ## General Information
 
@@ -10,17 +10,17 @@
 | Support Email | msrusu@qubitpage.com |
 | Support URL | https://carphacom.com |
 | Operating System | Ubuntu 24.04 LTS x64 custom Marketplace snapshot |
-| Edition | Carphacom Standalone â€” Developer Edition |
+| Edition | Carphacom Standalone — Developer Edition |
 
 ## Description
 
-Carphacom is a self-hosted, robotised e-commerce Developer Edition for Vultr one-click deployment. It includes a seeded Medusa commerce backend, PostgreSQL database, Redis cache, Next.js storefront, Next.js admin UI, warehouse/digital-twin interfaces, PM2 process management, Nginx routing, first-boot credential generation, domain/SSL helpers, and verification tools.
+Carphacom is a self-hosted, robotised e-commerce Developer Edition for Vultr one-click deployment. It includes a seeded Medusa commerce backend, PostgreSQL database, Redis cache, Next.js storefront, Carphacom Back Office / Admin Panel, warehouse/digital-twin interfaces, PM2 process management, Nginx routing, first-boot credential generation, domain/SSL helpers, and verification tools.
 
 This is an early standalone/root-ready Developer Edition. A newer production launch version is being prepared. Production deployments require domain/SSL setup, provider credentials, SMTP/payment configuration, backups, monitoring, firewall review, and security hardening.
 
 ## After Deployment
 
-Wait 2â€“5 minutes after the instance first boots. The first-boot service configures the instance-specific IP address, generates fresh secrets, creates or updates the Medusa admin user, restarts services, and writes first-login instructions.
+Wait 2–5 minutes after the instance first boots. The first-boot service configures the instance-specific IP address, generates fresh secrets, creates or updates the Medusa admin user, restarts services, and writes first-login instructions.
 
 Open the storefront:
 
@@ -28,7 +28,7 @@ Open the storefront:
 http://YOUR_INSTANCE_IP/ro
 ```
 
-Open the admin login:
+Open the Carphacom Back Office / Admin Panel:
 
 ```text
 http://YOUR_INSTANCE_IP/app/login
@@ -96,7 +96,7 @@ Expected core routes:
 ```text
 /                 storefront redirect
 /ro               storefront
-/app/login        admin login
+/app/login        Carphacom Back Office / Admin Panel login
 /admin/           redirects to /app/login
 /backend/health   Medusa backend health
 /warehouse/       warehouse/digital twin
@@ -124,7 +124,7 @@ Optional admin subdomain:
 carphacom-domain-ssl shop.example.com admin.shop.example.com
 ```
 
-The helper validates DNS, updates Nginx, updates app URLs, reloads services, and uses Certbot/Letâ€™s Encrypt when available.
+The helper validates DNS, updates Nginx, updates app URLs, reloads services, and uses Certbot/Let’s Encrypt when available.
 
 ## Services
 
@@ -183,3 +183,41 @@ https://carphacom.com
 msrusu@qubitpage.com
 ```
 
+## Marketplace Gallery Images
+
+Gallery images for the Vultr Application Gallery are included in:
+
+```text
+marketplace/vultr/gallery/
+```
+
+Suggested upload order:
+
+```text
+01-carphacom-platform-storefront-800x500.png
+02-carphacom-back-office-admin-800x500.png
+03-made-with-carphacom-statiiinfotrafic-800x500.png
+04-made-with-carphacom-banat-tractor-800x500.png
+05-carphacom-platform-routes-800x500.png
+```
+
+Gallery meaning:
+
+1. **Carphacom Platform Storefront** — the main public design from `demo.qubitpage.com`.
+2. **Carphacom Back Office / Admin Panel** — Carphacom's own admin panel, not Vultr Cockpit.
+3. **Made with Carphacom: Statii Info Trafic** — public example site.
+4. **Made with Carphacom: Banat Tractor** — public example site.
+5. **Carphacom Developer Routes** — storefront/admin/API/warehouse route overview.
+
+Example sites referenced in the gallery:
+
+```text
+https://statiiinfotrafic.ro/ro
+https://banat-tractor.ro/ro
+```
+
+See:
+
+```text
+GALLERY_UPLOAD_INSTRUCTIONS.md
+```
