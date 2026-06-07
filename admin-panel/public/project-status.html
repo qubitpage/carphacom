@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Proiect E-Commerce - CarphaCom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card { backdrop-filter: blur(10px); background: rgba(255,255,255,0.95); }
+        .progress-bar { transition: width 0.5s ease-in-out; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .animate-pulse-slow { animation: pulse 2s infinite; }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- Header -->
+    <div class="gradient-bg text-white py-12 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex items-center gap-4 mb-4">
+                <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center text-3xl font-bold">CC</div>
+                <div>
+                    <h1 class="text-3xl font-bold">Sistem E-Commerce „Next-Gen"</h1>
+                    <p class="text-white/80">Propunere Tehnică - 29 Ianuarie 2026</p>
+                </div>
+            </div>
+            <p class="text-lg text-white/90 max-w-3xl">
+                Transformarea prezenței online într-un ecosistem digital care se auto-gestionează, 
+                se optimizează pentru Google prin AI și automatizează complet fluxul de vânzare-livrare.
+            </p>
+        </div>
+    </div>
+
+    <!-- Progress Overview -->
+    <div class="max-w-6xl mx-auto px-6 -mt-8">
+        <div class="card rounded-2xl shadow-xl p-8 mb-8">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">
+                    <i class="fas fa-chart-pie text-purple-600 mr-2"></i>
+                    Progres General
+                </h2>
+                <span class="text-4xl font-bold text-purple-600">65%</span>
+            </div>
+            <div class="w-full h-4 bg-gray-200 rounded-full overflow-hidden">
+                <div class="progress-bar h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" style="width: 65%"></div>
+            </div>
+            <p class="text-gray-600 mt-3">
+                <i class="fas fa-clock mr-1"></i> Ultima actualizare: <strong id="lastUpdate">30 Ianuarie 2026, 21:00</strong>
+            </p>
+        </div>
+
+        <!-- Status Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <!-- Arhitectură -->
+            <div class="card rounded-xl shadow-lg p-6 border-l-4 border-green-500">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="font-bold text-gray-800"><i class="fas fa-server text-green-500 mr-2"></i>Arhitectură</h3>
+                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">100%</span>
+                </div>
+                <ul class="text-sm space-y-2">
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Next.js 16 (Admin + Store)</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Medusa.js 2.13 Backend</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> PostgreSQL Database</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Redis Cache</li>
+                </ul>
+            </div>
+
+            <!-- AI Automation -->
+            <div class="card rounded-xl shadow-lg p-6 border-l-4 border-green-500">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="font-bold text-gray-800"><i class="fas fa-robot text-purple-500 mr-2"></i>AI Automation</h3>
+                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">80%</span>
+                </div>
+                <ul class="text-sm space-y-2">
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Groq API (Llama 3.3)</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> OpenAI GPT-4o-mini</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Blog Auto-Generator</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> SEO Meta Auto</li>
+                    <li class="flex items-center gap-2 text-gray-400"><i class="fas fa-circle text-gray-300"></i> Gemini Integration</li>
+                </ul>
+            </div>
+
+            <!-- Email Marketing -->
+            <div class="card rounded-xl shadow-lg p-6 border-l-4 border-green-500">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="font-bold text-gray-800"><i class="fas fa-envelope text-blue-500 mr-2"></i>Email Marketing</h3>
+                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">100%</span>
+                </div>
+                <ul class="text-sm space-y-2">
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Brevo SMTP Integration</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Brevo API</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Email Templates (RO)</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Counter 300/zi</li>
+                </ul>
+            </div>
+
+            <!-- Facturare -->
+            <div class="card rounded-xl shadow-lg p-6 border-l-4 border-green-500">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="font-bold text-gray-800"><i class="fas fa-file-invoice text-orange-500 mr-2"></i>Facturare</h3>
+                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">100%</span>
+                </div>
+                <ul class="text-sm space-y-2">
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> FGO.ro API complet</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Facturi/Proforma/Chitanțe</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Admin Facturare Page</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Template Factura Intern</li>
+                    <li class="flex items-center gap-2 text-green-600"><i class="fas fa-check-circle text-green-500"></i> E-Factura ANAF (integrare directă!)</li>
+                </ul>
+            </div>
+
+            <!-- Plăți -->
+            <div class="card rounded-xl shadow-lg p-6 border-l-4 border-yellow-500">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="font-bold text-gray-800"><i class="fas fa-credit-card text-green-600 mr-2"></i>Plăți Online</h3>
+                    <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-medium">40%</span>
+                </div>
+                <ul class="text-sm space-y-2">
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Stripe (internațional)</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Ramburs (COD) UI</li>
+                    <li class="flex items-center gap-2 text-gray-400"><i class="fas fa-circle text-gray-300"></i> Netopia (backend)</li>
+                    <li class="flex items-center gap-2 text-gray-400"><i class="fas fa-circle text-gray-300"></i> euPlatesc.ro</li>
+                    <li class="flex items-center gap-2 text-gray-400"><i class="fas fa-circle text-gray-300"></i> TBI Bank BNPL</li>
+                </ul>
+            </div>
+
+            <!-- Curierat -->
+            <div class="card rounded-xl shadow-lg p-6 border-l-4 border-red-500">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="font-bold text-gray-800"><i class="fas fa-truck text-red-500 mr-2"></i>Curierat AWB</h3>
+                    <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium">10%</span>
+                </div>
+                <ul class="text-sm space-y-2">
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Basic Shipping UI</li>
+                    <li class="flex items-center gap-2 text-gray-400"><i class="fas fa-circle text-gray-300"></i> Sameday API</li>
+                    <li class="flex items-center gap-2 text-gray-400"><i class="fas fa-circle text-gray-300"></i> Fan Courier API</li>
+                    <li class="flex items-center gap-2 text-gray-400"><i class="fas fa-circle text-gray-300"></i> Cargus API</li>
+                    <li class="flex items-center gap-2 text-gray-400"><i class="fas fa-circle text-gray-300"></i> EasyBox Selector</li>
+                </ul>
+            </div>
+
+            <!-- PNI B2B -->
+            <div class="card rounded-xl shadow-lg p-6 border-l-4 border-red-500">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="font-bold text-gray-800"><i class="fas fa-boxes text-indigo-500 mr-2"></i>PNI B2B Sync</h3>
+                    <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium">0%</span>
+                </div>
+                <ul class="text-sm space-y-2">
+                    <li class="flex items-center gap-2 text-gray-400"><i class="fas fa-circle text-gray-300"></i> API Integration</li>
+                    <li class="flex items-center gap-2 text-gray-400"><i class="fas fa-circle text-gray-300"></i> Product Import</li>
+                    <li class="flex items-center gap-2 text-gray-400"><i class="fas fa-circle text-gray-300"></i> Stock Sync</li>
+                    <li class="flex items-center gap-2 text-gray-400"><i class="fas fa-circle text-gray-300"></i> Price Sync</li>
+                </ul>
+                <p class="text-xs text-red-600 mt-2"><i class="fas fa-info-circle"></i> Necesită credențiale API PNI</p>
+            </div>
+
+            <!-- Google -->
+            <div class="card rounded-xl shadow-lg p-6 border-l-4 border-yellow-500">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="font-bold text-gray-800"><i class="fab fa-google text-blue-500 mr-2"></i>Google Integration</h3>
+                    <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-medium">40%</span>
+                </div>
+                <ul class="text-sm space-y-2">
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Dashboard Admin UI</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Merchant Center UI</li>
+                    <li class="flex items-center gap-2 text-gray-400"><i class="fas fa-circle text-gray-300"></i> OAuth Login</li>
+                    <li class="flex items-center gap-2 text-gray-400"><i class="fas fa-circle text-gray-300"></i> Product Feed XML</li>
+                    <li class="flex items-center gap-2 text-gray-400"><i class="fas fa-circle text-gray-300"></i> Analytics API</li>
+                </ul>
+            </div>
+
+            <!-- Admin CMS -->
+            <div class="card rounded-xl shadow-lg p-6 border-l-4 border-green-500">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="font-bold text-gray-800"><i class="fas fa-cogs text-gray-600 mr-2"></i>Admin CMS</h3>
+                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">100%</span>
+                </div>
+                <ul class="text-sm space-y-2">
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> 20+ Pagini Admin</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Dashboard Analytics</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Products/Orders/Customers</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Blog/CMS/Media</li>
+                    <li class="flex items-center gap-2 text-gray-400"><i class="fas fa-circle text-gray-300"></i> User Roles</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Technical Project Details -->
+        <div class="card rounded-2xl shadow-xl p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                <i class="fas fa-file-alt text-blue-600 mr-2"></i>
+                Anexa Tehnică - Detalii Proiect
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-purple-700">1. Stack Tehnologic</h3>
+                    <table class="w-full text-sm">
+                        <tr class="border-b"><td class="py-2 font-medium">Front-End</td><td>Next.js 16 (React)</td></tr>
+                        <tr class="border-b"><td class="py-2 font-medium">Back-End</td><td>Medusa.js 2.13 + Node.js</td></tr>
+                        <tr class="border-b"><td class="py-2 font-medium">Database</td><td>PostgreSQL 15</td></tr>
+                        <tr class="border-b"><td class="py-2 font-medium">Cache</td><td>Redis 7</td></tr>
+                        <tr class="border-b"><td class="py-2 font-medium">Hosting</td><td>VPS Ubuntu 24.04</td></tr>
+                    </table>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-purple-700">2. API-uri Integrate</h3>
+                    <table class="w-full text-sm">
+                        <tr class="border-b"><td class="py-2 font-medium">AI Content</td><td>Groq, OpenAI</td></tr>
+                        <tr class="border-b"><td class="py-2 font-medium">Email</td><td>Brevo (SMTP + API)</td></tr>
+                        <tr class="border-b"><td class="py-2 font-medium">Facturare</td><td>FGO.ro API v7</td></tr>
+                        <tr class="border-b"><td class="py-2 font-medium">Plăți</td><td>Stripe (activ)</td></tr>
+                        <tr class="border-b"><td class="py-2 font-medium">Pending</td><td>Netopia, euPlatesc, Sameday</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- E-Factura ANAF Section -->
+        <div class="card rounded-2xl shadow-xl p-8 mb-8 border-2 border-orange-200">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                <i class="fas fa-landmark text-orange-600 mr-2"></i>
+                E-Factura ANAF - Ghid Integrare
+            </h2>
+
+            <div class="bg-orange-50 rounded-xl p-6 mb-6">
+                <h3 class="font-bold text-orange-800 mb-3">Ce este E-Factura?</h3>
+                <p class="text-gray-700 mb-4">
+                    E-Factura este sistemul național de facturare electronică gestionat de ANAF. 
+                    Din 2024, este obligatoriu pentru tranzacțiile B2B în România.
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white rounded-lg p-4">
+                        <h4 class="font-bold text-green-700 mb-2"><i class="fas fa-check mr-2"></i>Putem integra direct?</h4>
+                        <p class="text-sm text-gray-600">
+                            <strong>DA!</strong> ANAF oferă API public pentru:
+                        </p>
+                        <ul class="text-sm mt-2 space-y-1">
+                            <li>• Upload XML facturi</li>
+                            <li>• Verificare stare</li>
+                            <li>• Download răspunsuri</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-lg p-4">
+                        <h4 class="font-bold text-blue-700 mb-2"><i class="fas fa-link mr-2"></i>Link-uri Oficiale</h4>
+                        <ul class="text-sm space-y-2">
+                            <li><a href="https://www.anaf.ro/anaf/internet/ANAF/despre_anaf/strategii_anaf/proiecte_digitalizare/e.factura" target="_blank" class="text-blue-600 hover:underline">→ Portal E-Factura ANAF</a></li>
+                            <li><a href="https://mfinante.gov.ro/static/10/eFactura/prezentare.html" target="_blank" class="text-blue-600 hover:underline">→ Documentație Tehnică</a></li>
+                            <li><a href="https://www.anaf.ro/TestareEFactura/" target="_blank" class="text-blue-600 hover:underline">→ Mediu de Test</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-6">
+                <h3 class="font-bold text-blue-800 mb-3">Flux Implementat în Sistem</h3>
+                <div class="flex flex-wrap items-center gap-2 text-sm">
+                    <span class="bg-green-500 text-white px-3 py-1 rounded-full">1. Comandă Confirmată</span>
+                    <i class="fas fa-arrow-right text-gray-400"></i>
+                    <span class="bg-green-500 text-white px-3 py-1 rounded-full">2. Factură Generată Auto</span>
+                    <i class="fas fa-arrow-right text-gray-400"></i>
+                    <span class="bg-blue-500 text-white px-3 py-1 rounded-full">3. Salvată în DB</span>
+                    <i class="fas fa-arrow-right text-gray-400"></i>
+                    <span class="bg-orange-500 text-white px-3 py-1 rounded-full">4. Sync E-Factura (când activ)</span>
+                </div>
+                <p class="text-gray-600 mt-4 text-sm">
+                    <i class="fas fa-info-circle text-blue-500 mr-1"></i>
+                    Dacă E-Factura nu este configurat, facturile pot fi descărcate PDF și trimise manual la contabil.
+                </p>
+            </div>
+        </div>
+
+        <!-- Payment Processors -->
+        <div class="card rounded-2xl shadow-xl p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                <i class="fas fa-credit-card text-green-600 mr-2"></i>
+                Procesatori Plăți România
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="border rounded-xl p-5">
+                    <div class="flex items-center gap-3 mb-3">
+                        <img src="https://netopia-payments.com/wp-content/uploads/2023/03/cropped-Logo-NETOPIA-32x32.png" class="w-8 h-8">
+                        <h3 class="font-bold">Netopia Payments</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3">Cel mai popular procesor pentru România. Card RO/internațional.</p>
+                    <a href="https://netopia-payments.com/dezvoltatori/" target="_blank" class="text-blue-600 text-sm hover:underline">→ Documentație API</a>
+                    <p class="text-xs text-gray-400 mt-2">Status: <span class="text-yellow-600">Necesită credențiale</span></p>
+                </div>
+
+                <div class="border rounded-xl p-5">
+                    <div class="flex items-center gap-3 mb-3">
+                        <img src="https://www.euplatesc.ro/themes/starter/images/euplatesc-sigla.svg" class="w-8 h-8">
+                        <h3 class="font-bold">euPlatesc.ro</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3">Alternativă populară pentru plăți online în România.</p>
+                    <a href="https://www.euplatesc.ro/doc/api-documentatie.pdf" target="_blank" class="text-blue-600 text-sm hover:underline">→ Documentație API</a>
+                    <p class="text-xs text-gray-400 mt-2">Status: <span class="text-gray-500">Neimplementat</span></p>
+                </div>
+
+                <div class="border rounded-xl p-5">
+                    <div class="flex items-center gap-3 mb-3">
+                        <img src="https://stripe.com/img/v3/home/social.png" class="w-8 h-8 rounded">
+                        <h3 class="font-bold">Stripe</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3">Plăți internaționale. Integrat în Medusa.js nativ.</p>
+                    <a href="https://stripe.com/docs/api" target="_blank" class="text-blue-600 text-sm hover:underline">→ Documentație API</a>
+                    <p class="text-xs text-gray-400 mt-2">Status: <span class="text-green-600">✓ Implementat</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Merchant Center Guide -->
+        <div class="card rounded-2xl shadow-xl p-8 mb-8 border-2 border-blue-200">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                <i class="fab fa-google text-blue-600 mr-2"></i>
+                Google Merchant Center - Ghid Pas cu Pas
+            </h2>
+
+            <div class="space-y-6">
+                <!-- Step 1 -->
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="font-bold text-lg mb-3">
+                        <span class="bg-blue-600 text-white w-8 h-8 rounded-full inline-flex items-center justify-center mr-2">1</span>
+                        Creare cont Google Merchant Center
+                    </h3>
+                    <p class="text-gray-600 mb-3">Accesează și creează-ți contul gratuit:</p>
+                    <a href="https://merchants.google.com/mc/onboardinginterstitial" target="_blank" 
+                       class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                        <i class="fab fa-google"></i> Deschide Merchant Center
+                    </a>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="font-bold text-lg mb-3">
+                        <span class="bg-blue-600 text-white w-8 h-8 rounded-full inline-flex items-center justify-center mr-2">2</span>
+                        Activare Content API
+                    </h3>
+                    <p class="text-gray-600 mb-3">Pentru sincronizare automată produse, activează API-ul:</p>
+                    <ol class="text-sm space-y-2 mb-4">
+                        <li>1. Accesează <a href="https://console.cloud.google.com/apis/library/shoppingcontent.googleapis.com" target="_blank" class="text-blue-600 hover:underline">Google Cloud Console - Content API</a></li>
+                        <li>2. Click "Enable" pentru a activa API-ul</li>
+                        <li>3. Creează Service Account pentru autentificare</li>
+                    </ol>
+                    <a href="https://developers.google.com/shopping-content/guides/quickstart" target="_blank" 
+                       class="text-blue-600 hover:underline text-sm">→ Quickstart Guide Oficial</a>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="font-bold text-lg mb-3">
+                        <span class="bg-blue-600 text-white w-8 h-8 rounded-full inline-flex items-center justify-center mr-2">3</span>
+                        Configurare Feed Produse
+                    </h3>
+                    <p class="text-gray-600 mb-3">Format XML/RSS pentru produse. Link-uri utile:</p>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="https://support.google.com/merchants/answer/7052112" target="_blank" class="text-blue-600 hover:underline">→ Specificații Feed Produse</a></li>
+                        <li><a href="https://support.google.com/merchants/answer/160589" target="_blank" class="text-blue-600 hover:underline">→ Atribute Obligatorii</a></li>
+                        <li><a href="https://developers.google.com/shopping-content/reference/rest/v2.1/products" target="_blank" class="text-blue-600 hover:underline">→ API Reference Products</a></li>
+                    </ul>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="font-bold text-lg mb-3">
+                        <span class="bg-blue-600 text-white w-8 h-8 rounded-full inline-flex items-center justify-center mr-2">4</span>
+                        Conectare la Google Ads (opțional)
+                    </h3>
+                    <p class="text-gray-600 mb-3">Pentru campanii Shopping Ads:</p>
+                    <a href="https://ads.google.com/home/campaigns/shopping-ads/" target="_blank" 
+                       class="text-blue-600 hover:underline text-sm">→ Google Shopping Ads</a>
+                </div>
+            </div>
+
+            <div class="mt-6 p-4 bg-yellow-50 rounded-lg">
+                <p class="text-sm text-yellow-800">
+                    <i class="fas fa-lightbulb text-yellow-600 mr-2"></i>
+                    <strong>Notă:</strong> Pentru listare gratuită în tab-ul Shopping, nu ai nevoie de Google Ads. 
+                    Doar Merchant Center + Feed valid.
+                </p>
+            </div>
+        </div>
+
+        <!-- Next Steps -->
+        <div class="card rounded-2xl shadow-xl p-8 mb-8 bg-gradient-to-r from-purple-50 to-blue-50">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">
+                <i class="fas fa-tasks text-purple-600 mr-2"></i>
+                Ce se poate face ACUM (fără credențiale externe)
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-white rounded-xl p-5 shadow">
+                    <h3 class="font-bold text-green-700 mb-2"><i class="fas fa-check-circle mr-2"></i>Gata de implementare</h3>
+                    <ul class="text-sm space-y-2">
+                        <li>✅ Sistem facturare internă (fără FGO)</li>
+                        <li>✅ Template factură PDF cu datele firmei</li>
+                        <li>✅ Generator XML E-Factura</li>
+                        <li>✅ Pagină setări firmă/contact</li>
+                        <li>✅ Config serie + număr factură</li>
+                        <li>✅ User Roles (Admin/Operator)</li>
+                        <li>✅ Google Product Feed XML</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl p-5 shadow">
+                    <h3 class="font-bold text-yellow-700 mb-2"><i class="fas fa-key mr-2"></i>Necesită credențiale</h3>
+                    <ul class="text-sm space-y-2">
+                        <li>🔑 PNI B2B → API key de la furnizor</li>
+                        <li>🔑 Netopia → Cont merchant + API</li>
+                        <li>🔑 euPlatesc → Cont + MID/KEY</li>
+                        <li>🔑 Sameday → Cont business + API</li>
+                        <li>🔑 Fan Courier → Contract + API</li>
+                        <li>✅ E-Factura ANAF → Integrare directă implementată!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center py-8 text-gray-500">
+            <p>Proiect E-Commerce CarphaCom | © 2026</p>
+            <p class="text-sm mt-2">
+                <a href="https://demo2.qubitpage.com/app" class="text-blue-600 hover:underline">Admin Panel</a> | 
+                <a href="https://demo2.qubitpage.com" class="text-blue-600 hover:underline">Storefront</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Auto-update timestamp
+        document.getElementById('lastUpdate').textContent = new Date().toLocaleString('ro-RO', {
+            day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'
+        });
+    </script>
+</body>
+</html>

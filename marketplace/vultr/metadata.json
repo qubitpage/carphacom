@@ -1,0 +1,44 @@
+{
+  "product": "Carphacom Standalone",
+  "edition": "Developer Edition",
+  "status": "public_repository_sanitized_marketplace_submission_package",
+  "prepared_at": "2026-06-07",
+  "repository": "https://github.com/qubitpage/carphacom",
+  "support": {
+    "url": "https://carphacom.com",
+    "email": "msrusu@qubitpage.com"
+  },
+  "operating_system": "Ubuntu 24.04 LTS x64 custom Vultr Marketplace snapshot",
+  "minimum_requirements": {
+    "recommended": "4 vCPU / 8 GB RAM / 160 GB disk",
+    "light_testing": "2 vCPU / 4 GB RAM / 80 GB disk",
+    "production_starting_point": "4-8+ vCPU / 16+ GB RAM / 160+ GB disk"
+  },
+  "routes": {
+    "storefront": "/ro",
+    "admin": "/app",
+    "admin_login": "/app/login",
+    "admin_alias": "/admin/",
+    "backend_health": "/backend/health",
+    "warehouse": "/warehouse/",
+    "warehouse_lab": "/warehouse-lab/"
+  },
+  "one_click_preseed_keys": [
+    "CARPHACOM_ADMIN_EMAIL",
+    "CARPHACOM_ADMIN_PASSWORD",
+    "CARPHACOM_DOMAIN"
+  ],
+  "verified_features": [
+    "dynamic public IP detection on first boot",
+    "generated per-instance credentials",
+    "optional admin email/password preseed",
+    "Medusa admin user creation",
+    "PostgreSQL and Redis local services",
+    "storefront/admin/backend/warehouse route checks",
+    "seeded demo commerce database"
+  ],
+  "notes": [
+    "Developer Edition only; production requires provider credentials, backups, monitoring, SSL, mail/payment configuration, and secret rotation.",
+    "Do not publish a live demo machine directly. Use a sanitized final snapshot with first-boot reset enabled."
+  ]
+}

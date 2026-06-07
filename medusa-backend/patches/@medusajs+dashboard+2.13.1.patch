@@ -1,0 +1,237 @@
+diff --git a/node_modules/@medusajs/dashboard/src/components/layout/main-layout/main-layout.tsx b/node_modules/@medusajs/dashboard/src/components/layout/main-layout/main-layout.tsx
+index 01aa7b0..553a49e 100644
+--- a/node_modules/@medusajs/dashboard/src/components/layout/main-layout/main-layout.tsx
++++ b/node_modules/@medusajs/dashboard/src/components/layout/main-layout/main-layout.tsx
+@@ -13,6 +13,11 @@ import {
+   SquaresPlus,
+   Tag,
+   Users,
++  ChartBar,
++  DocumentText,
++  Envelope,
++  Photo,
++  PencilSquare,
+ } from "@medusajs/icons"
+ import { Avatar, Divider, DropdownMenu, Text, clx } from "@medusajs/ui"
+ import { Collapsible as RadixCollapsible } from "radix-ui"
+@@ -51,7 +56,10 @@ const MainSidebar = () => {
+         </div>
+         <div className="flex flex-1 flex-col justify-between">
+           <div className="flex flex-1 flex-col">
+-            <CoreRouteSection />
++            <DashboardSection />
++            <MagazinSection />
++            <CMSSection />
++            <MarketingSection />
+             <ExtensionRouteSection />
+           </div>
+           <UtilitySection />
+@@ -282,6 +290,208 @@ const Searchbar = () => {
+   )
+ }
+ 
++const DashboardSection = () => {
++  return (
++    <nav className="flex flex-col gap-y-1 py-3">
++      <Searchbar />
++      <NavItem
++        icon={<ChartBar />}
++        label="Dashboard"
++        to="/dashboard"
++      />
++    </nav>
++  )
++}
++
++const MagazinSection = () => {
++  const { t } = useTranslation()
++  const { getMenu } = useExtension()
++  const menuItems = getMenu("coreExtensions")
++
++  const magazinRoutes: Omit<INavItem, "pathname">[] = [
++    {
++      icon: <ShoppingCart />,
++      label: t("orders.domain"),
++      to: "/orders",
++      items: [],
++    },
++    {
++      icon: <Tag />,
++      label: t("products.domain"),
++      to: "/products",
++      items: [
++        { label: t("collections.domain"), to: "/collections" },
++        { label: t("categories.domain"), to: "/categories" },
++      ],
++    },
++    {
++      icon: <Buildings />,
++      label: t("inventory.domain"),
++      to: "/inventory",
++      items: [
++        { label: t("reservations.domain"), to: "/reservations" },
++      ],
++    },
++    {
++      icon: <Users />,
++      label: t("customers.domain"),
++      to: "/customers",
++      items: [
++        { label: t("customerGroups.domain"), to: "/customer-groups" },
++      ],
++    },
++    {
++      icon: <ReceiptPercent />,
++      label: t("promotions.domain"),
++      to: "/promotions",
++      items: [
++        { label: t("campaigns.domain"), to: "/campaigns" },
++      ],
++    },
++    {
++      icon: <CurrencyDollar />,
++      label: t("priceLists.domain"),
++      to: "/price-lists",
++    },
++  ]
++
++  // Add extension items to their nested routes
++  menuItems.forEach((item) => {
++    if (item.nested) {
++      const route = magazinRoutes.find((route) => route.to === item.nested)
++      if (route && route.items) {
++        route.items.push(item)
++      }
++    }
++  })
++
++  return (
++    <div>
++      <div className="px-3">
++        <Divider variant="dashed" />
++      </div>
++      <div className="flex flex-col gap-y-1 py-3">
++        <RadixCollapsible.Root defaultOpen>
++          <div className="px-4">
++            <RadixCollapsible.Trigger asChild className="group/trigger">
++              <button className="text-ui-fg-subtle flex w-full items-center justify-between px-2">
++                <Text size="xsmall" weight="plus" leading="compact">
++                  Magazin
++                </Text>
++                <div className="text-ui-fg-muted">
++                  <ChevronDownMini className="group-data-[state=open]/trigger:hidden" />
++                  <MinusMini className="group-data-[state=closed]/trigger:hidden" />
++                </div>
++              </button>
++            </RadixCollapsible.Trigger>
++          </div>
++          <RadixCollapsible.Content>
++            <nav className="flex flex-col gap-y-0.5 py-1">
++              {magazinRoutes.map((route) => (
++                <NavItem key={route.to} {...route} />
++              ))}
++            </nav>
++          </RadixCollapsible.Content>
++        </RadixCollapsible.Root>
++      </div>
++    </div>
++  )
++}
++
++const CMSSection = () => {
++  const cmsRoutes: Omit<INavItem, "pathname">[] = [
++    {
++      icon: <DocumentText />,
++      label: "Pagini",
++      to: "/cms/pages",
++    },
++    {
++      icon: <PencilSquare />,
++      label: "Blog",
++      to: "/cms/blog",
++    },
++    {
++      icon: <Photo />,
++      label: "Media",
++      to: "/cms/media",
++    },
++  ]
++
++  return (
++    <div>
++      <div className="px-3">
++        <Divider variant="dashed" />
++      </div>
++      <div className="flex flex-col gap-y-1 py-3">
++        <RadixCollapsible.Root defaultOpen>
++          <div className="px-4">
++            <RadixCollapsible.Trigger asChild className="group/trigger">
++              <button className="text-ui-fg-subtle flex w-full items-center justify-between px-2">
++                <Text size="xsmall" weight="plus" leading="compact">
++                  CMS
++                </Text>
++                <div className="text-ui-fg-muted">
++                  <ChevronDownMini className="group-data-[state=open]/trigger:hidden" />
++                  <MinusMini className="group-data-[state=closed]/trigger:hidden" />
++                </div>
++              </button>
++            </RadixCollapsible.Trigger>
++          </div>
++          <RadixCollapsible.Content>
++            <nav className="flex flex-col gap-y-0.5 py-1">
++              {cmsRoutes.map((route) => (
++                <NavItem key={route.to} {...route} />
++              ))}
++            </nav>
++          </RadixCollapsible.Content>
++        </RadixCollapsible.Root>
++      </div>
++    </div>
++  )
++}
++
++const MarketingSection = () => {
++  const marketingRoutes: Omit<INavItem, "pathname">[] = [
++    {
++      icon: <Envelope />,
++      label: "Email",
++      to: "/marketing/email",
++    },
++  ]
++
++  return (
++    <div>
++      <div className="px-3">
++        <Divider variant="dashed" />
++      </div>
++      <div className="flex flex-col gap-y-1 py-3">
++        <RadixCollapsible.Root defaultOpen>
++          <div className="px-4">
++            <RadixCollapsible.Trigger asChild className="group/trigger">
++              <button className="text-ui-fg-subtle flex w-full items-center justify-between px-2">
++                <Text size="xsmall" weight="plus" leading="compact">
++                  Marketing
++                </Text>
++                <div className="text-ui-fg-muted">
++                  <ChevronDownMini className="group-data-[state=open]/trigger:hidden" />
++                  <MinusMini className="group-data-[state=closed]/trigger:hidden" />
++                </div>
++              </button>
++            </RadixCollapsible.Trigger>
++          </div>
++          <RadixCollapsible.Content>
++            <nav className="flex flex-col gap-y-0.5 py-1">
++              {marketingRoutes.map((route) => (
++                <NavItem key={route.to} {...route} />
++              ))}
++            </nav>
++          </RadixCollapsible.Content>
++        </RadixCollapsible.Root>
++      </div>
++    </div>
++  )
++}
++
+ const CoreRouteSection = () => {
+   const coreRoutes = useCoreRoutes()
+ 

@@ -1,0 +1,24 @@
+# CarphaCom - https://statiiinfotrafic.ro
+# Magazin online cu stații radio, electronice, securitate și accesorii
+# Romanian e-commerce store
+
+> Site: https://statiiinfotrafic.ro
+> Products: 2475
+> Categories: 78
+> Blog Articles: 226
+> Brands: 74
+
+## Main Pages
+- Homepage: https://statiiinfotrafic.ro/ro
+- Store: https://statiiinfotrafic.ro/ro/store
+- Categories: https://statiiinfotrafic.ro/ro/categories
+- Brands: https://statiiinfotrafic.ro/ro/brands
+- Blog: https://statiiinfotrafic.ro/ro/blog
+- Contact: https://statiiinfotrafic.ro/ro/contact
+
+## Sitemaps
+- Products: https://statiiinfotrafic.ro/sitemap-products.xml
+- Categories: https://statiiinfotrafic.ro/sitemap-categories.xml
+- Blog: https://statiiinfotrafic.ro/sitemap-blog.xml
+- Brands: https://statiiinfotrafic.ro/sitemap-brands.xml
+- Pages: https://statiiinfotrafic.ro/sitemap-pages.xml

@@ -1,0 +1,63 @@
+# Dependencies
+node_modules/
+.pnp.*
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# Build output
+.next/
+dist/
+build/
+.medusa/
+coverage/
+.turbo/
+.cache/
+out/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+!.env.marketplace.example
+*.pem
+*.key
+*.pfx
+*.p12
+id_rsa*
+id_ed25519*
+api_keys.*
+secrets.*
+
+# Logs and runtime
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.DS_Store
+Thumbs.db
+
+# Database/runtime dumps
+*.dump
+*.backup
+*.sqlite
+*.sqlite3
+*.tar
+*.tar.gz
+*.zip
+
+# Local Marketplace generated state
+CARPHACOM_FIRST_LOGIN.txt
+marketplace-generated.env
+clone-*.json
+
+# generated reports and backups
+.reports/
+*.bak
+*.bak2
+*.bak3
+*.orig
+*.tmp
+

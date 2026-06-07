@@ -1,0 +1,52 @@
+# robots.txt — statiiinfotrafic.ro
+# Updated: 2026-02-24
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /app/
+Disallow: /admin/
+Disallow: /auth/
+Disallow: /checkout
+Disallow: /account
+Disallow: /cart
+Disallow: /_next/
+Disallow: /*?sort=
+Disallow: /*?page=
+Disallow: /*?filter=
+Disallow: /*?q=
+Disallow: /*?v_id=
+Disallow: /order/
+Disallow: /sitemap/
+
+# === AI / ML Crawlers — Welcome ===
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# === Sitemaps ===
+Sitemap: https://statiiinfotrafic.ro/sitemap.xml
+Sitemap: https://statiiinfotrafic.ro/sitemap-products.xml
+Sitemap: https://statiiinfotrafic.ro/sitemap-categories.xml
+Sitemap: https://statiiinfotrafic.ro/sitemap-blog.xml
+Sitemap: https://statiiinfotrafic.ro/sitemap-pages.xml

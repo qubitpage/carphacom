@@ -1,0 +1,535 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* ============================================
+   TEMA STAȚII INFOTRAFIC - MAGAZIN ELECTRONICE
+   Design modern, impact vizual, ușor de utilizat
+   ============================================ */
+
+:root {
+  /* Variabile CSS pentru temă */
+  --color-primary: #f97316;
+  --color-primary-hover: #ea580c;
+  --color-accent: #10b981;
+  --color-accent-hover: #059669;
+  --color-dark: #0f172a;
+  --color-dark-light: #1e293b;
+  --color-text-light: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --color-sale: #ef4444;
+  --color-new: #3b82f6;
+  --color-hot: #f59e0b;
+  
+  /* Shadows */
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-card-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 20px rgba(249, 115, 22, 0.3);
+  
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* Body base styles */
+body {
+  @apply bg-dark-900 text-dark-100;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  input:focus ~ label,
+  input:not(:placeholder-shown) ~ label {
+    @apply -translate-y-2 text-xsmall-regular;
+  }
+
+  input:focus ~ label {
+    @apply left-0;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    border: 1px solid #334155;
+    -webkit-text-fill-color: #f1f5f9;
+    -webkit-box-shadow: 0 0 0px 1000px #1e293b inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
+  
+  /* Glow effect pentru butoane */
+  .glow-orange {
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+  }
+  
+  .glow-green {
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+  }
+  
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-primary-600;
+  }
+  
+  /* Radio wave animation */
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+@layer components {
+  .content-container {
+    @apply max-w-[1440px] w-full mx-auto px-4 small:px-6;
+  }
+
+  /* Buton principal CTA - Portocaliu */
+  .btn-primary {
+    @apply px-6 py-3 bg-primary-500 text-white font-semibold rounded-lg 
+           hover:bg-primary-600 active:bg-primary-700
+           transition-all duration-200 ease-in-out
+           shadow-lg hover:shadow-xl hover:-translate-y-0.5
+           focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-dark-900;
+  }
+  
+  /* Buton secundar - Verde */
+  .btn-secondary {
+    @apply px-6 py-3 bg-accent-500 text-white font-semibold rounded-lg
+           hover:bg-accent-600 active:bg-accent-700
+           transition-all duration-200 ease-in-out
+           shadow-lg hover:shadow-xl hover:-translate-y-0.5
+           focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2 focus:ring-offset-dark-900;
+  }
+  
+  /* Buton outline */
+  .btn-outline {
+    @apply px-6 py-3 bg-transparent text-primary-400 font-semibold rounded-lg
+           border-2 border-primary-500
+           hover:bg-primary-500 hover:text-white
+           transition-all duration-200 ease-in-out
+           focus:outline-none focus:ring-2 focus:ring-primary-400;
+  }
+  
+  /* Buton ghost */
+  .btn-ghost {
+    @apply px-4 py-2 text-dark-200 hover:text-white hover:bg-dark-700
+           rounded-lg transition-colors duration-200;
+  }
+
+  .contrast-btn {
+    @apply px-4 py-2 border border-primary-500 text-primary-400 rounded-full 
+           hover:bg-primary-500 hover:text-white transition-colors duration-200 ease-in;
+  }
+
+  /* Card produs modern */
+  .product-card {
+    @apply bg-dark-800 rounded-xl overflow-hidden
+           border border-dark-700 
+           transition-all duration-300 ease-in-out
+           hover:border-primary-500/50 hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  .product-card:hover {
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.15);
+  }
+  
+  /* Badge-uri produse */
+  .badge {
+    @apply px-2 py-1 text-xs font-bold uppercase rounded-full;
+  }
+  
+  .badge-sale {
+    @apply bg-sale text-white;
+  }
+  
+  .badge-new {
+    @apply bg-new text-white;
+  }
+  
+  .badge-hot {
+    @apply bg-hot text-dark-900;
+  }
+  
+  .badge-stock {
+    @apply bg-accent-500 text-white;
+  }
+  
+  /* Input fields dark theme */
+  .input-dark {
+    @apply w-full px-4 py-3 bg-dark-800 border border-dark-600 rounded-lg
+           text-dark-100 placeholder-dark-400
+           focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20
+           transition-all duration-200;
+  }
+  
+  /* Header sticky */
+  .header-dark {
+    @apply bg-dark-900/95 backdrop-blur-md border-b border-dark-700;
+  }
+  
+  /* Footer */
+  .footer-dark {
+    @apply bg-dark-950 border-t border-dark-800;
+  }
+  
+  /* Navigation link */
+  .nav-link {
+    @apply text-dark-300 hover:text-primary-400 transition-colors duration-200
+           relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5
+           after:bg-primary-500 after:transition-all after:duration-300
+           hover:after:w-full;
+  }
+
+  .text-xsmall-regular {
+    @apply text-[10px] leading-4 font-normal;
+  }
+
+  .text-small-regular {
+    @apply text-xs leading-5 font-normal;
+  }
+
+  .text-small-semi {
+    @apply text-xs leading-5 font-semibold;
+  }
+
+  .text-base-regular {
+    @apply text-sm leading-6 font-normal;
+  }
+
+  .text-base-semi {
+    @apply text-sm leading-6 font-semibold;
+  }
+
+  .text-large-regular {
+    @apply text-base leading-6 font-normal;
+  }
+
+  .text-large-semi {
+    @apply text-base leading-6 font-semibold;
+  }
+
+  .text-xl-regular {
+    @apply text-2xl leading-[36px] font-normal;
+  }
+
+  .text-xl-semi {
+    @apply text-2xl leading-[36px] font-semibold;
+  }
+
+  .text-2xl-regular {
+    @apply text-[30px] leading-[48px] font-normal;
+  }
+
+  .text-2xl-semi {
+    @apply text-[30px] leading-[48px] font-semibold;
+  }
+
+  .text-3xl-regular {
+    @apply text-[32px] leading-[44px] font-normal;
+  }
+
+  .text-3xl-semi {
+    @apply text-[32px] leading-[44px] font-semibold;
+  }
+  
+  /* Category cards */
+  .category-card {
+    @apply relative overflow-hidden rounded-xl bg-dark-800 
+           border border-dark-700 p-6
+           transition-all duration-300
+           hover:border-primary-500/50 hover:bg-dark-700
+           group cursor-pointer;
+  }
+  
+  .category-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-primary-500/10 to-transparent
+           opacity-0 transition-opacity duration-300;
+  }
+  
+  .category-card:hover::before {
+    @apply opacity-100;
+  }
+  
+  /* Price styling */
+  .price-current {
+    @apply text-2xl font-bold text-primary-400;
+  }
+  
+  .price-old {
+    @apply text-lg text-dark-400 line-through;
+  }
+  
+  .price-discount {
+    @apply text-sm font-semibold text-sale;
+  }
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-dark-500;
+}
+
+/* Radio signal animation for hero */
+@keyframes radio-signal {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.radio-signal {
+  animation: radio-signal 2s ease-in-out infinite;
+}
+
+/* ============================================
+   MEDUSA UI OVERRIDES - Dark Theme
+   ============================================ */
+
+/* Override Medusa UI Container backgrounds */
+[class*="bg-ui-bg"],
+.bg-ui-bg-base,
+.bg-ui-bg-subtle,
+.bg-ui-bg-field,
+.bg-ui-bg-field-hover {
+  background-color: #1e293b !important; /* dark-700 */
+}
+
+/* Override Medusa UI text colors */
+.text-ui-fg-base,
+.text-ui-fg-subtle,
+.text-ui-fg-muted {
+  color: #e2e8f0 !important; /* dark-200 */
+}
+
+/* Override Medusa UI borders */
+.border-ui-border-base,
+.border-ui-border-strong {
+  border-color: #334155 !important; /* dark-600 */
+}
+
+/* Override Medusa UI Container component */
+[data-slot="container"],
+div[class*="rounded"][class*="bg-ui"] {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+/* Stripe card input dark theme */
+.StripeElement {
+  background-color: #1e293b !important;
+  border: 1px solid #334155 !important;
+  padding: 12px !important;
+  border-radius: 8px !important;
+}
+
+.StripeElement--focus {
+  border-color: #f97316 !important;
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.2) !important;
+}
+
+/* Radio buttons in checkout */
+[data-headlessui-state] {
+  background-color: transparent !important;
+}
+
+/* Payment container overrides */
+.border-ui-border-interactive {
+  border-color: #f97316 !important;
+}
+
+/* Headless UI radio options */
+[role="radio"] {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+[role="radio"][data-checked="true"],
+[role="radio"][aria-checked="true"] {
+  border-color: #f97316 !important;
+}
+
+/* Specs Description Tables */
+/* ============================================
+   PRODUCT DESCRIPTION PROSE STYLING
+   Since @tailwindcss/typography is not installed, 
+   we manually style HTML elements in descriptions
+   ============================================ */
+.prose {
+  color: #e2e8f0;
+  line-height: 1.75;
+  font-size: 0.95rem;
+}
+
+.prose p {
+  margin-bottom: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.prose strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose li {
+  margin-bottom: 0.25rem;
+  padding-left: 0.25rem;
+  color: #cbd5e1;
+}
+
+.prose li::marker {
+  color: #f97316;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  color: #fff;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose h3 {
+  font-size: 1.1rem;
+}
+
+.prose h4 {
+  font-size: 1rem;
+}
+
+.prose a {
+  color: #f97316;
+  text-decoration: underline;
+  text-decoration-color: rgba(249, 115, 22, 0.4);
+  transition: text-decoration-color 200ms ease;
+}
+
+.prose a:hover {
+  text-decoration-color: #f97316;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.prose table td, .prose table th {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.prose table td:first-child, .prose table th:first-child {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.prose table tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.prose br + strong {
+  display: inline-block;
+  margin-top: 0.75rem;
+}
+
+/* Specs Description Tables */
+.specs-description table.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.specs-description table.specs-table tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.specs-description table.specs-table tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.specs-description table.specs-table td {
+  padding: 0.75rem 1rem;
+}
+
+.specs-description table.specs-table td:first-child {
+  color: rgba(255, 255, 255, 0.6);
+  width: 40%;
+}
+
+.specs-description table.specs-table td:last-child {
+  color: #fff;
+  font-weight: 500;
+}
+
+.specs-description h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(96, 165, 250, 0.3);
+}

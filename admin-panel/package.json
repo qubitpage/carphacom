@@ -1,0 +1,53 @@
+{
+  "name": "admin-panel",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -H 127.0.0.1",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@medusajs/js-sdk": "^2.13.1",
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/nodemailer": "^7.0.9",
+    "@types/xml2js": "^0.4.14",
+    "basic-ftp": "^5.1.0",
+    "bcryptjs": "^3.0.3",
+    "cheerio": "^1.2.0",
+    "clsx": "^2.1.1",
+    "csv-parse": "^6.1.0",
+    "google-auth-library": "^10.5.0",
+    "googleapis": "^171.0.0",
+    "isomorphic-dompurify": "^3.0.0-rc.2",
+    "lucide-react": "^0.563.0",
+    "next": "^16.2.7",
+    "nodemailer": "^8.0.10",
+    "pg": "^8.18.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "scrypt-kdf": "^4.0.0",
+    "tailwind-merge": "^3.4.0",
+    "xml2js": "^0.6.2"
+  },
+  "overrides": {
+    "postcss": "^8.5.15"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/pg": "^8.16.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "^16.2.7",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

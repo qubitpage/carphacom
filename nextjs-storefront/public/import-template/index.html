@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Import Produse - Stații InfoTrafic</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #e4e4e7;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #22d3ee;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        .subtitle {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        .download-section {
+            background: linear-gradient(135deg, #22d3ee20, #8b5cf620);
+            border: 2px solid #22d3ee;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #22d3ee, #06b6d4);
+            color: #0f172a;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(34, 211, 238, 0.3);
+        }
+        .section {
+            background: #1e293b;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid #334155;
+        }
+        h2 {
+            color: #22d3ee;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h2 .badge {
+            background: #ef4444;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        h2 .badge.optional {
+            background: #8b5cf6;
+        }
+        h2 .badge.specs {
+            background: #f59e0b;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #334155;
+        }
+        th {
+            background: #0f172a;
+            color: #22d3ee;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+        }
+        tr:hover {
+            background: #334155;
+        }
+        .col-name {
+            font-family: 'Courier New', monospace;
+            color: #a5f3fc;
+            font-weight: 600;
+        }
+        .col-required {
+            color: #ef4444;
+            font-weight: 700;
+        }
+        .col-type {
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+        .example {
+            background: #0f172a;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #86efac;
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .notes {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            border-radius: 0 12px 12px 0;
+            margin-top: 30px;
+            color: #78350f;
+        }
+        .notes h3 {
+            color: #92400e;
+            margin-bottom: 15px;
+        }
+        .notes ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .notes li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        .notes li::before {
+            content: "⚠️";
+            position: absolute;
+            left: 0;
+        }
+        .preview-section {
+            margin-top: 30px;
+        }
+        .preview-table {
+            overflow-x: auto;
+            background: #0f172a;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .preview-table table {
+            min-width: 1500px;
+        }
+        .preview-table th {
+            background: #22d3ee;
+            color: #0f172a;
+        }
+        .preview-table td {
+            font-size: 0.8rem;
+            max-width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #22d3ee;
+            text-decoration: none;
+        }
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo" style="text-align:center">📻</div>
+        <h1>Template Import Produse</h1>
+        <p class="subtitle">Structura CSV pentru importul produselor în platforma Stații InfoTrafic</p>
+        
+        <div class="download-section">
+            <p style="margin-bottom: 20px; color: #cbd5e1;">Descarcă fișierul CSV template cu exemple de produse:</p>
+            <a href="template_import_produse.csv" class="download-btn" download>
+                📥 Descarcă Template CSV
+            </a>
+            <p style="margin-top: 15px; color: #64748b; font-size: 0.9rem;">7 produse exemplu • Encoding UTF-8 • Separator virgulă</p>
+        </div>
+
+        <div class="section">
+            <h2>📋 Câmpuri OBLIGATORII <span class="badge">REQUIRED</span></h2>
+            <p style="color: #94a3b8; margin-bottom: 15px;">Fără aceste câmpuri, produsul nu poate fi importat.</p>
+            <table>
+                <tr>
+                    <th>Coloană</th>
+                    <th>Tip</th>
+                    <th>Descriere</th>
+                    <th>Exemplu</th>
+                </tr>
+                <tr>
+                    <td class="col-name col-required">sku</td>
+                    <td class="col-type">Text</td>
+                    <td>Cod unic produs (SKU) - identificator unic</td>
+                    <td><span class="example">FOMCO-CB-450</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name col-required">title</td>
+                    <td class="col-type">Text</td>
+                    <td>Numele complet al produsului</td>
+                    <td><span class="example">Stație Radio CB Fomco 450</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name col-required">price</td>
+                    <td class="col-type">Număr</td>
+                    <td>Preț cu TVA în BANI (nu lei!) - 459 lei = 45900</td>
+                    <td><span class="example">45900</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name col-required">stock</td>
+                    <td class="col-type">Număr</td>
+                    <td>Stoc disponibil (număr întreg)</td>
+                    <td><span class="example">25</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>⭐ Câmpuri RECOMANDATE <span class="badge optional">RECOMMENDED</span></h2>
+            <p style="color: #94a3b8; margin-bottom: 15px;">Pentru un import complet și afișare optimă pe site.</p>
+            <table>
+                <tr>
+                    <th>Coloană</th>
+                    <th>Tip</th>
+                    <th>Descriere</th>
+                    <th>Exemplu</th>
+                </tr>
+                <tr>
+                    <td class="col-name">description</td>
+                    <td class="col-type">Text/HTML</td>
+                    <td>Descrierea produsului (poate conține HTML)</td>
+                    <td><span class="example">&lt;p&gt;Stație radio CB...&lt;/p&gt;</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name">category</td>
+                    <td class="col-type">Text</td>
+                    <td>Categoria produsului</td>
+                    <td><span class="example">Stații Radio CB</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name">brand</td>
+                    <td class="col-type">Text</td>
+                    <td>Producător/Marca</td>
+                    <td><span class="example">Fomco</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name">ean</td>
+                    <td class="col-type">Text</td>
+                    <td>Cod de bare EAN-13</td>
+                    <td><span class="example">5949012345678</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name">weight</td>
+                    <td class="col-type">Număr</td>
+                    <td>Greutate în grame</td>
+                    <td><span class="example">450</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name">thumbnail</td>
+                    <td class="col-type">URL</td>
+                    <td>URL imagine principală (HTTPS)</td>
+                    <td><span class="example">https://site.ro/img/prod.jpg</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name">images</td>
+                    <td class="col-type">URL(s)</td>
+                    <td>URL-uri imagini adiționale (separate prin ;)</td>
+                    <td><span class="example">url1.jpg;url2.jpg;url3.jpg</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>📦 Câmpuri OPȚIONALE <span class="badge optional">OPTIONAL</span></h2>
+            <table>
+                <tr>
+                    <th>Coloană</th>
+                    <th>Tip</th>
+                    <th>Descriere</th>
+                    <th>Exemplu</th>
+                </tr>
+                <tr>
+                    <td class="col-name">cost_price</td>
+                    <td class="col-type">Număr</td>
+                    <td>Preț de achiziție în bani</td>
+                    <td><span class="example">35000</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name">rrp_price</td>
+                    <td class="col-type">Număr</td>
+                    <td>Preț recomandat de vânzare în bani</td>
+                    <td><span class="example">49900</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name">warranty_months</td>
+                    <td class="col-type">Număr</td>
+                    <td>Garanție în luni</td>
+                    <td><span class="example">24</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name">length</td>
+                    <td class="col-type">Număr</td>
+                    <td>Lungime în mm</td>
+                    <td><span class="example">180</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name">width</td>
+                    <td class="col-type">Număr</td>
+                    <td>Lățime în mm</td>
+                    <td><span class="example">120</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name">height</td>
+                    <td class="col-type">Număr</td>
+                    <td>Înălțime în mm</td>
+                    <td><span class="example">50</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name">origin_country</td>
+                    <td class="col-type">Text</td>
+                    <td>Țara de origine (cod ISO 2 litere)</td>
+                    <td><span class="example">RO</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>🔧 Câmpuri SPECIFICAȚII <span class="badge specs">SPECS</span></h2>
+            <p style="color: #94a3b8; margin-bottom: 15px;">Specificații tehnice care vor apărea în pagina produsului. Prefixul <code style="background:#0f172a;padding:2px 6px;border-radius:4px;">spec_</code> este obligatoriu.</p>
+            <table>
+                <tr>
+                    <th>Coloană</th>
+                    <th>Descriere</th>
+                    <th>Exemplu</th>
+                </tr>
+                <tr>
+                    <td class="col-name">spec_putere</td>
+                    <td>Putere de emisie</td>
+                    <td><span class="example">4W</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name">spec_canale</td>
+                    <td>Număr canale</td>
+                    <td><span class="example">40</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name">spec_frecventa</td>
+                    <td>Bandă de frecvență</td>
+                    <td><span class="example">26.965-27.405 MHz</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name">spec_alimentare</td>
+                    <td>Tensiune alimentare</td>
+                    <td><span class="example">12-24V DC</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name">spec_impedanta</td>
+                    <td>Impedanță</td>
+                    <td><span class="example">50 Ohm</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name">spec_tip_antena</td>
+                    <td>Tip antenă</td>
+                    <td><span class="example">Magnetică</span></td>
+                </tr>
+                <tr>
+                    <td class="col-name">spec_*</td>
+                    <td>Orice altă specificație (înlocuiește * cu numele)</td>
+                    <td><span class="example">valoare</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="notes">
+            <h3>⚠️ Note Importante</h3>
+            <ul>
+                <li><strong>Prețurile</strong> trebuie să fie în <strong>BANI</strong> (nu lei) - ex: 459 lei = 45900</li>
+                <li><strong>Encoding fișier:</strong> obligatoriu <strong>UTF-8</strong> pentru diacritice românești</li>
+                <li><strong>Separator:</strong> virgulă (,) - textele cu virgule trebuie între ghilimele duble "text, cu virgulă"</li>
+                <li><strong>Imagini:</strong> trebuie să fie URL-uri publice accesibile (preferabil HTTPS)</li>
+                <li><strong>SKU:</strong> trebuie să fie unic pentru fiecare produs</li>
+                <li><strong>Categorii:</strong> dacă nu există, vor fi create automat la import</li>
+            </ul>
+        </div>
+
+        <div class="preview-section">
+            <h2 style="color: #22d3ee; margin-bottom: 20px;">👁️ Preview Date CSV</h2>
+            <div class="preview-table">
+                <table>
+                    <tr>
+                        <th>sku</th>
+                        <th>title</th>
+                        <th>price</th>
+                        <th>stock</th>
+                        <th>category</th>
+                        <th>brand</th>
+                        <th>ean</th>
+                        <th>weight</th>
+                        <th>warranty</th>
+                    </tr>
+                    <tr>
+                        <td>FOMCO-CB-450</td>
+                        <td>Stație Radio CB Fomco 450</td>
+                        <td>45900</td>
+                        <td>25</td>
+                        <td>Stații Radio CB</td>
+                        <td>Fomco</td>
+                        <td>5949012345678</td>
+                        <td>450g</td>
+                        <td>24 luni</td>
+                    </tr>
+                    <tr>
+                        <td>FOMCO-CB-550</td>
+                        <td>Stație Radio CB Fomco 550 Pro</td>
+                        <td>65900</td>
+                        <td>15</td>
+                        <td>Stații Radio CB</td>
+                        <td>Fomco</td>
+                        <td>5949012345680</td>
+                        <td>520g</td>
+                        <td>24 luni</td>
+                    </tr>
+                    <tr>
+                        <td>FOMCO-ANT-ML145</td>
+                        <td>Antenă CB Fomco ML145</td>
+                        <td>12900</td>
+                        <td>50</td>
+                        <td>Antene CB</td>
+                        <td>Fomco</td>
+                        <td>5949012345681</td>
+                        <td>380g</td>
+                        <td>12 luni</td>
+                    </tr>
+                    <tr>
+                        <td>FOMCO-ANT-TRUCK</td>
+                        <td>Antenă CB Fomco Truck 150</td>
+                        <td>18900</td>
+                        <td>30</td>
+                        <td>Antene CB</td>
+                        <td>Fomco</td>
+                        <td>5949012345682</td>
+                        <td>650g</td>
+                        <td>12 luni</td>
+                    </tr>
+                    <tr>
+                        <td>FOMCO-MIC-EXT</td>
+                        <td>Microfon Extern Fomco</td>
+                        <td>4500</td>
+                        <td>100</td>
+                        <td>Accesorii CB</td>
+                        <td>Fomco</td>
+                        <td>5949012345683</td>
+                        <td>120g</td>
+                        <td>6 luni</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <footer>
+            <p>Template generat pentru <a href="https://www.statiiinfotrafic.ro">Stații InfoTrafic</a></p>
+            <p style="margin-top: 10px;">Contact: <a href="mailto:contact@statiiinfotrafic.ro">contact@statiiinfotrafic.ro</a> | Tel: 0749 040 400</p>
+        </footer>
+    </div>
+</body>
+</html>

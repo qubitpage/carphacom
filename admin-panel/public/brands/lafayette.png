@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+	<meta property="og:title" content="" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://www.lafayette.se/images/og.image/8936c19bb588e20d1be2465f652b496fd1ffa28701d3086078d3fc98a8d730bf.jpg" />
+	<meta property="og:url" content="https://www.lafayette.se/skin/frontend/default/lafayette/images/logo.png" />
+	<meta name="generator" content="µSpace CMS (4.0.1)" />
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+	<link rel="stylesheet" href="/cms/template/lafayette/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/cms/template/lafayette/css/style.min.css" />
+	<link rel="stylesheet" href="/cms/template/lafayette/css/swiper.min.css" />
+	<link rel="stylesheet" href="/cms/template/lafayette/css/dark.min.css" />
+	<link rel="stylesheet" href="/cms/template/lafayette/css/font-icons.min.css" />
+	<link rel="stylesheet" href="/cms/template/lafayette/css/animate.min.css" />
+	<link rel="stylesheet" href="/cms/template/lafayette/css/magnific-popup.min.css" />
+	<link rel="stylesheet" href="/cms/template/lafayette/css/responsive.min.css" />
+	<link rel="stylesheet" href="/cms/template/lafayette/css/customization.css" />
+	<!-- schema.org makeup Organization -->
+	<script type="application/ld+json">
+	{
+		"@context": "http://schema.org",
+		"@type": "Corporation",
+		"name": "Lafayette",
+		"alternateName": "Lafayette AB",
+		"url": "https://www.lafayette.se/",
+		"logo": "https://www.lafayette.se/cms/template/lafayette/images/logo.png",
+		"contactPoint": {
+			"@type": "ContactPoint",
+			"telephone": "+46 31 840430",
+			"contactType": "customer service",
+			"availableLanguage": ["English","Swedish"]
+		},
+		"sameAs": [
+			"https://www.facebook.com/lafayetteab",
+			"https://www.youtube.com/@lafayettejaktradio1678",
+			"https://www.linkedin.com/company/lafayette-ab/"
+		]
+	}
+	</script>
+	<!-- End schema.org makeup Organization -->
+	<title></title>
+</head>
+
+<body class="stretched no-transition">
+	<div id="wrapper" class="clearfix">
+		<header id="header" class="transparent-header full-header" data-sticky-class="not-dark">
+			<div id="header-wrap">
+				<div class="container clearfix">
+					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+					<div id="logo">
+						<a href="/" class="standard-logo" data-dark-logo="/images/logo-text.svg"><img src="/images/logo-text.svg" style="max-width: 150px;" alt="Lafayette"></a>
+						<a href="/" class="retina-logo" data-dark-logo="/images/logo-text.svg"><img src="/images/logo-text.svg" style="max-width: 150px;" alt="Lafayette"></a>
+					</div>
+					<nav id="primary-menu">
+						<ul>
+	<li class="  " ><a href="/products/radio/" class="" >Radio</a></li>
+	<li class="  " ><a href="/products/accessories" class="" >Radiotillbehör</a></li>
+	<li class="  " ><a href="/products/led/" class="" >Pannlampor</a></li>
+	<li class="  " ><a href="https://gps.lafayette.se/" class="" >GPS</a></li>
+	<li class="  " ><a href="/products/silencer/" class="" >VMAC</a></li>
+	<li class="  " ><a href="/products/find-reseller" class="" >Hitta Återförsäljare</a></li>
+	<li class="  " ><a href="https://www.lafayette.se/products/" class="" >Produkter</a>
+	<ul class=" " >
+		<li class="  " > <a href="https://www.lafayette.se/products/" class="" >Produkter</a></li>
+		<li class="  " ><a href="https://www.lafayette.se/products/radio/" class="" >Radio</a>
+		<ul class=" " >
+			<li class="  " > <a href="https://www.lafayette.se/products/radio/" class="" >Smart+</a></li>
+			<li class="  " > <a href="https://www.lafayette.se/products/radio/smart-plus-31-jaktpaket" class="" >Smart+ 31 Jaktpaket</a></li>
+			<li class="  " > <a href="https://www.lafayette.se/products/radio/smart-plus-31-superpaket" class="" >Smart+ 31 Superpaket</a></li>
+			<li class="  " > <a href="https://www.lafayette.se/products/radio/smart-plus-155-jaktpaket" class="" >Smart+ 155 Jaktpaket</a></li>
+			<li class="  " > <a href="https://www.lafayette.se/products/radio/smart-plus-155-superpaket" class="" >Smart+ 155 Superpaket</a></li>
+			<li class="  " > <a href="https://www.lafayette.se/products/radio/smart-plus-kombipaket" class="" >Smart+ Kombipaket 31/155 MHz</a></li>
+			<li class="  " > <a href="https://www.lafayette.se/products/radio/smart-plus-70-jaktpaket" class="" >Smart+ 70 Jaktpaket</a></li>
+		</ul>
+		</li>
+		<li class="  " ><a href="https://www.lafayette.se/products/led/" class="" >Pannlampor</a>
+		<ul class=" " >
+			<li class="  " > <a href="https://www.lafayette.se/products/led/" class="" >Pannlampor</a></li>
+			<li class="  " > <a href="https://www.lafayette.se/products/led/hl12" class="" >Lafayette HL12</a></li>
+			<li class="  " > <a href="https://www.lafayette.se/products/led/hl19" class="" >Lafayette HL19</a></li>
+			<li class="  " > <a href="https://www.lafayette.se/products/led/hl23" class="" >Lafayette HL23</a></li>
+			<li class="  " > <a href="https://www.lafayette.se/products/led/hl35" class="" >Lafayette HL35</a></li>
+			<li class="  " > <a href="https://www.lafayette.se/products/led/hl50" class="" >Lafayette HL50</a></li>
+		</ul>
+		</li>
+		<li class="  " ><a href="https://www.lafayette.se/products/gps/" class="" >Lafayette GPS</a>
+		</li>
+		<li class="  " ><a href="https://www.lafayette.se/products/silencer/" class="" >VMAC</a>
+		<ul class=" " >
+			<li class="  " > <a href="https://www.lafayette.se/products/silencer/" class="" >VMAC</a></li>
+			<li class="  " > <a href="https://www.lafayette.se/products/silencer/vs115" class="" >VMAC VS115</a></li>
+			<li class="  " > <a href="https://www.lafayette.se/products/silencer/vl115" class="" >VMAC VL115</a></li>
+			<li class="  " > <a href="https://www.lafayette.se/products/silencer/vs145" class="" >VMAC VS145</a></li>
+			<li class="  " > <a href="https://www.lafayette.se/products/silencer/vl145" class="" >VMAC VL145</a></li>
+		</ul>
+		</li>
+		<li class="  " > <a href="https://www.lafayette.se/products/accessories" class="" >Tillbehör</a></li>
+		<li class="  " > <a href="https://www.lafayette.se/products/find-reseller" class="" >Hitta återförsäljare</a></li>
+		<li class="  " ><a href="https://gpbmnordic.com/sv" class="" >GP</a></li>
+	</ul>
+	</li>
+	<li class="  " ><a href="#top" class="" >Support</a>
+	<ul class=" " >
+		<li class="  " > <a href="https://www.lafayette.se/support/my-pages" class="" >Mina sidor</a></li>
+		<li class="  " > <a href="https://www.lafayette.se/support/service" class="" >Service</a></li>
+		<li class="  " ><a href="/reseller/login" class="" >Återförsäljarportal</a></li>
+	</ul>
+	</li>
+
+
+		<li><a style="padding-left:0px;padding-right:0px;"><img src="/cms/images/flags/se.svg" style="width:21px;margin:3px 6px;" /></a>
+			<ul>
+				
+			</ul>
+		</li>
+						</ul>
+
+					</nav>
+				</div>
+			</div>
+		</header>
+		<section id="page-title">
+			<div class="container clearfix">
+				<h1></h1>
+				<style type="text/css">#page-title ol.breadcrumb { display:inline; }</style>
+				<ol class="breadcrumb">
+<a href="https://www.lafayette.se">Start</a> /  /  /  /  /  / <a href="https://www.lafayette.se"></a>
+				</ol>
+			</div>
+		</section>
+
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container clearfix">
+
+				</div>
+			</div>
+		</section>
+		
+		<footer id="footer" class="dark">
+			<div class="container">
+				<div class="footer-widgets-wrap clearfix">
+<div class="row clearfix">
+	<div class="col-lg-4" style="color:rgba(255,255,255,0.5);">
+		Lafayette<br />
+		Marieholmsgatan 54<br />
+		415 02 Göteborg
+	</div>
+	<div class="col-lg-4" style="color:rgba(255,255,255,0.5);">
+		<i class="icon-envelope2"></i> info&#64;lafayette.se<br />
+		<i class="icon-headphones"></i> +46 31 840430<br />
+	</div>
+	<div class="col-lg-4" style="color:rgba(255,255,255,0.5);">
+		<a href="https://www.facebook.com/lafayetteab" class="social-icon si-small si-borderless si-facebook">
+			<i class="icon-facebook"></i>
+			<i class="icon-facebook"></i>
+		</a>
+
+		<a href="https://www.youtube.com/@lafayettejaktradio1678" class="social-icon si-small si-borderless si-youtube">
+			<i class="icon-youtube"></i>
+			<i class="icon-youtube"></i>
+		</a>
+
+		<a href="https://www.linkedin.com/company/lafayette-ab/" class="social-icon si-small si-borderless si-facebook">
+			<i class="icon-linkedin"></i>
+			<i class="icon-linkedin"></i>
+		</a>
+	</div>
+</div>
+				</div>
+			</div>
+
+			<style type="text/css">.social-icon.si-small { font-size: 22px; line-height: 30px !important; }</style>
+			<div id="copyrights">
+				<div class="container clearfix">
+					<div class="col_half">
+						Copyrights &copy; <script>document.write(new Date().getFullYear())</script> Lafayette AB. All rights reserved.<br>
+						<div class="copyright-links"><a href="/privacy-policy">Privacy Policy</a></div>
+					</div>
+					<div class="col_half col_last tright">
+
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<style type="text/css">
+	#cookieConsent{ background-color:white;text-align:center;display:none;position:fixed;z-index:65000;bottom:0px;width:100%;font-size:14px; }
+	#cookieConsent button.cookieAccept{ background:#090;color:white;border:none;border-radius:0.2em;margin:0.5em;padding:0.2em 0.5em 0.2em 0.5em;}
+	</style>
+	<div id="cookieConsent">This website uses cookies. By using this website you consent to our use of these cookies.<button class="cookieAccept">I understand</button></div>
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<noscript id="deferred-styles">
+		<link rel="stylesheet" href="/cms/template/lafayette/css/font-icons.min.css" type="text/css" />
+	</noscript>
+	<script>
+		var loadDeferredStyles=function(){var e=document.getElementById("deferred-styles"),n=document.createElement("div");n.innerHTML=e.textContent,document.body.appendChild(n),e.parentElement.removeChild(e)},raf=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;raf?raf(function(){window.setTimeout(loadDeferredStyles,0)}):window.addEventListener("load",loadDeferredStyles);
+	</script>
+	<script src="/cms/template/lafayette/js/jquery.min.js"></script>
+	<script src="/cms/template/lafayette/js/plugins.min.js"></script>
+	<script src="/cms/template/lafayette/js/functions.min.js"></script>
+	<script src="/cms/template/lafayette/js/customize.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery.cookie-consent/dist/jquery.cookie-consent.min.js"></script>
+	<script>
+	$('#cookieConsent').cookieConsent();
+	</script>
+	
+
+</body>
+</html>
