@@ -4,8 +4,6 @@
  * Docs: https://api.fgo.ro/v1/files/specificatii-api-latest.pdf
  */
 
-import crypto from 'crypto';
-
 // FGO Configuration
 export interface FGOConfig {
   codUnicFurnizor: string;  // CUI/CIF of the company
@@ -14,12 +12,13 @@ export interface FGOConfig {
   isTest: boolean;
 }
 
-// Default config. Values must be supplied by the deploying operator.
+// Default config. Values must be supplied explicitly by the deploying operator
+// through fgoService.setConfig(...). Do not bundle provider secrets in the UI.
 let fgoConfig: FGOConfig = {
-  codUnicFurnizor: process.env.FGO_COD_UNIC_FURNIZOR || '',
-  cheiePrivata: process.env.FGO_CHEIE_PRIVATA || '',
-  apiUrl: process.env.FGO_API_URL || 'https://api.fgo.ro/v1',
-  isTest: process.env.FGO_IS_TEST === 'true',
+  codUnicFurnizor: '',
+  cheiePrivata: '',
+  apiUrl: 'https://api.fgo.ro/v1',
+  isTest: false,
 };
 
 // Invoice types
@@ -123,12 +122,18 @@ export interface FGOPayment {
 }
 
 /**
- * Calculate SHA-1 hash for FGO API authentication
+ * Calculate SHA-1 hash for FGO API authentication.
  * Hash = SHA1(CodUnicFurnizor + CheiePrivata + ExtraParam)
+ * Uses Web Crypto so this admin-side module does not depend on Node globals.
  */
-function calculateHash(extraParam?: string): string {
+async function calculateHash(extraParam?: string): Promise<string> {
   const data = fgoConfig.codUnicFurnizor + fgoConfig.cheiePrivata + (extraParam || '');
-  return crypto.createHash('sha1').update(data).digest('hex').toUpperCase();
+  const bytes = new TextEncoder().encode(data);
+  const digest = await globalThis.crypto.subtle.digest('SHA-1', bytes);
+  return Array.from(new Uint8Array(digest))
+    .map((byte) => byte.toString(16).padStart(2, '0'))
+    .join('')
+    .toUpperCase();
 }
 
 /**
@@ -149,7 +154,7 @@ async function fgoRequest(
   let requestBody: any = undefined;
   
   if (method === 'POST') {
-    const hash = calculateHash(hashParam);
+    const hash = await calculateHash(hashParam);
     requestBody = {
       ...body,
       CodUnic: fgoConfig.codUnicFurnizor,
