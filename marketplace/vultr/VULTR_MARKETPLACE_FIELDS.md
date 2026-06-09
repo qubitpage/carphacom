@@ -29,13 +29,13 @@ This Marketplace image is intended for development and evaluation. A newer produ
 After deployment, open:
 
 ```text
-http://YOUR_INSTANCE_IP/ro
+http://{{ip}}/ro
 ```
 
 Admin login:
 
 ```text
-http://YOUR_INSTANCE_IP/app/login
+http://{{ip}}/app/login
 ```
 
 First-login credentials are generated on first boot and stored on the instance:

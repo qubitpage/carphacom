@@ -74,43 +74,43 @@ journalctl -u carphacom-firstboot.service -n 100 --no-pager
 
 ## Access the Application
 
-Replace `YOUR_INSTANCE_IP` with the public IP address shown in your Vultr dashboard.
+For Vultr Marketplace app instructions, `{{ip}}` is replaced automatically with the deployed instance public IPv4 address.
 
 Storefront:
 
 ```text
-http://YOUR_INSTANCE_IP/ro
+http://{{ip}}/ro
 ```
 
 Admin login:
 
 ```text
-http://YOUR_INSTANCE_IP/app/login
+http://{{ip}}/app/login
 ```
 
 Admin shortcut:
 
 ```text
-http://YOUR_INSTANCE_IP/admin/
+http://{{ip}}/admin/
 ```
 
 Backend health check:
 
 ```text
-http://YOUR_INSTANCE_IP/backend/health
+http://{{ip}}/backend/health
 ```
 
 Warehouse interfaces:
 
 ```text
-http://YOUR_INSTANCE_IP/warehouse/
-http://YOUR_INSTANCE_IP/warehouse-lab/
+http://{{ip}}/warehouse/
+http://{{ip}}/warehouse-lab/
 ```
 
 Instance health check:
 
 ```text
-http://YOUR_INSTANCE_IP/healthz
+http://{{ip}}/healthz
 ```
 
 Important: `/ro/app` is not an admin route. `/ro` is the storefront locale namespace. The admin UI is served from `/app/login`.
@@ -211,7 +211,7 @@ journalctl -u carphacom-firstboot.service -n 200 --no-pager
 1. In your DNS provider, create an A record pointing your domain to the Vultr instance IP:
 
 ```text
-shop.example.com A YOUR_INSTANCE_IP
+shop.example.com A {{ip}}
 ```
 
 2. Wait for DNS propagation.
@@ -361,7 +361,7 @@ Check backend health:
 
 ```bash
 curl -fsS http://127.0.0.1:9000/health
-curl -fsS http://YOUR_INSTANCE_IP/backend/health
+curl -fsS http://{{ip}}/backend/health
 ```
 
 ## Fix Unrouted Pages
@@ -475,3 +475,9 @@ Before using Carphacom in production:
 - Support email: msrusu@qubitpage.com
 - Source repository: https://github.com/qubitpage/carphacom
 - Project repository: https://github.com/msrusu87-web/CarphaCom-Robotised-E-Commerce
+
+
+## IP and HTTPS note
+
+> **Important:** Use `http://{{ip}}` for first access. Do **not** use `https://{{ip}}` on a raw IP address; browser TLS certificate errors are expected until you attach a domain and run the SSL helper.
+

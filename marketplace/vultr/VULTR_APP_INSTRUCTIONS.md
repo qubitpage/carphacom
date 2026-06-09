@@ -25,19 +25,19 @@ Wait 2–5 minutes after the instance first boots. The first-boot service config
 Open the storefront:
 
 ```text
-http://YOUR_INSTANCE_IP/ro
+http://{{ip}}/ro
 ```
 
 Open the Carphacom Back Office / Admin Panel:
 
 ```text
-http://YOUR_INSTANCE_IP/app/login
+http://{{ip}}/app/login
 ```
 
 Friendly admin alias:
 
 ```text
-http://YOUR_INSTANCE_IP/admin/
+http://{{ip}}/admin/
 ```
 
 Important: `/ro/app` is not the admin route. `/ro` is the storefront locale namespace; admin is served from `/app/login`.
@@ -109,7 +109,7 @@ Expected core routes:
 Create a DNS A record pointing your domain to the Vultr instance IP:
 
 ```text
-shop.example.com A YOUR_INSTANCE_IP
+shop.example.com A {{ip}}
 ```
 
 Then run:
@@ -191,23 +191,23 @@ Gallery images for the Vultr Application Gallery are included in:
 marketplace/vultr/gallery/
 ```
 
+Upload only the storefront/example images below. Do not upload admin login screenshots, cockpit screenshots, infrastructure dashboards, warehouse panels, terminal screenshots, or route diagrams.
+
 Suggested upload order:
 
 ```text
-01-carphacom-platform-storefront-800x500.png
-02-carphacom-back-office-admin-800x500.png
+01-carphacom-classic-storefront-800x500.png
+02-carphacom-marketplace-instance-800x500.png
 03-made-with-carphacom-statiiinfotrafic-800x500.png
 04-made-with-carphacom-banat-tractor-800x500.png
-05-carphacom-platform-routes-800x500.png
 ```
 
 Gallery meaning:
 
-1. **Carphacom Platform Storefront** — the main public design from `demo.qubitpage.com`.
-2. **Carphacom Back Office / Admin Panel** — Carphacom's own admin panel, not Vultr Cockpit.
-3. **Made with Carphacom: Statii Info Trafic** — public example site.
-4. **Made with Carphacom: Banat Tractor** — public example site.
-5. **Carphacom Developer Routes** — storefront/admin/API/warehouse route overview.
+1. **Carphacom Classic Storefront** — the main public design from `demo.qubitpage.com/ro`.
+2. **One-Click Marketplace Instance** — Carphacom Developer Edition storefront running from a fresh Vultr Marketplace image.
+3. **Made with Carphacom: Statii Info Trafic** — public example storefront.
+4. **Made with Carphacom: Banat Tractor** — public example storefront.
 
 Example sites referenced in the gallery:
 
@@ -221,3 +221,9 @@ See:
 ```text
 GALLERY_UPLOAD_INSTRUCTIONS.md
 ```
+
+
+## IP and HTTPS note
+
+> **Important:** Use `http://{{ip}}` for first access. Do **not** use `https://{{ip}}` on a raw IP address; browser TLS certificate errors are expected until you attach a domain and run the SSL helper.
+
