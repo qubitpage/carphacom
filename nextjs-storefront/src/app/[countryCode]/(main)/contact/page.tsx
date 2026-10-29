@@ -75,7 +75,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold">Telefon</h3>
-                  <a href="tel:+40722555961" className="text-primary-400 text-lg font-bold hover:text-primary-300">0722 555 961</a>
+                  <a href="mailto:contact@qubitpage.com" className="text-primary-400 text-lg font-bold hover:text-primary-300">contact@qubitpage.com</a>
                 </div>
               </div>
               <p className="text-dark-400 text-sm">Luni - Vineri: 09:00 - 18:00</p>
@@ -91,7 +91,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold">Email</h3>
-                  <a href="mailto:contact@banat-tractor.ro" className="text-accent-400 hover:text-accent-300">contact@banat-tractor.ro</a>
+                  <a href="mailto:contact@qubitpage.com" className="text-accent-400 hover:text-accent-300">contact@qubitpage.com</a>
                 </div>
               </div>
               <p className="text-dark-400 text-sm">Răspundem în maxim 24h</p>
@@ -106,7 +106,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold">WhatsApp</h3>
-                  <a href="https://wa.me/40722555961" className="text-green-400 hover:text-green-300">0722 555 961</a>
+                  <a href="mailto:contact@qubitpage.com" className="text-green-400 hover:text-green-300">contact@qubitpage.com</a>
                 </div>
               </div>
               <p className="text-dark-400 text-sm">Răspuns instant în timpul programului</p>

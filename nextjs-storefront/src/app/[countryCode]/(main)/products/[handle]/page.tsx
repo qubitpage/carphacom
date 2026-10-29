@@ -101,10 +101,10 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       ? product.description.replace(/<[^>]*>/g, '').slice(0, 160)
       : `${product.title} disponibil prin Banat Tractor. Cere ofertă personalizată pentru configurație, livrare și consultanță tehnică.`,
     alternates: {
-      canonical: `https://banat-tractor.ro/ro/products/${handle}`,
+      canonical: `https://qubitpage.com/ro/products/${handle}`,
       languages: {
-        "ro": `https://banat-tractor.ro/ro/products/${handle}`,
-        "x-default": `https://banat-tractor.ro/ro/products/${handle}`,
+        "ro": `https://qubitpage.com/ro/products/${handle}`,
+        "x-default": `https://qubitpage.com/ro/products/${handle}`,
       },
     },
     openGraph: {
@@ -113,7 +113,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
         ? product.description.replace(/<[^>]*>/g, '').slice(0, 160)
         : `Cere ofertă pentru ${product.title}.`,
       images: product.thumbnail ? [product.thumbnail] : [],
-      url: `https://banat-tractor.ro/ro/products/${handle}`,
+      url: `https://qubitpage.com/ro/products/${handle}`,
       type: 'website',
     },
   }
@@ -163,7 +163,7 @@ export default async function ProductPage(props: Props) {
       ? pricedProduct.description.replace(/<[^>]*>/g, "").slice(0, 5000)
       : undefined,
     image: pricedProduct.images?.map((i) => i.url) || [],
-    url: `https://banat-tractor.ro/ro/products/${pricedProduct.handle}`,
+    url: `https://qubitpage.com/ro/products/${pricedProduct.handle}`,
     sku: cheapestVariant?.sku || undefined,
     brand: pricedProduct.metadata?.manufacturer
       ? {
@@ -175,7 +175,7 @@ export default async function ProductPage(props: Props) {
       ? {
           offers: {
             "@type": "Offer",
-            url: `https://banat-tractor.ro/ro/products/${pricedProduct.handle}`,
+            url: `https://qubitpage.com/ro/products/${pricedProduct.handle}`,
             priceCurrency,
             price: (priceAmount / 100).toFixed(2),
             availability:

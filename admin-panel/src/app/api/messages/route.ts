@@ -19,7 +19,7 @@ const DATA_DIR = path.join(process.cwd(), "data")
 const MESSAGES_FILE = path.join(DATA_DIR, "messages.json")
 
 // Notification emails
-const ADMIN_EMAILS = ["contact@qubitpage.com", "covalciuc_ionut@yahoo.com"]
+const ADMIN_EMAILS = ["contact@qubitpage.com"]
 
 interface Message {
   id: string

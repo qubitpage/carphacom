@@ -119,7 +119,7 @@ export default function ReturPage() {
                 <span className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</span>
                 <div>
                   <span className="font-semibold text-white">Contactează-ne</span>
-                  <p className="text-sm mt-1">Trimite un email la <a href="mailto:contact@qubitpage.com" className="text-accent-400 hover:text-accent-300">contact@qubitpage.com</a> sau sună la <a href="tel:+40749040400" className="text-accent-400 hover:text-accent-300">0749 040 400</a> pentru a anunța returul. Precizează numărul comenzii și motivul returului.</p>
+                  <p className="text-sm mt-1">Trimite un email la <a href="mailto:contact@qubitpage.com" className="text-accent-400 hover:text-accent-300">contact@qubitpage.com</a> sau sună la <a href="mailto:contact@qubitpage.com" className="text-accent-400 hover:text-accent-300">contact@qubitpage.com</a> pentru a anunța returul. Precizează numărul comenzii și motivul returului.</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -367,7 +367,7 @@ export default function ReturPage() {
                   <div className="text-accent-400 text-sm">contact@qubitpage.com</div>
                 </div>
               </a>
-              <a href="tel:+40749040400" className="bg-dark-800 hover:bg-dark-700 border border-dark-600 rounded-lg p-5 transition-all duration-200 flex items-center gap-4">
+              <a href="mailto:contact@qubitpage.com" className="bg-dark-800 hover:bg-dark-700 border border-dark-600 rounded-lg p-5 transition-all duration-200 flex items-center gap-4">
                 <div className="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
@@ -375,7 +375,7 @@ export default function ReturPage() {
                 </div>
                 <div>
                   <div className="text-white font-semibold">Telefon</div>
-                  <div className="text-primary-400 text-sm">0749 040 400</div>
+                  <div className="text-primary-400 text-sm">contact@qubitpage.com</div>
                 </div>
               </a>
             </div>

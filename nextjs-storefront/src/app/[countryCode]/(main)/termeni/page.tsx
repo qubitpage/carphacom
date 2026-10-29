@@ -2,9 +2,9 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Termeni și Condiții | Banat Tractor Service",
-  description: "Termeni și condiții pentru utilizarea site-ului banat-tractor.ro și solicitarea ofertelor pentru utilaje agricole.",
+  description: "Termeni și condiții pentru utilizarea site-ului qubitpage.com și solicitarea ofertelor pentru utilaje agricole.",
   alternates: {
-    canonical: "https://banat-tractor.ro/ro/termeni",
+    canonical: "https://qubitpage.com/ro/termeni",
   },
 }
 
@@ -13,8 +13,8 @@ const company = {
   cui: "RO1816792",
   reg: "J35/2912/1991",
   address: "P-ța Vasile Adamachi 6, Timișoara, România",
-  email: "contact@banat-tractor.ro",
-  phone: "0722 555 961",
+  email: "contact@qubitpage.com",
+  phone: "",
 }
 
 export default function TermeniPage() {
@@ -27,7 +27,7 @@ export default function TermeniPage() {
           <section className="bg-dark-800 border border-dark-700 rounded-2xl p-8">
             <p className="text-dark-400 text-sm mb-4">Ultima actualizare: Mai 2026</p>
             <p className="text-dark-300">
-              Site-ul <strong className="text-white">banat-tractor.ro</strong> este administrat de {company.name} și prezintă utilaje agricole,
+              Site-ul <strong className="text-white">qubitpage.com</strong> este administrat de {company.name} și prezintă utilaje agricole,
               piese, service și opțiuni de configurare pentru clienții din România.
             </p>
           </section>

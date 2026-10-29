@@ -56,7 +56,7 @@ const SHOP_INFO = {
   city: "Com. Aghireșu, Jud. Cluj",
   postalCode: "407005",
   country: "România",
-  phone: "+40 774 077 860",
+  phone: "",
   email: "contact@qubitpage.com",
   website: "qubitpage.com",
 }

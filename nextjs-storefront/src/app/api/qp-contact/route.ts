@@ -2,6 +2,9 @@
  * Qubitpage website contact form.
  * Saves each message as a "contact" ticket in the admin panel's messages store (admin-panel/data/messages.json),
  * so it appears in the admin's Messages screen, and keeps a JSON-lines copy as a backup.
+ * Each message is also emailed to CONTACT_NOTIFY_EMAIL (default contact@qubitpage.com) with Reply-To set to the sender,
+ * through Brevo (BREVO_API_KEY) or SMTP (SMTP_HOST/SMTP_USER/SMTP_PASSWORD). These settings are read from the
+ * storefront environment, or from the admin panel / Medusa backend .env files on the same server.
  * Protected with a honeypot field, length checks and a per-IP rate limit.
  */
 import { NextRequest, NextResponse } from "next/server"
@@ -11,6 +14,57 @@ import path from "path"
 const ADMIN_DATA_DIR = process.env.ADMIN_DATA_DIR || path.join(process.cwd(), "..", "admin-panel", "data")
 const MESSAGES_FILE = path.join(ADMIN_DATA_DIR, "messages.json")
 const LOG_FILE = path.join(ADMIN_DATA_DIR, "website-contact.jsonl")
+
+const NOTIFY_TO = process.env.CONTACT_NOTIFY_EMAIL || "contact@qubitpage.com"
+
+// Settings from this app's env, falling back to the sibling apps' .env files (same server, same install).
+function setting(key: string): string {
+  if (process.env[key]) return process.env[key] as string
+  for (const f of ["../admin-panel/.env.local", "../admin-panel/.env", "../medusa-backend/.env", ".env.local", ".env"]) {
+    try {
+      const m = fs.readFileSync(path.join(process.cwd(), f), "utf8").match(new RegExp(`^${key}=(.*)$`, "m"))
+      if (m && m[1].trim()) return m[1].trim().replace(/^["']|["']$/g, "")
+    } catch {}
+  }
+  return ""
+}
+
+const esc = (s: string) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]!))
+
+async function emailNotice(t: { id: string; name: string; email: string; company: string; topic: string; message: string }): Promise<string> {
+  const subject = `[qubitpage.com] ${t.topic} — ${t.name} (${t.id})`
+  const text = `New message from the qubitpage.com contact form\n\nTicket: ${t.id}\nName: ${t.name}\nEmail: ${t.email}\nCompany: ${t.company || "-"}\nTopic: ${t.topic}\n\n${t.message}\n\nReply to this email to answer ${t.name}.`
+  const html = `<div style="font-family:Arial,sans-serif;font-size:15px;color:#111"><h2 style="margin:0 0 12px">New website message</h2>
+<p><b>Ticket:</b> ${t.id}<br><b>Name:</b> ${esc(t.name)}<br><b>Email:</b> <a href="mailto:${esc(t.email)}">${esc(t.email)}</a><br><b>Company:</b> ${esc(t.company || "-")}<br><b>Topic:</b> ${esc(t.topic)}</p>
+<div style="white-space:pre-wrap;border-left:3px solid #00d4ff;padding:8px 12px;background:#f5f7fb">${esc(t.message)}</div>
+<p style="color:#666;font-size:13px">Reply to this email to answer ${esc(t.name)}. The message is also in the admin panel under Messages.</p></div>`
+  const fromEmail = setting("CONTACT_FROM_EMAIL") || setting("SMTP_FROM") || "noreply@qubitpage.com"
+  const brevo = setting("BREVO_API_KEY")
+  try {
+    if (brevo) {
+      const r = await fetch("https://api.brevo.com/v3/smtp/email", {
+        method: "POST",
+        headers: { "api-key": brevo, "Content-Type": "application/json", accept: "application/json" },
+        body: JSON.stringify({ sender: { name: "Qubitpage website", email: fromEmail }, to: [{ email: NOTIFY_TO }], replyTo: { email: t.email, name: t.name }, subject, htmlContent: html, textContent: text }),
+      })
+      if (r.ok) return "sent"
+      console.error("[qp-contact] Brevo error", r.status, (await r.text()).slice(0, 300))
+    }
+    const host = setting("SMTP_HOST"), user = setting("SMTP_USER"), pass = setting("SMTP_PASSWORD") || setting("SMTP_PASS")
+    if (host && user && pass) {
+      const nodemailer = (await import("nodemailer")).default
+      const port = Number(setting("SMTP_PORT") || 587)
+      await nodemailer.createTransport({ host, port, secure: port === 465, auth: { user, pass } }).sendMail({
+        from: `"Qubitpage website" <${fromEmail}>`, to: NOTIFY_TO, replyTo: `"${t.name.replace(/"/g, "")}" <${t.email}>`, subject, text, html,
+      })
+      return "sent"
+    }
+    return brevo ? "failed" : "not-configured"
+  } catch (e: any) {
+    console.error("[qp-contact] email error:", e?.message)
+    return "failed"
+  }
+}
 
 const hits = new Map<string, number[]>()
 function limited(ip: string) {
@@ -52,7 +106,8 @@ export async function POST(req: NextRequest) {
     const tmp = MESSAGES_FILE + ".tmp"
     fs.writeFileSync(tmp, JSON.stringify(store, null, 2))
     fs.renameSync(tmp, MESSAGES_FILE)
-    fs.appendFileSync(LOG_FILE, JSON.stringify({ at: now, name, email, company, topic, message, ip }) + "\n")
+    const emailed = await emailNotice({ id, name, email, company, topic, message })
+    fs.appendFileSync(LOG_FILE, JSON.stringify({ at: now, id, name, email, company, topic, message, ip, emailed }) + "\n")
     return NextResponse.json({ ok: true, id })
   } catch (e: any) {
     console.error("[qp-contact] could not save:", e?.message)

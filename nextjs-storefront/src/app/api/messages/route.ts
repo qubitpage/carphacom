@@ -17,7 +17,7 @@ const MESSAGES_FILE = path.join(process.cwd(), "..", "admin-panel", "data", "mes
 const ADMIN_DATA_DIR = path.join(process.cwd(), "..", "admin-panel", "data")
 
 // Admin notification emails
-const ADMIN_EMAILS = ["contact@qubitpage.com", "covalciuc_ionut@yahoo.com"]
+const ADMIN_EMAILS = ["contact@qubitpage.com"]
 
 interface Message {
   id: string

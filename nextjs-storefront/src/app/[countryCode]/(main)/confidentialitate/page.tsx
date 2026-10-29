@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Politica de Confidențialitate | Banat Tractor Service",
   description: "Politica de confidențialitate și protecția datelor personale pentru Banat Tractor Service S.R.L.",
   alternates: {
-    canonical: "https://banat-tractor.ro/ro/confidentialitate",
+    canonical: "https://qubitpage.com/ro/confidentialitate",
   },
 }
 
@@ -13,8 +13,8 @@ const company = {
   cui: "RO1816792",
   reg: "J35/2912/1991",
   address: "P-ța Vasile Adamachi 6, Timișoara, România",
-  email: "contact@banat-tractor.ro",
-  phone: "0722 555 961",
+  email: "contact@qubitpage.com",
+  phone: "",
 }
 
 export default function ConfidentialitatePage() {
@@ -27,7 +27,7 @@ export default function ConfidentialitatePage() {
           <div className="bg-dark-800 border border-dark-700 rounded-2xl p-8 mb-6">
             <p className="text-dark-400 text-sm mb-4">Ultima actualizare: Mai 2026</p>
             <p className="text-dark-300">
-              {company.name} protejează datele personale ale clienților și vizitatorilor site-ului banat-tractor.ro
+              {company.name} protejează datele personale ale clienților și vizitatorilor site-ului qubitpage.com
               în conformitate cu Regulamentul General privind Protecția Datelor (GDPR) și legislația aplicabilă din România.
             </p>
           </div>

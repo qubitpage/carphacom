@@ -1,0 +1,30 @@
+{
+  "tickets": [
+    {
+      "id": "TK-00001",
+      "type": "contact",
+      "category": "Software development",
+      "subject": "[Website] Software development",
+      "status": "new",
+      "priority": "normal",
+      "customerName": "Test",
+      "customerEmail": "t@example.com",
+      "messages": [
+        {
+          "id": "TK-00001-1",
+          "sender": "customer",
+          "senderName": "Test",
+          "senderEmail": "t@example.com",
+          "content": "Local test of the contact form.",
+          "timestamp": "2026-10-29T16:41:57.291Z",
+          "read": false
+        }
+      ],
+      "createdAt": "2026-10-29T16:41:57.291Z",
+      "updatedAt": "2026-10-29T16:41:57.291Z",
+      "unreadAdmin": 1,
+      "unreadCustomer": 0
+    }
+  ],
+  "lastId": 1
+}

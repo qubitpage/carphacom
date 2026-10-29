@@ -86,7 +86,7 @@ export default function GarantiePage() {
             <ol className="space-y-4 text-dark-300">
               <li className="flex items-start gap-3">
                 <span className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</span>
-                <span>Contactează-ne la 0749 040 400 sau prin email la contact@qubitpage.com</span>
+                <span>Scrie-ne la contact@qubitpage.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">2</span>

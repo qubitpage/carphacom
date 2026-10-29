@@ -108,7 +108,7 @@ function buildSubmitSM(sender: string, destination: string, message: string): Bu
     cstr(sender),         // source_addr
     Buffer.from([0x01]),  // dest_addr_ton (international)
     Buffer.from([0x01]),  // dest_addr_npi (E.164)
-    cstr(cleanDest),      // destination_addr (digits only, e.g. 40774077860)
+    cstr(cleanDest),      // destination_addr (digits only, e.g. 40700000000)
     Buffer.from([0x00]),  // esm_class
     Buffer.from([0x00]),  // protocol_id
     Buffer.from([0x00]),  // priority_flag

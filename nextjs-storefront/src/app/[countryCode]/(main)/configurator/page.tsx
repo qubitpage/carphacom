@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Configurator tractor Farmtrac | Banat Tractor",
   description: "Configurează un tractor Farmtrac cu opțiunile oficiale disponibile pentru fiecare model și cere ofertă personalizată de la Banat Tractor.",
   alternates: {
-    canonical: "https://banat-tractor.ro/ro/configurator",
+    canonical: "https://qubitpage.com/ro/configurator",
   },
 }
 

@@ -16,7 +16,7 @@ export async function sendEmail(options: EmailOptions): Promise<boolean> {
   }
 
   try {
-    const fromEmail = options.from || process.env.SMTP_FROM || "covalciuc_ionut@yahoo.com"
+    const fromEmail = options.from || process.env.SMTP_FROM || "contact@qubitpage.com"
     const fromName = options.fromName || "Qubitpage"
     const recipients = Array.isArray(options.to) ? options.to : [options.to]
 
@@ -53,7 +53,7 @@ export async function sendEmail(options: EmailOptions): Promise<boolean> {
 }
 
 export function getAdminEmail(): string[] {
-  const primary = process.env.ADMIN_NOTIFICATION_EMAIL || "covalciuc_ionut@yahoo.com"
+  const primary = process.env.ADMIN_NOTIFICATION_EMAIL || "contact@qubitpage.com"
   const extra = process.env.ADMIN_NOTIFICATION_EMAIL_CC || ""
   const emails = [primary]
   if (extra) {
@@ -287,7 +287,7 @@ export function orderConfirmationCustomerEmailHtml(data: {
     </p>
     <p style="color: #666; font-size: 13px; margin-top: 16px;">
       Dacă ai întrebări despre comanda ta, nu ezita să ne contactezi la 
-      <a href="mailto:covalciuc_ionut@yahoo.com">covalciuc_ionut@yahoo.com</a>.
+      <a href="mailto:contact@qubitpage.com">contact@qubitpage.com</a>.
     </p>
   `)
 }

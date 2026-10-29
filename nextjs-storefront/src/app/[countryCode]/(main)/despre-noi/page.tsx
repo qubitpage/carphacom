@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Despre Noi | Banat Tractor Service",
   description: "Banat Tractor Service este prezentă pe piața utilajelor agricole din 1991, cu vânzare, service și piese pentru Banat și Vestul României.",
   alternates: {
-    canonical: "https://banat-tractor.ro/ro/despre-noi",
+    canonical: "https://qubitpage.com/ro/despre-noi",
   },
 }
 

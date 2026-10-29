@@ -1155,7 +1155,7 @@ function EmailTab({ notify }: { notify: (m: string, t?: "success" | "error") => 
               <span className="text-xs font-normal text-gray-400">(verifică cum arată înainte de bulk send)</span>
             </label>
             <div className="flex gap-2">
-              <input value={quickTestEmail} onChange={e => setQuickTestEmail(e.target.value)} placeholder="Email de test (ex: msrusu87@gmail.com)"
+              <input value={quickTestEmail} onChange={e => setQuickTestEmail(e.target.value)} placeholder="Email de test (ex: you@example.com)"
                 className="flex-1 px-3 py-2.5 border border-gray-300 rounded-lg text-sm bg-white" />
               <button onClick={() => sendTestEmail(true)} disabled={quickSending || !quickTpl || !quickTestEmail}
                 className="flex items-center gap-1.5 px-4 py-2 bg-amber-500 text-white rounded-lg text-sm font-medium hover:bg-amber-600 disabled:opacity-50">
