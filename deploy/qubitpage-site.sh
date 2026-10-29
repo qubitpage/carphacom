@@ -19,7 +19,7 @@ fetch_src() {
   say "Downloading branch $BRANCH"
   rm -rf "$SRC" && mkdir -p "$SRC"
   if [ -n "${QP_LOCAL_SRC:-}" ]; then cp -a "$QP_LOCAL_SRC/." "$SRC/"; return; fi
-  curl -fsSL "https://codeload.github.com/qubitpage/carphacom/tar.gz/refs/heads/$BRANCH" | tar xz -C "$SRC" --strip-components=1 || { echo "download failed"; exit 1; }
+  curl -fsSL "https://codeload.github.com/qubitpage/carphacom/tar.gz/$BRANCH" | tar xz -C "$SRC" --strip-components=1 || { echo "download failed"; exit 1; }
 }
 
 blobhash() { python3 - "$1" <<'PY'
