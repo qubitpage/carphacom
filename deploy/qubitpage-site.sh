@@ -42,6 +42,7 @@ stage_files() {
   say "Applying changes to $ROOT (backup: $BK)"
   while IFS=' ' read -r st hash f; do
     [ -n "$f" ] || continue
+    case "$f" in */data/*|*/.env|*/.env.*) echo "skipped (runtime data/secrets): $f"; continue ;; esac
     case "$st" in
       A|M)
         if [ -e "$ROOT/$f" ]; then mkdir -p "$BK/$(dirname "$f")"; cp -a "$ROOT/$f" "$BK/$f"; fi

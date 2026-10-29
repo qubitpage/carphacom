@@ -1,4 +1,3 @@
-A - admin-panel/data/messages.json
 M 00c181c18ee452e93a7de4ed0c1ffa5748193969 admin-panel/next.config.ts
 D - admin-panel/public/mypni-compare.html
 M 375f150303db3f0b07f5bbbd33459d548127aef8 admin-panel/src/app/(admin)/cms/page.tsx
