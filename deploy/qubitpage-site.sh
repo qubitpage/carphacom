@@ -10,6 +10,7 @@ TS="$(date +%Y%m%d-%H%M%S)"
 BK="$HOME/backups/site-$TS"
 LOG="$HOME/qp-deploy.log"
 SRC="$HOME/.qp-src"
+STATE="$HOME/.qp-deployed"   # hashes of files this script wrote (safe to overwrite next time)
 mkdir -p "$BK"
 exec > >(tee -a "$LOG") 2>&1
 say() { printf '\n== %s ==\n' "$*"; }
@@ -44,10 +45,12 @@ stage_files() {
     case "$st" in
       A|M)
         if [ -e "$ROOT/$f" ]; then mkdir -p "$BK/$(dirname "$f")"; cp -a "$ROOT/$f" "$BK/$f"; fi
-        if [ "$st" = M ] && [ -f "$ROOT/$f" ] && [ "$(blobhash "$ROOT/$f")" != "$hash" ]; then
+        cur=""; [ -f "$ROOT/$f" ] && cur="$(blobhash "$ROOT/$f")"
+        if [ "$st" = M ] && [ -n "$cur" ] && [ "$cur" != "$hash" ] && ! grep -qxF "$cur $f" "$STATE" "$SRC/deploy/qubitpage-site.prev" 2>/dev/null; then
           rebrand "$ROOT/$f"; patched=$((patched+1)); echo "patched in place (server copy differs): $f"
         else
           mkdir -p "$ROOT/$(dirname "$f")"; cp "$SRC/$f" "$ROOT/$f"; copied=$((copied+1))
+          echo "$(blobhash "$ROOT/$f") $f" >> "$STATE"
         fi ;;
       D)
         if [ -e "$ROOT/$f" ]; then mkdir -p "$BK/removed/$(dirname "$f")"; mv "$ROOT/$f" "$BK/removed/$f"; moved=$((moved+1)); fi ;;

@@ -124,6 +124,12 @@ const OLD_TO_NEW: [string, string][] = [
   ["/products", "/projects"], ["/store", "/projects"], ["/categories", "/projects"], ["/collections", "/projects"],
   ["/brands", "/projects"], ["/blog", "/projects"], ["/search", "/projects"],
 ]
+function notFoundRewrite(request: NextRequest) {
+  const url = request.nextUrl.clone() // same origin as the request, so Next serves it internally (no proxy)
+  url.pathname = "/page-not-found"
+  url.search = ""
+  return NextResponse.rewrite(url, { status: 404 })
+}
 function legacyTarget(pathname: string): string | null {
   const segs = pathname.split("/").filter(Boolean)
   let rest = "/" + segs.join("/")
@@ -146,7 +152,7 @@ export async function middleware(request: NextRequest) {
       const host = request.headers.get("host") || request.nextUrl.host
       return NextResponse.redirect(`${proto}://${host}${target}`, 301)
     }
-    return NextResponse.rewrite(new URL("/page-not-found", request.url), { status: 404 })
+    return notFoundRewrite(request)
   }
   let redirectUrl = request.nextUrl.href
 
@@ -206,7 +212,7 @@ export async function middleware(request: NextRequest) {
   // Unknown address (not a country code, not a shop page): show the website's 404 instead of redirecting into the shop.
   const firstSeg = pathname.split("/")[1]?.toLowerCase() || ""
   if (!urlHasCountryCode && !(regionMap && regionMap.has(firstSeg)) && !startsWithAny(pathname, SHOP_PATHS)) {
-    return NextResponse.rewrite(new URL("/page-not-found", request.url), { status: 404 })
+    return notFoundRewrite(request)
   }
 
   // If no country code is set, we redirect to the relevant region.
