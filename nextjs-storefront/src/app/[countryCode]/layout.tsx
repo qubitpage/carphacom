@@ -5,8 +5,7 @@ import { notFound } from "next/navigation"
 const shopOff = () => process.env.SHOP_ENABLED !== "1"
 
 export async function generateMetadata() {
-  if (shopOff()) notFound() // stop before any shop page metadata is produced
-  return {}
+  return shopOff() ? { title: "Page not found", robots: { index: false, follow: true } } : {}
 }
 
 export default function CountryLayout({ children }: { children: React.ReactNode }) {

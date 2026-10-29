@@ -2,6 +2,7 @@
 01d4d8cb930bbc19ba2a7f70b595ced9303071b9 nextjs-storefront/src/app/[countryCode]/(main)/termeni/page.tsx
 048fe7107b00d033850c3f2eac574bce37f3e5d9 nextjs-storefront/src/app/(site)/layout.tsx
 05f967b0c0e9096cfa6123654339f4db864a0747 nextjs-storefront/src/app/[countryCode]/(main)/retur/page.tsx
+068878e2b9ecdacd7e6801fd2aeeb33ea9f305eb nextjs-storefront/src/app/not-found.tsx
 07e07999b90a281e42847462d3a4f7ce9e28ea85 nextjs-storefront/src/app/api/qp-contact/route.ts
 116eb8b359ddfcfb52faf64861d7635761f15357 admin-panel/src/app/api/admin/auth/google/callback/route.ts
 13d8991266100daba3c0f6ae4d49eba44fb223db admin-panel/src/app/api/admin/auth/forgot-password/route.ts
@@ -63,6 +64,7 @@
 8f69b9a219ac990ada42782ad59a3dff68eacf81 nextjs-storefront/src/app/(site)/projects/[slug]/page.tsx
 8fce603003c1e5857013afec915ace9fc8bcdb8d admin-panel/.gitignore
 8fe7a43b3bd834e12d91ff7858bb422536edc9f0 nextjs-storefront/src/app/[countryCode]/(main)/collections/[handle]/page.tsx
+9232247118d69ce6c22b8fd6eab1af38f0e5f8cf nextjs-storefront/src/app/[countryCode]/(main)/page.tsx
 94104faa67afb28390b929174572d87cf4160798 nextjs-storefront/src/app/[countryCode]/(main)/retur/page.tsx
 96600c9ed7f944570a4b74cc6c44c7211d0df432 nextjs-storefront/src/middleware.ts
 97b730344f31cee57ddaaaf29b039d8917f281d7 admin-panel/src/app/api/admin/auth/google/route.ts
@@ -101,6 +103,7 @@ c78b679aa807934bc33496ff785b0a25d5d9ec70 nextjs-storefront/src/app/(site)/about/
 ce004ff48993fe600d1c39b57fa61f21e559ce10 admin-panel/src/app/api/sitemap/update/route.ts
 ce882acd271bbfbb04aa176dc1c89eb7c5373b6a admin-panel/src/lib/google/auth.ts
 cec37eb0ece6e679b6066157a2284a2e08cd79cb nextjs-storefront/src/app/[countryCode]/(main)/account/@dashboard/orders/page.tsx
+cf40a1180793c74b2f756bd056664d9e06d61b45 nextjs-storefront/src/app/[countryCode]/layout.tsx
 d3449070dc2018122eae3acade449ee236cc7cde admin-panel/src/app/sitemap.xml.ts
 d5eea3214d5ac079386aa80d7fddcb3655e897cd nextjs-storefront/src/app/[countryCode]/(main)/contact/page.tsx
 d6239b861ae39b735d27d6f6c3141e434294934c nextjs-storefront/src/app/[countryCode]/(main)/categories/[...category]/page.tsx

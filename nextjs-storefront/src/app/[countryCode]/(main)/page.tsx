@@ -3,7 +3,8 @@ import { Metadata } from "next"
 export const revalidate = 60
 
 export const metadata: Metadata = {
-  title: "Shop | Qubitpage",
+  // While the shop is off this route only serves the 404 page, so it keeps that title.
+  title: process.env.SHOP_ENABLED === "1" ? "Shop | Qubitpage" : "Page not found",
   description: "Qubitpage LIMITED shop.",
   alternates: {
     canonical: "https://qubitpage.com/ro",
