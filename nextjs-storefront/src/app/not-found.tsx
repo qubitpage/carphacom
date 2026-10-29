@@ -1,30 +1,21 @@
-import { ArrowUpRightMini } from "@medusajs/icons"
-import { Text } from "@medusajs/ui"
-import { Metadata } from "next"
-import Link from "next/link"
+import type { Metadata } from "next"
+import { Space_Grotesk } from "next/font/google"
+import "./(site)/site.css"
+import Header from "qubitpage/header"
+import { Footer } from "qubitpage/ui"
+import NotFoundView from "qubitpage/not-found-view"
 
-export const metadata: Metadata = {
-  title: "404",
-  description: "Something went wrong",
-}
+const grotesk = Space_Grotesk({ subsets: ["latin"], display: "swap", variable: "--font-grotesk", weight: ["500", "600", "700"] })
 
+export const metadata: Metadata = { title: "Page not found · Qubitpage", robots: { index: false } }
+
+// Any unknown address (and every old shop page while the shop is off) ends here, with HTTP status 404.
 export default function NotFound() {
   return (
-    <div className="flex flex-col gap-4 items-center justify-center min-h-[calc(100vh-64px)]">
-      <h1 className="text-2xl-semi text-ui-fg-base">Page not found</h1>
-      <p className="text-small-regular text-ui-fg-base">
-        The page you tried to access does not exist.
-      </p>
-      <Link
-        className="flex gap-x-1 items-center group"
-        href="/"
-      >
-        <Text className="text-ui-fg-interactive">Go to frontpage</Text>
-        <ArrowUpRightMini
-          className="group-hover:rotate-45 ease-in-out duration-150"
-          color="var(--fg-interactive)"
-        />
-      </Link>
+    <div className={`qp ${grotesk.variable}`}>
+      <Header />
+      <main id="main"><NotFoundView /></main>
+      <Footer />
     </div>
   )
 }

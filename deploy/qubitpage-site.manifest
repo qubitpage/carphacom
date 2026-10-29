@@ -1,3 +1,4 @@
+A - admin-panel/.gitignore
 M 00c181c18ee452e93a7de4ed0c1ffa5748193969 admin-panel/next.config.ts
 D - admin-panel/public/mypni-compare.html
 M 375f150303db3f0b07f5bbbd33459d548127aef8 admin-panel/src/app/(admin)/cms/page.tsx
@@ -1156,6 +1157,7 @@ M 829e378748edda2f20643b99381ef2dc4c38e9b3 nextjs-storefront/src/app/[countryCod
 M 75939ae681ac538361afabd8768aa8794be8c89c nextjs-storefront/src/app/[countryCode]/(main)/sitemap/page.tsx
 M bb270ba6fa03780207e2d30f754e127efa266bca nextjs-storefront/src/app/[countryCode]/(main)/store/page.tsx
 M 72184588a6719e7386ed093d26b5f04f8e8fa061 nextjs-storefront/src/app/[countryCode]/(main)/termeni/page.tsx
+A - nextjs-storefront/src/app/[countryCode]/layout.tsx
 M e6836cb527229a35fac4eacb251bea32025ff954 nextjs-storefront/src/app/api/auth/forgot-password/route.ts
 M b69c9f443c155e6b8a677021f0c64a570d901ad6 nextjs-storefront/src/app/api/auth/google/callback/route.ts
 M 709c78c2cb6477e9378620b7457c7fdd27e08273 nextjs-storefront/src/app/api/auth/google/route.ts
@@ -1166,6 +1168,7 @@ M f743c013bbbacd140bd4583ea81a29965640a4fc nextjs-storefront/src/app/api/message
 A - nextjs-storefront/src/app/api/qp-contact/route.ts
 M 19e9ee54d0ad73caff479fed6e0923ded1d93468 nextjs-storefront/src/app/api/unsubscribe/route.ts
 M 85a298d92b1b959575f80cc0346787aff5bca649 nextjs-storefront/src/app/layout.tsx
+M ece9db8dbf1da345712d84561964d30b057c465b nextjs-storefront/src/app/not-found.tsx
 M 99452966b2a689a7d2d3e694cb6a7184e4e16940 nextjs-storefront/src/app/opengraph-image.jpg
 D - nextjs-storefront/src/app/test-tiered-pricing/page.tsx
 M 99452966b2a689a7d2d3e694cb6a7184e4e16940 nextjs-storefront/src/app/twitter-image.jpg
@@ -1182,6 +1185,7 @@ A - nextjs-storefront/src/qubitpage/data.ts
 A - nextjs-storefront/src/qubitpage/filter.tsx
 A - nextjs-storefront/src/qubitpage/github.ts
 A - nextjs-storefront/src/qubitpage/header.tsx
+A - nextjs-storefront/src/qubitpage/not-found-view.tsx
 A - nextjs-storefront/src/qubitpage/ui.tsx
 M d8a776945b0cf48953b3800fedb085c6e8d73ec6 nextjs-storefront/src/styles/globals.css
 M a1b521a2928dc7d250d1e1106e53d316e278678c nextjs-storefront/tailwind.config.js
