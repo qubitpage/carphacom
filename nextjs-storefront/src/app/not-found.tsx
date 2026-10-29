@@ -7,7 +7,7 @@ import NotFoundView from "qubitpage/not-found-view"
 
 const grotesk = Space_Grotesk({ subsets: ["latin"], display: "swap", variable: "--font-grotesk", weight: ["500", "600", "700"] })
 
-export const metadata: Metadata = { title: "Page not found · Qubitpage", robots: { index: false } }
+export const metadata: Metadata = { title: "Page not found", robots: { index: false } }
 
 // Any unknown address (and every old shop page while the shop is off) ends here, with HTTP status 404.
 export default function NotFound() {

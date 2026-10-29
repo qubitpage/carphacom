@@ -103,7 +103,7 @@ stage_medusa() {
   local pkgs; pkgs="$(node -e 'const p=require("./package.json");const d={...p.dependencies,...p.devDependencies};console.log(Object.keys(d).filter(k=>/^@medusajs\/(medusa|framework|cli|admin-sdk|test-utils|file|js-sdk|types|utils|icons)$/.test(k)).map(k=>k+"@2.22.1").join(" "))')"
   say "npm install $pkgs"
   npm install $pkgs --no-audit --no-fund --loglevel=error || { echo "INSTALL FAILED — restore: cp $BK/medusa-package*.json; npm install"; return 1; }
-  npx medusa db:migrate || { echo "MIGRATION FAILED"; return 1; }
+  npx medusa db:migrate --execute-safe-links < /dev/null || { echo "MIGRATION FAILED"; return 1; }
   npm run build || { echo "MEDUSA BUILD FAILED"; return 1; }
   [ -f .env ] && [ -d .medusa/server ] && cp .env .medusa/server/.env 2>/dev/null
   pm2 restart qubit-backend --update-env

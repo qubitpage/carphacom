@@ -1,3 +1,4 @@
+0068ef5b358134260a24089207725d4034358f06 nextjs-storefront/src/qubitpage/not-found-view.tsx
 01d4d8cb930bbc19ba2a7f70b595ced9303071b9 nextjs-storefront/src/app/[countryCode]/(main)/termeni/page.tsx
 048fe7107b00d033850c3f2eac574bce37f3e5d9 nextjs-storefront/src/app/(site)/layout.tsx
 05f967b0c0e9096cfa6123654339f4db864a0747 nextjs-storefront/src/app/[countryCode]/(main)/retur/page.tsx
@@ -5,6 +6,7 @@
 116eb8b359ddfcfb52faf64861d7635761f15357 admin-panel/src/app/api/admin/auth/google/callback/route.ts
 13d8991266100daba3c0f6ae4d49eba44fb223db admin-panel/src/app/api/admin/auth/forgot-password/route.ts
 14d9f9c2cb9b1b09930c45cea541dae6870c427e nextjs-storefront/src/modules/checkout/components/payment-button/index.tsx
+164c52ffd701273b04d05b4bb414edee5cd7af33 nextjs-storefront/src/app/not-found.tsx
 16510a4562b9049c0e6bcbe8d988c21d395721db nextjs-storefront/tailwind.config.js
 16ec0f19323ce8d81c0db3ecf7471446fc75bace nextjs-storefront/public/qubitpage-mark.png
 171cc69d03b882782717a3733774fb339b6961b2 nextjs-storefront/public/favicon.ico
@@ -32,11 +34,13 @@
 46156a57b8a5e1001909cd4fbd953083dcde20fc admin-panel/src/app/(admin)/cms/page.tsx
 4ae96470ae44cf6ae5e11614319d96fab9a2934c medusa-backend/medusa-config.ts
 4e2553a4536fbe16a2a5082855938559c5d8b225 nextjs-storefront/src/app/api/messages/route.ts
+4ffe9310692b8802b384b18c25c0e94dfdc7f142 nextjs-storefront/src/app/[countryCode]/layout.tsx
 5204700f73c6b3fcf4152476292361d40f727942 admin-panel/src/lib/google/search-console.ts
 541fe8c318af11939f13e2aaf909e5fba03aafc4 nextjs-storefront/public/.well-known/llms.txt
 541fe8c318af11939f13e2aaf909e5fba03aafc4 nextjs-storefront/public/llms.txt
 54bf24456c0ccdf23b0d284aa2de2976e49895bc admin-panel/src/lib/google/merchants.ts
 5a836f48ab4a4add1606b83851acbfdf85c2491a nextjs-storefront/src/app/[countryCode]/(main)/confidentialitate/page.tsx
+5b115d3228a2ab26375786d0770e2c69082c0cf2 nextjs-storefront/src/app/(site)/page-not-found/page.tsx
 5d8fafd46e05bab0412f570a91fb7a593c49734e nextjs-storefront/src/app/api/auth/google/route.ts
 6399033715294b99e1269cfc30cf452a0f5a00dc medusa-backend/src/lib/email.ts
 6a09213d21da4b8a78dfbb8ba700e1e0bb35bebd admin-panel/src/app/api/marketing/campaigns/test-send/route.ts
@@ -113,6 +117,7 @@ e4eb9ed9c876fdc3ddf5216aaa52bce13083dc8c nextjs-storefront/src/modules/layout/te
 e5656f5f829d5ecce8a9e327f8b05344a022a72f admin-panel/src/lib/marketing/sms-service.ts
 e8ca97468c37a724881519f71f30521952bb77c8 admin-panel/src/app/api/messages/route.ts
 e964c048169cd5008abe4f96247af28627473afb admin-panel/src/app/(admin)/marketing/page.tsx
+ea3e7d3332aa0c1cff8e3a230bf6c41d4d900827 nextjs-storefront/src/middleware.ts
 ee0efe5f59d78ad14c78a5fac079c9190dc2a76f medusa-backend/src/lib/email.ts
 f077f383e28bd0c3721585540255fbe5eb54f9dc nextjs-storefront/src/app/api/auth/forgot-password/route.ts
 f0e3d3200c9323eb6b49d96923e563c6401c5859 nextjs-storefront/src/app/[countryCode]/(main)/livrare/page.tsx

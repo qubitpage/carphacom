@@ -3,8 +3,8 @@ import { Metadata } from "next"
 export const revalidate = 60
 
 export const metadata: Metadata = {
-  title: "Stații Radio CB, Electronice și Accesorii | Qubitpage",
-  description: "Magazin online specializat în stații radio CB, antene, amplificatoare și accesorii electronice. Branduri de top: Avanti, PNI, Midland, President. Livrare rapidă în România.",
+  title: "Shop | Qubitpage",
+  description: "Qubitpage LIMITED shop.",
   alternates: {
     canonical: "https://qubitpage.com/ro",
     languages: {
