@@ -1,10 +1,10 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Plată | Stații InfoTrafic",
+  title: "Plată | Qubitpage",
   description: "Metode de plată acceptate - plata securizată online, ramburs sau transfer bancar.",
   alternates: {
-    canonical: "https://statiiinfotrafic.ro/ro/plata",
+    canonical: "https://qubitpage.com/ro/plata",
   },
 }
 
@@ -107,7 +107,7 @@ export default async function PlataPage() {
                 <h3 className="text-white font-semibold text-lg">Ordin de Plată</h3>
                 <p className="text-dark-400 mb-4">Pentru comenzi de la firme sau plăți din străinătate</p>
                 <div className="bg-dark-800 p-4 rounded-lg text-sm">
-                  <p className="text-dark-300"><strong className="text-white">Beneficiar:</strong> {bankDetails?.beneficiary || 'SC STATII INFO TRAFIC SRL'}</p>
+                  <p className="text-dark-300"><strong className="text-white">Beneficiar:</strong> {bankDetails?.beneficiary || 'Qubitpage LIMITED'}</p>
                   <p className="text-dark-300"><strong className="text-white">IBAN:</strong> {bankDetails?.iban?.replace(/\s/g, '') || 'RO68BTRLRONCRT0483596201'}</p>
                   <p className="text-dark-300"><strong className="text-white">Bancă:</strong> {bankDetails?.bankName || 'Banca Transilvania'}</p>
                 </div>

@@ -14,7 +14,7 @@ const pool = new Pool({
 })
 
 const JWT_SECRET = process.env.JWT_SECRET || 'carphatian_jwt_secret_2026_demo2'
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://statiiinfotrafic.ro'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://qubitpage.com'
 
 function base64url(input: Buffer | string): string {
   const buf = typeof input === 'string' ? Buffer.from(input) : input

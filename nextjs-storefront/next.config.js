@@ -54,74 +54,10 @@ const nextConfig = {
     // Minimize external calls
     minimumCacheTTL: 86400, // 24 hours
     remotePatterns: [
-      {
-        protocol: "http",
-        hostname: "localhost",
-      },
-      {
-        protocol: "https",
-        hostname: "www.statiiinfotrafic.ro",
-      },
-      {
-        protocol: "https",
-        hostname: "statiiinfotrafic.ro",
-      },
-      {
-        protocol: "http",
-        hostname: "statiiinfotrafic.ro",
-      },
-      {
-        protocol: "http",
-        hostname: "www.statiiinfotrafic.ro",
-      },
-      {
-        protocol: "https",
-        hostname: "medusa-public-images.s3.eu-west-1.amazonaws.com",
-      },
-      {
-        protocol: "https",
-        hostname: "medusa-server-testing.s3.amazonaws.com",
-      },
-      {
-        protocol: "https",
-        hostname: "medusa-server-testing.s3.us-east-1.amazonaws.com",
-      },
-      {
-        protocol: "https",
-        hostname: "www.autocb.ro",
-      },
-      {
-        protocol: "http",
-        hostname: "www.autocb.ro",
-      },
-      {
-        protocol: "https",
-        hostname: "ui-avatars.com",
-      },
-      {
-        protocol: "https",
-        hostname: "cdn.mypni.com",
-      },
-      {
-        protocol: "https",
-        hostname: "www.mypni.eu",
-      },
-      {
-        protocol: "http",
-        hostname: "www.mypni.eu",
-      },
-      {
-        protocol: "http",
-        hostname: "cdn.mypni.com",
-      },
-      {
-        protocol: "https",
-        hostname: "www.artero.ro",
-      },
-      {
-        protocol: "http",
-        hostname: "www.artero.ro",
-      },
+      { protocol: "http", hostname: "localhost" },
+      { protocol: "https", hostname: "raw.githubusercontent.com" },
+      { protocol: "https", hostname: "avatars.githubusercontent.com" },
+      { protocol: "https", hostname: "medusa-public-images.s3.eu-west-1.amazonaws.com" },
       ...(S3_HOSTNAME && S3_PATHNAME
         ? [
             {

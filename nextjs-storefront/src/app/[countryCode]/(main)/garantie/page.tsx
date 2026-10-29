@@ -1,10 +1,10 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Garanție | Stații InfoTrafic",
+  title: "Garanție | Qubitpage",
   description: "Informații despre garanție - 24 luni garanție pentru toate produsele.",
   alternates: {
-    canonical: "https://statiiinfotrafic.ro/ro/garantie",
+    canonical: "https://qubitpage.com/ro/garantie",
   },
 }
 
@@ -86,7 +86,7 @@ export default function GarantiePage() {
             <ol className="space-y-4 text-dark-300">
               <li className="flex items-start gap-3">
                 <span className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</span>
-                <span>Contactează-ne la 0749 040 400 sau prin email la contact@statiiinfotrafic.ro</span>
+                <span>Contactează-ne la 0749 040 400 sau prin email la contact@qubitpage.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">2</span>

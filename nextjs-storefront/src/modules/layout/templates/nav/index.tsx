@@ -82,7 +82,7 @@ export default async function Nav() {
               href="/"
               className="flex items-center gap-3 group"
               data-testid="nav-store-link"
-              aria-label="Stații InfoTrafic - Pagina principală"
+              aria-label="Qubitpage - Pagina principală"
             >
               {/* Icon stație radio */}
               <div className="relative">
@@ -96,7 +96,7 @@ export default async function Nav() {
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-white group-hover:text-primary-400 transition-colors duration-200">
-                  Stații InfoTrafic
+                  Qubitpage
                 </span>
                 <span className="text-xs text-dark-300 hidden small:block">
                   Comunicații Radio & Electronice

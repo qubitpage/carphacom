@@ -18,7 +18,7 @@ function getClient() {
     clientId: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     redirectUri: process.env.GOOGLE_LOGIN_REDIRECT_URI
-      || `${process.env.NEXTAUTH_URL || 'https://statiiinfotrafic.ro/app'}/api/admin/auth/google/callback`,
+      || `${process.env.NEXTAUTH_URL || 'https://qubitpage.com/app'}/api/admin/auth/google/callback`,
   })
 }
 

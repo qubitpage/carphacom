@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
  */
 export async function GET(request: NextRequest) {
   const proto = request.headers.get("x-forwarded-proto") || "https"
-  const host = request.headers.get("host") || "statiiinfotrafic.ro"
+  const host = request.headers.get("host") || "qubitpage.com"
   const origin = `${proto}://${host}`
 
   const response = NextResponse.redirect(`${origin}/ro/account`, 302)

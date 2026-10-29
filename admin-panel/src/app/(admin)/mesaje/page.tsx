@@ -152,7 +152,7 @@ export default function MesajePage() {
           message: replyText.trim(),
           isAdmin: true,
           senderName: "Admin",
-          senderEmail: "admin@statiiinfotrafic.ro",
+          senderEmail: "admin@qubitpage.com",
         })
       })
       const data = await res.json()

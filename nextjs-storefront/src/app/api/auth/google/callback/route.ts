@@ -28,7 +28,7 @@ function getClient() {
     clientId: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     redirectUri: process.env.GOOGLE_CUSTOMER_REDIRECT_URI
-      || 'https://statiiinfotrafic.ro/api/auth/google/callback',
+      || 'https://qubitpage.com/api/auth/google/callback',
   })
 }
 
@@ -42,7 +42,7 @@ function derivePassword(googleSub: string): string {
 
 function getBaseUrl(request: NextRequest): string {
   const proto = request.headers.get('x-forwarded-proto') || 'https'
-  const host = request.headers.get('x-forwarded-host') || request.headers.get('host') || 'statiiinfotrafic.ro'
+  const host = request.headers.get('x-forwarded-host') || request.headers.get('host') || 'qubitpage.com'
   return `${proto}://${host}`
 }
 

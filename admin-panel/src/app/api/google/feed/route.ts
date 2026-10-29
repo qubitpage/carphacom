@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
     const { products } = await productsResponse.json()
 
     // Generate XML Feed
-    const baseUrl = process.env.NEXT_PUBLIC_STORE_URL || 'https://statiiinfotrafic.ro'
+    const baseUrl = process.env.NEXT_PUBLIC_STORE_URL || 'https://qubitpage.com'
     const feedUrl = `${baseUrl}/feeds/google-products.xml`
 
     const xml = generateGoogleShoppingXML(products, baseUrl)
@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
  */
 export async function GET() {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_STORE_URL || 'https://statiiinfotrafic.ro'
+    const baseUrl = process.env.NEXT_PUBLIC_STORE_URL || 'https://qubitpage.com'
     const feedUrl = `${baseUrl}/feeds/google-products.xml`
 
     return NextResponse.json({
@@ -113,7 +113,7 @@ function generateGoogleShoppingXML(products: any[], baseUrl: string): string {
       <g:condition>new</g:condition>
       <g:availability>${(product.status === 'published' && (parseInt(product.metadata?.stock_total) || parseInt(product.metadata?.stock_quantity) || 0) > 0) ? 'in stock' : 'out of stock'}</g:availability>
       <g:price>${priceValue} RON</g:price>
-      <g:brand>${escapeXml(product.metadata?.brand || product.collection?.title || 'Stații InfoTrafic')}</g:brand>
+      <g:brand>${escapeXml(product.metadata?.brand || product.collection?.title || 'Qubitpage')}</g:brand>
       <g:google_product_category>Arts &amp; Entertainment &gt; Hobbies &amp; Creative Arts &gt; Arts &amp; Crafts</g:google_product_category>
       <g:product_type>${escapeXml(product.collection?.title || 'General')}</g:product_type>
       <g:gtin>${escapeXml(variant?.ean || '')}</g:gtin>
@@ -123,7 +123,7 @@ function generateGoogleShoppingXML(products: any[], baseUrl: string): string {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
   <channel>
-    <title>Stații InfoTrafic - Produse pentru Trafic și Siguranță Rutieră</title>
+    <title>Qubitpage - Produse pentru Trafic și Siguranță Rutieră</title>
     <link>${baseUrl}</link>
     <description>Produse profesionale pentru siguranța rutieră și gestionarea traficului în România</description>
     ${items}

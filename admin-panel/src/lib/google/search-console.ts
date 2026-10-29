@@ -28,7 +28,7 @@ export class GoogleSearchConsoleService {
   private searchConsole: any
 
   constructor(auth: OAuth2Client) {
-    this.siteUrl = process.env.GOOGLE_SEARCH_CONSOLE_SITE_URL || 'https://www.statiiinfotrafic.ro'
+    this.siteUrl = process.env.GOOGLE_SEARCH_CONSOLE_SITE_URL || 'https://qubitpage.com'
     this.searchConsole = google.searchconsole({ version: 'v1', auth })
   }
 

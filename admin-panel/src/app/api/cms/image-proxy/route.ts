@@ -9,7 +9,7 @@ export async function GET(request: NextRequest) {
     }
 
     // Only allow known domains
-    const allowed = ['cdn.mypni.com', 'www.statiiinfotrafic.ro', 'statiiinfotrafic.ro', 'b2b.mypni.com', 'www.artero.ro', 'artero.ro', 'www.autocb.ro', 'autocb.ro']
+    const allowed = ['cdn.mypni.com', 'qubitpage.com', 'qubitpage.com', 'b2b.mypni.com', 'www.artero.ro', 'artero.ro', 'www.autocb.ro', 'autocb.ro']
     let hostname = ''
     try { hostname = new URL(url).hostname } catch { return NextResponse.json({ error: 'Invalid URL' }, { status: 400 }) }
     if (!allowed.some(d => hostname === d || hostname.endsWith('.' + d))) {
@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
     }
 
     const response = await fetch(url, {
-      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; StatiiInfoTrafic/1.0)' },
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; Qubitpage/1.0)' },
     })
 
     if (!response.ok) {

@@ -294,7 +294,7 @@ const PayUPaymentButton = ({
           customerPhone: cart.billing_address?.phone || '',
           customerIp,
           products,
-          description: `Comandă #${cart.id?.slice(-8)} - statiiinfotrafic.ro`,
+          description: `Comandă #${cart.id?.slice(-8)} - qubitpage.com`,
         }),
       })
 

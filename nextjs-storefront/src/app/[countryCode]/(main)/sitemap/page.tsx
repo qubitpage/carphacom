@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Harta Site-ului | Stații InfoTrafic",
+  title: "Harta Site-ului | Qubitpage",
   description: "Navigați cu ușurință prin toate secțiunile și paginile magazinului nostru de echipamente radio CB și comunicații.",
 }
 

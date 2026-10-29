@@ -19,7 +19,7 @@ const DATA_DIR = path.join(process.cwd(), "data")
 const MESSAGES_FILE = path.join(DATA_DIR, "messages.json")
 
 // Notification emails
-const ADMIN_EMAILS = ["contact@statiiinfotrafic.ro", "covalciuc_ionut@yahoo.com"]
+const ADMIN_EMAILS = ["contact@qubitpage.com", "covalciuc_ionut@yahoo.com"]
 
 interface Message {
   id: string
@@ -104,7 +104,7 @@ function ticketEmailHtml(ticket: Ticket, message: Message, isReply: boolean = fa
 <body style="margin:0;padding:0;background:#f4f4f7;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
 <div style="max-width:600px;margin:0 auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
   <div style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);padding:24px;text-align:center;">
-    <h1 style="color:#fff;margin:0;font-size:20px;">🔔 ${isReply ? "Răspuns Nou" : "Mesaj Nou"} — Stații InfoTrafic</h1>
+    <h1 style="color:#fff;margin:0;font-size:20px;">🔔 ${isReply ? "Răspuns Nou" : "Mesaj Nou"} — Qubitpage</h1>
   </div>
   <div style="padding:24px;">
     <div style="background:#f8f9ff;border-radius:8px;padding:16px;margin-bottom:16px;">
@@ -125,7 +125,7 @@ function ticketEmailHtml(ticket: Ticket, message: Message, isReply: boolean = fa
     </p>
   </div>
   <div style="background:#f4f4f7;padding:16px;text-align:center;font-size:12px;color:#888;">
-    Stații InfoTrafic — statiiinfotrafic.ro
+    Qubitpage — qubitpage.com
   </div>
 </div>
 </body></html>`
@@ -299,7 +299,7 @@ export async function POST(request: NextRequest) {
         id: generateMsgId(),
         sender: isAdmin ? "admin" : "customer",
         senderName: senderName || (isAdmin ? "Admin" : ticket.customerName),
-        senderEmail: senderEmail || (isAdmin ? "admin@statiiinfotrafic.ro" : ticket.customerEmail),
+        senderEmail: senderEmail || (isAdmin ? "admin@qubitpage.com" : ticket.customerEmail),
         content: message,
         timestamp: new Date().toISOString(),
         read: false,

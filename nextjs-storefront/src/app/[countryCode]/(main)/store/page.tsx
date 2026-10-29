@@ -6,10 +6,10 @@ import { SortOptions } from "@modules/store/components/refinement-list/sort-prod
 import StoreTemplate from "@modules/store/templates"
 
 export const metadata: Metadata = {
-  title: "Magazin | Stații InfoTrafic",
+  title: "Magazin | Qubitpage",
   description: "Explorează toate produsele noastre: stații CB, antene, walkie talkie și accesorii.",
   alternates: {
-    canonical: "https://statiiinfotrafic.ro/ro/store",
+    canonical: "https://qubitpage.com/ro/store",
   },
 }
 

@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react"
 import { Map, FileCode, Tag, Link2, Clock, CheckCircle, AlertCircle, ExternalLink, Copy, RefreshCw, Bot, Send, Loader2 } from "lucide-react"
 
-const SITE_URL = 'https://statiiinfotrafic.ro'
+const SITE_URL = 'https://qubitpage.com'
 
 const tabs = [
   { id: "sitemaps", label: "Sitemaps", icon: Map },

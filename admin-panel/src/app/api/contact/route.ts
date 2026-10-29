@@ -8,7 +8,7 @@ import { sendEmail } from "@/lib/email/brevo-service";
 import templates from "@/lib/email/templates";
 import { emailCounter } from "@/lib/email/email-counter";
 
-const ADMIN_EMAIL = 'infotraficstatii@gmail.com';
+const ADMIN_EMAIL = 'contact@qubitpage.com';
 
 export async function POST(request: NextRequest) {
   try {

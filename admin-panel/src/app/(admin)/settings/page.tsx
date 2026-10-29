@@ -199,9 +199,9 @@ export default function SettingsPage() {
     smtpUser: '',
     smtpPass: '',
     smtpSecure: true,
-    fromEmail: 'noreply@statiiinfotrafic.ro',
+    fromEmail: 'noreply@qubitpage.com',
     fromName: 'Demo Store',
-    replyTo: 'contact@statiiinfotrafic.ro'
+    replyTo: 'contact@qubitpage.com'
   })
   const [templates, setTemplates] = useState<EmailTemplate[]>(defaultTemplates)
   const [editingTemplate, setEditingTemplate] = useState<EmailTemplate | null>(null)

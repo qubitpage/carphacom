@@ -1,10 +1,10 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Politica de Retur | Stații InfoTrafic - Returnare Gratuită 30 Zile",
+  title: "Politica de Retur | Qubitpage - Returnare Gratuită 30 Zile",
   description: "Returnare gratuită în 30 zile, fără costuri de restocking. Transport retur 30 RON (gratuit peste 600 RON). Rambursare completă în maxim 14 zile lucrătoare.",
   alternates: {
-    canonical: "https://statiiinfotrafic.ro/ro/retur",
+    canonical: "https://qubitpage.com/ro/retur",
   },
 }
 
@@ -119,7 +119,7 @@ export default function ReturPage() {
                 <span className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</span>
                 <div>
                   <span className="font-semibold text-white">Contactează-ne</span>
-                  <p className="text-sm mt-1">Trimite un email la <a href="mailto:contact@statiiinfotrafic.ro" className="text-accent-400 hover:text-accent-300">contact@statiiinfotrafic.ro</a> sau sună la <a href="tel:+40749040400" className="text-accent-400 hover:text-accent-300">0749 040 400</a> pentru a anunța returul. Precizează numărul comenzii și motivul returului.</p>
+                  <p className="text-sm mt-1">Trimite un email la <a href="mailto:contact@qubitpage.com" className="text-accent-400 hover:text-accent-300">contact@qubitpage.com</a> sau sună la <a href="tel:+40749040400" className="text-accent-400 hover:text-accent-300">0749 040 400</a> pentru a anunța returul. Precizează numărul comenzii și motivul returului.</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -355,7 +355,7 @@ export default function ReturPage() {
             <h2 className="text-2xl font-bold text-white mb-4">Ai Întrebări despre Returnări?</h2>
             <p className="text-dark-300 mb-6">Echipa noastră de suport este disponibilă să te ajute cu orice nelămurire legată de procesul de retur.</p>
             <div className="grid md:grid-cols-2 gap-4">
-              <a href="mailto:contact@statiiinfotrafic.ro" className="bg-dark-800 hover:bg-dark-700 border border-dark-600 rounded-lg p-5 transition-all duration-200 flex items-center gap-4">
+              <a href="mailto:contact@qubitpage.com" className="bg-dark-800 hover:bg-dark-700 border border-dark-600 rounded-lg p-5 transition-all duration-200 flex items-center gap-4">
                 <div className="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
@@ -364,7 +364,7 @@ export default function ReturPage() {
                 </div>
                 <div>
                   <div className="text-white font-semibold">Email</div>
-                  <div className="text-accent-400 text-sm">contact@statiiinfotrafic.ro</div>
+                  <div className="text-accent-400 text-sm">contact@qubitpage.com</div>
                 </div>
               </a>
               <a href="tel:+40749040400" className="bg-dark-800 hover:bg-dark-700 border border-dark-600 rounded-lg p-5 transition-all duration-200 flex items-center gap-4">

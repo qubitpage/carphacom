@@ -3238,7 +3238,7 @@ export default function MagazinPage() {
                   </button>
                   {editingProduct && (
                     <a
-                      href={`https://www.statiiinfotrafic.ro/ro/products/${editingProduct.handle}`}
+                      href={`https://qubitpage.com/ro/products/${editingProduct.handle}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="py-3 px-4 border border-blue-300 text-blue-600 rounded-lg hover:bg-blue-50 font-medium flex items-center gap-2"
@@ -3491,7 +3491,7 @@ export default function MagazinPage() {
                         <td className="px-4 py-4">
                           <div className="flex gap-1">
                             <a 
-                              href={`https://www.statiiinfotrafic.ro/ro/products/${product.handle}`}
+                              href={`https://qubitpage.com/ro/products/${product.handle}`}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="p-2 text-gray-400 hover:text-blue-600 rounded-lg inline-flex"
@@ -3568,7 +3568,7 @@ export default function MagazinPage() {
                           )
                         })()}
                         <a 
-                          href={`https://www.statiiinfotrafic.ro/ro/products/${product.handle}`}
+                          href={`https://qubitpage.com/ro/products/${product.handle}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="p-2 text-gray-400 hover:text-blue-600 rounded-lg"
@@ -6120,7 +6120,7 @@ export default function MagazinPage() {
                           {/* PayU Webhook URL */}
                           <div className="bg-gray-50 rounded-lg p-3">
                             <p className="text-xs text-gray-500 mb-1">IPN Notification URL (setează în panoul PayU):</p>
-                            <code className="text-xs text-blue-600 break-all select-all">https://statiiinfotrafic.ro/app/api/payu/notify</code>
+                            <code className="text-xs text-blue-600 break-all select-all">https://qubitpage.com/app/api/payu/notify</code>
                           </div>
 
                           {/* PayU Action Buttons */}
@@ -6374,7 +6374,7 @@ export default function MagazinPage() {
                       {needsApi && (
                         <div className="bg-gray-50 rounded-lg p-3">
                           <p className="text-xs text-gray-500 mb-1">Webhook URL:</p>
-                          <code className="text-xs text-blue-600 break-all">https://statiiinfotrafic.ro/webhooks/{payment.id}</code>
+                          <code className="text-xs text-blue-600 break-all">https://qubitpage.com/webhooks/{payment.id}</code>
                         </div>
                       )}
 

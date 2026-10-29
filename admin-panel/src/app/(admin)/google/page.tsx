@@ -104,7 +104,7 @@ interface MetaSettings {
   hreflang: { lang: string; url: string }[]
 }
 
-const SITE_URL = 'https://statiiinfotrafic.ro'
+const SITE_URL = 'https://qubitpage.com'
 
 // ─── Constants ──────────────────────────────────────────────────────────
 
@@ -807,7 +807,7 @@ export default function GooglePage() {
 
     setSyncing(true)
     try {
-      const siteUrl = 'https://www.statiiinfotrafic.ro'
+      const siteUrl = 'https://qubitpage.com'
       const sitemapUrl = `${siteUrl}/sitemap.xml`
       
       const res = await fetch('/app/api/google/console/sitemap', {
@@ -1991,17 +1991,17 @@ export default function GooglePage() {
                   <div className="flex items-center justify-between p-2 bg-white rounded-lg">
                     <span>Feed URL (Sitemap)</span>
                     <button
-                      onClick={() => copyToClipboard('https://www.statiiinfotrafic.ro/sitemap.xml')}
+                      onClick={() => copyToClipboard('https://qubitpage.com/sitemap.xml')}
                       className="flex items-center gap-1 text-blue-600 hover:text-blue-800 font-medium"
                     >
                       <Copy className="w-3 h-3" />
-                      https://www.statiiinfotrafic.ro/sitemap.xml
+                      https://qubitpage.com/sitemap.xml
                     </button>
                   </div>
                   <div className="flex items-center justify-between p-2 bg-white rounded-lg">
                     <span>Products Sitemap</span>
                     <button
-                      onClick={() => copyToClipboard('https://www.statiiinfotrafic.ro/sitemap-products.xml')}
+                      onClick={() => copyToClipboard('https://qubitpage.com/sitemap-products.xml')}
                       className="flex items-center gap-1 text-blue-600 hover:text-blue-800 font-medium"
                     >
                       <Copy className="w-3 h-3" />
@@ -2011,7 +2011,7 @@ export default function GooglePage() {
                   <div className="flex items-center justify-between p-2 bg-white rounded-lg">
                     <span>Brands Sitemap</span>
                     <button
-                      onClick={() => copyToClipboard('https://www.statiiinfotrafic.ro/sitemap-brands.xml')}
+                      onClick={() => copyToClipboard('https://qubitpage.com/sitemap-brands.xml')}
                       className="flex items-center gap-1 text-blue-600 hover:text-blue-800 font-medium"
                     >
                       <Copy className="w-3 h-3" />
@@ -2542,7 +2542,7 @@ export default function GooglePage() {
                               rel="noopener noreferrer"
                               className="font-medium text-blue-600 hover:text-blue-800 text-sm truncate block max-w-[350px]"
                             >
-                              {(p.page || p.keys?.[0] || '').replace('https://www.statiiinfotrafic.ro', '')}
+                              {(p.page || p.keys?.[0] || '').replace('https://qubitpage.com', '')}
                             </a>
                           </td>
                           <td className="px-4 py-3 text-right font-semibold text-blue-600">{p.clicks}</td>
@@ -2574,7 +2574,7 @@ export default function GooglePage() {
                 </h3>
                 <div className="flex items-center gap-3">
                   <div className="flex-1 bg-gray-50 rounded-lg px-4 py-2.5 border border-gray-200 text-sm text-gray-700 font-mono">
-                    https://www.statiiinfotrafic.ro/sitemap.xml
+                    https://qubitpage.com/sitemap.xml
                   </div>
                   <button
                     onClick={handleSubmitSitemap}
@@ -2647,7 +2647,7 @@ export default function GooglePage() {
                     <div key={s.url} className="flex items-center justify-between bg-white rounded-lg px-3 py-2">
                       <span className="text-blue-800 font-medium">{s.name}</span>
                       <button
-                        onClick={() => copyToClipboard(`https://www.statiiinfotrafic.ro${s.url}`)}
+                        onClick={() => copyToClipboard(`https://qubitpage.com${s.url}`)}
                         className="text-blue-600 hover:text-blue-800 flex items-center gap-1 text-xs"
                       >
                         <Copy className="w-3 h-3" />
@@ -3402,7 +3402,7 @@ export default function GooglePage() {
                   Sitemap Dinamic (Auto-Update)
                 </h4>
                 <p className="text-sm text-gray-600 mb-2">
-                  <strong>URL:</strong> <a href="https://www.statiiinfotrafic.ro/api/sitemap.xml" target="_blank" className="text-blue-600 hover:underline">www.statiiinfotrafic.ro/api/sitemap.xml</a>
+                  <strong>URL:</strong> <a href="https://qubitpage.com/api/sitemap.xml" target="_blank" className="text-blue-600 hover:underline">qubitpage.com/api/sitemap.xml</a>
                 </p>
                 <p className="text-xs text-gray-600 mb-3">
                   ✓ Se regenerează automat când adaugi produse noi<br/>
@@ -3434,7 +3434,7 @@ export default function GooglePage() {
                   Robots.txt (AI & Search Engines)
                 </h4>
                 <p className="text-sm text-gray-600 mb-2">
-                  <strong>URL:</strong> <a href="https://www.statiiinfotrafic.ro/api/robots.txt" target="_blank" className="text-blue-600 hover:underline">www.statiiinfotrafic.ro/api/robots.txt</a>
+                  <strong>URL:</strong> <a href="https://qubitpage.com/api/robots.txt" target="_blank" className="text-blue-600 hover:underline">qubitpage.com/api/robots.txt</a>
                 </p>
                 <p className="text-xs text-gray-600">
                   ✓ Allow: Google, Bing, Yandex, DuckDuckGo<br/>

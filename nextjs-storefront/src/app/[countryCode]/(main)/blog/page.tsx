@@ -3,10 +3,10 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import { getBlogPosts, getBlogCategories, BlogPost } from "@lib/data/blog"
 
 export const metadata: Metadata = {
-  title: "Blog | Stații InfoTrafic",
+  title: "Blog | Qubitpage",
   description: "Ultimele știri, ghiduri și recenzii despre echipamente de comunicații radio CB, VHF, UHF și PMR.",
   alternates: {
-    canonical: "https://statiiinfotrafic.ro/ro/blog",
+    canonical: "https://qubitpage.com/ro/blog",
   },
 }
 

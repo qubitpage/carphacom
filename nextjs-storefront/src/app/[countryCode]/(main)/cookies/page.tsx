@@ -1,10 +1,10 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Politica Cookies | Stații InfoTrafic",
-  description: "Informații despre utilizarea cookie-urilor pe site-ul Stații InfoTrafic.",
+  title: "Politica Cookies | Qubitpage",
+  description: "Informații despre utilizarea cookie-urilor pe site-ul Qubitpage.",
   alternates: {
-    canonical: "https://statiiinfotrafic.ro/ro/cookies",
+    canonical: "https://qubitpage.com/ro/cookies",
   },
 }
 
@@ -148,7 +148,7 @@ export default function CookiesPage() {
               <h2 className="text-xl font-bold text-primary-400 mb-4">Contact</h2>
               <p className="text-dark-300">
                 Pentru întrebări despre politica noastră de cookie-uri, contactați-ne la 
-                <a href="mailto:contact@statiiinfotrafic.ro" className="text-primary-400 hover:text-primary-300 ml-1">contact@statiiinfotrafic.ro</a>.
+                <a href="mailto:contact@qubitpage.com" className="text-primary-400 hover:text-primary-300 ml-1">contact@qubitpage.com</a>.
               </p>
             </div>
           </div>

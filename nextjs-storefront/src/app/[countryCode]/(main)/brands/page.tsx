@@ -3,11 +3,11 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import { listBrandsOnly } from "@lib/data/products"
 
 export const metadata: Metadata = {
-  title: "Branduri | Statii InfoTrafic",
+  title: "Branduri | Qubitpage",
   description:
-    "Toate brandurile partenere din magazinul Statii InfoTrafic - echipamente radio CB, antene, statii, securitate si accesorii.",
+    "Toate brandurile partenere din magazinul Qubitpage - echipamente radio CB, antene, statii, securitate si accesorii.",
   alternates: {
-    canonical: "https://statiiinfotrafic.ro/ro/brands",
+    canonical: "https://qubitpage.com/ro/brands",
   },
 }
 

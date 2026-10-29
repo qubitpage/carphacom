@@ -30,7 +30,7 @@ const statusBadge = (s: string) => s === 'published' ? 'bg-emerald-100 text-emer
 const statusLabel = (s: string) => s === 'published' ? 'Publicat' : s === 'draft' ? 'Draft' : s
 const proxyImg = (url: string) => {
   if (!url) return ''
-  if (url.startsWith('/') || url.includes('statiiinfotrafic.ro/static')) return url
+  if (url.startsWith('/') || url.includes('qubitpage.com/static')) return url
   return `/app/api/cms/image-proxy?url=${encodeURIComponent(url)}`
 }
 const widgetTypeIcons: Record<string, string> = {
@@ -431,7 +431,7 @@ export default function CMSPageComponent() {
                     <td className="lg:px-6 lg:py-3.5 text-sm text-gray-500 hidden lg:table-cell">{fmtDate(page.updated_at)}</td>
                     <td className="lg:px-6 lg:py-3.5">
                       <div className="flex gap-1 mt-2 lg:mt-0">
-                        <a href={`https://statiiinfotrafic.ro/ro${page.slug}`} target="_blank" rel="noopener" className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg" title="Previzualizare"><Eye className="w-4 h-4" /></a>
+                        <a href={`https://qubitpage.com/ro${page.slug}`} target="_blank" rel="noopener" className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg" title="Previzualizare"><Eye className="w-4 h-4" /></a>
                         <button onClick={() => setEditingPage(page)} className="p-2 text-gray-400 hover:text-green-600 hover:bg-green-50 rounded-lg" title="Editare"><Edit className="w-4 h-4" /></button>
                         <button onClick={() => deletePage(page.id)} className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg" title="Șterge"><Trash2 className="w-4 h-4" /></button>
                       </div>
@@ -542,7 +542,7 @@ export default function CMSPageComponent() {
                       <td className="lg:px-6 lg:py-3.5 text-sm text-gray-500 hidden lg:table-cell">{fmtDate(post.created_at)}</td>
                       <td className="lg:px-6 lg:py-3.5">
                         <div className="flex gap-1 mt-2 lg:mt-0">
-                          <a href={`https://statiiinfotrafic.ro/ro/blog/${post.slug}`} target="_blank" rel="noopener" className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg"><Eye className="w-4 h-4" /></a>
+                          <a href={`https://qubitpage.com/ro/blog/${post.slug}`} target="_blank" rel="noopener" className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg"><Eye className="w-4 h-4" /></a>
                           <button onClick={() => setEditingPost(post)} className="p-2 text-gray-400 hover:text-green-600 hover:bg-green-50 rounded-lg"><Edit className="w-4 h-4" /></button>
                           <button onClick={() => deletePost(post.id)} className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg"><Trash2 className="w-4 h-4" /></button>
                         </div>
@@ -894,7 +894,7 @@ export default function CMSPageComponent() {
             <div>
               <h4 className="font-medium text-blue-900">Previzualizare Widget-uri</h4>
               <p className="text-sm text-blue-700 mt-1">Widget-urile controlează zonele vizuale ale site-ului. Click pe 👁 pentru previzualizare conținut sau pe ⚙️ pentru editare.</p>
-              <a href="https://statiiinfotrafic.ro/ro" target="_blank" rel="noopener"
+              <a href="https://qubitpage.com/ro" target="_blank" rel="noopener"
                 className="inline-flex items-center gap-1 mt-2 text-sm text-blue-600 font-medium hover:underline">
                 <ExternalLink className="w-4 h-4" /> Deschide Site-ul
               </a>

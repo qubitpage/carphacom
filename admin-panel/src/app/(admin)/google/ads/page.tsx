@@ -99,7 +99,7 @@ export default function GoogleAdsPage() {
     keywords: "",
     adHeadlines: ["", "", ""],
     adDescriptions: ["", ""],
-    finalUrl: "https://statiiinfotrafic.ro",
+    finalUrl: "https://qubitpage.com",
   })
 
   const fetchData = useCallback(async () => {
@@ -216,7 +216,7 @@ export default function GoogleAdsPage() {
           keywords: "",
           adHeadlines: ["", "", ""],
           adDescriptions: ["", ""],
-          finalUrl: "https://statiiinfotrafic.ro",
+          finalUrl: "https://qubitpage.com",
         })
         fetchData()
       } else {
@@ -651,7 +651,7 @@ function CreateCampaignModal({
               type="text"
               value={formData.name}
               onChange={(e) => updateField("name", e.target.value)}
-              placeholder="ex: Stații InfoTrafic - România"
+              placeholder="ex: Qubitpage - România"
               className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
@@ -762,7 +762,7 @@ function CreateCampaignModal({
                   value={formData.keywords}
                   onChange={(e) => updateField("keywords", e.target.value)}
                   rows={4}
-                  placeholder={"stații infotrafic\nstații confort termic\nechipamente trafic România\nsemnalizare rutieră"}
+                  placeholder={"Qubitpage\nstații confort termic\nechipamente trafic România\nsemnalizare rutieră"}
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 font-mono text-sm"
                 />
                 <p className="text-xs text-gray-500 mt-1">Broad match implicit. Adaugă [] pentru exact, "" pentru phrase.</p>
@@ -775,7 +775,7 @@ function CreateCampaignModal({
                   type="url"
                   value={formData.finalUrl}
                   onChange={(e) => updateField("finalUrl", e.target.value)}
-                  placeholder="https://statiiinfotrafic.ro"
+                  placeholder="https://qubitpage.com"
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500"
                 />
               </div>

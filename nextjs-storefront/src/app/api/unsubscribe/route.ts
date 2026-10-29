@@ -35,7 +35,7 @@ export async function GET(req: NextRequest) {
       return new NextResponse(
         htmlPage(
           "Dezabonare Confirmată",
-          `Adresa <strong>${contact.email || "dvs."}</strong> a fost eliminată din lista noastră de newsletter.<br/><br/>Nu veți mai primi emailuri de marketing de la StațiiInfoTrafic.ro.`,
+          `Adresa <strong>${contact.email || "dvs."}</strong> a fost eliminată din lista noastră de newsletter.<br/><br/>Nu veți mai primi emailuri de marketing de la Qubitpage.`,
           "success"
         ),
         { status: 200, headers: { "Content-Type": "text/html; charset=utf-8" } }
@@ -83,7 +83,7 @@ function htmlPage(title: string, message: string, type: "success" | "error" | "i
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${title} — StațiiInfoTrafic.ro</title>
+  <title>${title} — Qubitpage</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #f9fafb; padding: 20px; }
@@ -103,7 +103,7 @@ function htmlPage(title: string, message: string, type: "success" | "error" | "i
 <body>
   <div class="card">
     <div class="header">
-      <h1>StațiiInfoTrafic.ro</h1>
+      <h1>Qubitpage</h1>
       <p>Managementul Preferințelor Email</p>
     </div>
     <div class="body">
@@ -112,7 +112,7 @@ function htmlPage(title: string, message: string, type: "success" | "error" | "i
       <p>${message}</p>
     </div>
     <div class="footer">
-      <a href="https://statiiinfotrafic.ro">← Înapoi la StațiiInfoTrafic.ro</a>
+      <a href="https://qubitpage.com">← Înapoi la Qubitpage</a>
     </div>
   </div>
 </body>

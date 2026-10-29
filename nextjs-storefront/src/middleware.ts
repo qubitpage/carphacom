@@ -110,7 +110,44 @@ function hasIndexableQueryParams(params: URLSearchParams): boolean {
 /**
  * Middleware to handle region selection and onboarding status.
  */
+// Qubitpage company website: these paths are served directly (no country prefix, no shop region lookup).
+const SITE_PATHS = ["/projects", "/robotics", "/about", "/contact", "/privacy", "/page-not-found"]
+// Paths that belong to the (hidden) shop: without a country code they are still redirected to it.
+const SHOP_PATHS = ["/store", "/products", "/categories", "/collections", "/cart", "/account", "/checkout", "/order", "/brands", "/blog", "/search", "/reset-password", "/configurator", "/despre-noi", "/livrare", "/plata", "/retur", "/cookies", "/sitemap"]
+const startsWithAny = (p: string, list: string[]) => list.some((x) => p === x || p.startsWith(x + "/"))
+
+// The old shop front (radio products) is switched off. Set SHOP_ENABLED=1 to serve the Medusa shop pages again.
+const SHOP_ENABLED = process.env.SHOP_ENABLED === "1"
+const OLD_TO_NEW: [string, string][] = [
+  ["/despre-noi", "/about"], ["/contact", "/contact"], ["/confidentialitate", "/privacy"], ["/cookies", "/privacy"],
+  ["/termeni", "/privacy"], ["/garantie", "/contact"], ["/servers", "/projects"], ["/configurator", "/robotics"],
+  ["/products", "/projects"], ["/store", "/projects"], ["/categories", "/projects"], ["/collections", "/projects"],
+  ["/brands", "/projects"], ["/blog", "/projects"], ["/search", "/projects"],
+]
+function legacyTarget(pathname: string): string | null {
+  const segs = pathname.split("/").filter(Boolean)
+  let rest = "/" + segs.join("/")
+  if (segs.length && /^[a-z]{2}$/i.test(segs[0]) && !startsWithAny("/" + segs[0], SITE_PATHS)) rest = "/" + segs.slice(1).join("/")
+  if (rest === "/") return segs.length ? "/" : null
+  for (const [from, to] of OLD_TO_NEW) if (startsWithAny(rest, [from])) return to
+  if (startsWithAny(rest, SHOP_PATHS) || startsWithAny(rest, ["/test-tiered-pricing"])) return "/"
+  if (rest !== pathname && startsWithAny(rest, SITE_PATHS)) return rest
+  return null
+}
+
 export async function middleware(request: NextRequest) {
+  const pathname = request.nextUrl.pathname
+  if (pathname === "/" || startsWithAny(pathname, SITE_PATHS)) return NextResponse.next()
+  if (pathname.includes(".")) return NextResponse.next() // static files: robots.txt, sitemap.xml, images…
+  if (!SHOP_ENABLED) {
+    const target = legacyTarget(pathname)
+    if (target) {
+      const proto = request.headers.get("x-forwarded-proto") || request.nextUrl.protocol.replace(":", "")
+      const host = request.headers.get("host") || request.nextUrl.host
+      return NextResponse.redirect(`${proto}://${host}${target}`, 301)
+    }
+    return NextResponse.rewrite(new URL("/page-not-found", request.url), { status: 404 })
+  }
   let redirectUrl = request.nextUrl.href
 
   let response = NextResponse.redirect(redirectUrl, 307)
@@ -119,7 +156,8 @@ export async function middleware(request: NextRequest) {
 
   let cacheId = cacheIdCookie?.value || crypto.randomUUID()
 
-  const regionMap = await getRegionMap(cacheId)
+  let regionMap: Map<string, HttpTypes.StoreRegion> | null = null
+  try { regionMap = await getRegionMap(cacheId) } catch { regionMap = null } // shop backend down: the website still works
 
   const countryCode = regionMap && (await getCountryCode(request, regionMap))
 
@@ -164,6 +202,12 @@ export async function middleware(request: NextRequest) {
   const forwardedProto = request.headers.get("x-forwarded-proto") || "https"
   const forwardedHost = request.headers.get("host") || request.nextUrl.host
   const publicOrigin = `${forwardedProto}://${forwardedHost}`
+
+  // Unknown address (not a country code, not a shop page): show the website's 404 instead of redirecting into the shop.
+  const firstSeg = pathname.split("/")[1]?.toLowerCase() || ""
+  if (!urlHasCountryCode && !(regionMap && regionMap.has(firstSeg)) && !startsWithAny(pathname, SHOP_PATHS)) {
+    return NextResponse.rewrite(new URL("/page-not-found", request.url), { status: 404 })
+  }
 
   // If no country code is set, we redirect to the relevant region.
   if (!urlHasCountryCode && countryCode) {

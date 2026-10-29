@@ -21,7 +21,7 @@ module.exports = {
         padding: "padding-top padding-right padding-bottom padding-left",
       },
       colors: {
-        // Tema Stații InfoTrafic - Paletă modernă pentru electronice
+        // Tema Qubitpage - Paletă modernă pentru electronice
         primary: {
           50: "#fff7ed",
           100: "#ffedd5",

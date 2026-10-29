@@ -19,7 +19,7 @@ function exec(cmd: string): string {
 
 function getSSLInfo(): { valid: boolean; daysLeft: number; issuer: string; expiry: string } {
   try {
-    const output = exec(`echo | openssl s_client -servername statiiinfotrafic.ro -connect statiiinfotrafic.ro:443 2>/dev/null | openssl x509 -noout -dates -issuer 2>/dev/null`)
+    const output = exec(`echo | openssl s_client -servername qubitpage.com -connect qubitpage.com:443 2>/dev/null | openssl x509 -noout -dates -issuer 2>/dev/null`)
     const notAfter = output.match(/notAfter=(.+)/)?.[1] || ''
     const issuer = output.match(/issuer=(.+)/)?.[1]?.replace(/.*O\s*=\s*/, '').split(',')[0] || 'Unknown'
     const expDate = new Date(notAfter)

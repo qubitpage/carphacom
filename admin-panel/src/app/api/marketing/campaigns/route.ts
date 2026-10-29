@@ -41,8 +41,8 @@ export async function POST(req: NextRequest) {
         list_ids,
         subject || '',
         sms_message || '',
-        sender_email || 'contact@statiiinfotrafic.ro',
-        sender_name || 'StațiiInfoTrafic',
+        sender_email || 'contact@qubitpage.com',
+        sender_name || 'Qubitpage',
       ]
     )
     return NextResponse.json({ campaign: rows[0] }, { status: 201 })

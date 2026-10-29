@@ -99,7 +99,7 @@ export default function LogsPage() {
   // PageSpeed state
   const [psResult, setPsResult] = useState<PageSpeedResult | null>(null)
   const [psLoading, setPsLoading] = useState(false)
-  const [psUrl, setPsUrl] = useState("https://statiiinfotrafic.ro")
+  const [psUrl, setPsUrl] = useState("https://qubitpage.com")
   const [psStrategy, setPsStrategy] = useState<"mobile" | "desktop">("mobile")
 
   // Diagnostics state
@@ -637,7 +637,7 @@ export default function LogsPage() {
             <h3 className="text-sm font-semibold text-gray-900 flex items-center gap-1.5 mb-3"><Gauge className="w-4 h-4 text-blue-500" /> Google PageSpeed Insights</h3>
             <div className="flex flex-col sm:flex-row gap-2">
               <input type="url" value={psUrl} onChange={e => setPsUrl(e.target.value)}
-                className="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm" placeholder="https://statiiinfotrafic.ro" />
+                className="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm" placeholder="https://qubitpage.com" />
               <div className="flex gap-2">
                 <select value={psStrategy} onChange={e => setPsStrategy(e.target.value as "mobile" | "desktop")}
                   className="px-3 py-2 border border-gray-300 rounded-lg text-sm bg-white">

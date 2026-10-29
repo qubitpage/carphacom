@@ -17,7 +17,7 @@ module.exports = defineConfig({
   admin: {
     disable: false,
     path: "/app",
-    backendUrl: "https://statiiinfotrafic.ro",
+    backendUrl: "https://qubitpage.com",
     outDir: ".medusa/client",
   },
   modules: [
@@ -45,7 +45,7 @@ module.exports = defineConfig({
             id: "local",
             options: {
               upload_dir: "static",
-              backend_url: "https://www.statiiinfotrafic.ro/static"
+              backend_url: "https://qubitpage.com/static"
             }
           }
         ]

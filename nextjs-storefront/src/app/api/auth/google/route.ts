@@ -17,7 +17,7 @@ function getClient() {
     clientId: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     redirectUri: process.env.GOOGLE_CUSTOMER_REDIRECT_URI
-      || 'https://statiiinfotrafic.ro/api/auth/google/callback',
+      || 'https://qubitpage.com/api/auth/google/callback',
   })
 }
 

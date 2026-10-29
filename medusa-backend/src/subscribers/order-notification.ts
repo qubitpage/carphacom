@@ -141,7 +141,7 @@ export default async function orderNotificationHandler({
 
       await sendEmail({
         to: order.email,
-        subject: `✅ Confirmare Comandă #${order.display_id || order.id.slice(-8)} — Stații InfoTrafic`,
+        subject: `✅ Confirmare Comandă #${order.display_id || order.id.slice(-8)} — Qubitpage`,
         html: customerHtml,
       })
     }

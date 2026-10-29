@@ -7,7 +7,7 @@ import { revalidateTag } from "next/cache"
  */
 function getPublicOrigin(request: NextRequest): string {
   const proto = request.headers.get("x-forwarded-proto") || "https"
-  const host = request.headers.get("host") || "statiiinfotrafic.ro"
+  const host = request.headers.get("host") || "qubitpage.com"
   return `${proto}://${host}`
 }
 

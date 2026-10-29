@@ -611,7 +611,7 @@ const ProductDescriptionTab = ({ product }: { product: HttpTypes.StoreProduct })
             <p>Cod produs: <span className="text-white font-mono">{sku}</span></p>
           )}
           <p>
-            Produsul este disponibil pe <strong className="text-primary-400">statiiinfotrafic.ro</strong> cu livrare rapidă în toată România.
+            Produsul este disponibil pe <strong className="text-primary-400">qubitpage.com</strong> cu livrare rapidă în toată România.
             Pentru informații suplimentare sau întrebări tehnice, nu ezitați să ne contactați.
           </p>
         </div>

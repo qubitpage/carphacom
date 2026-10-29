@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
       '{{phone}}': '0774000000',
       '{{city}}': 'București',
       '{{website}}': 'www.firma-test.ro',
-      '{{unsubscribe_url}}': 'https://www.statiiinfotrafic.ro/api/unsubscribe?token=test-preview',
+      '{{unsubscribe_url}}': 'https://qubitpage.com/api/unsubscribe?token=test-preview',
     }
     for (const [key, val] of Object.entries(replacements)) {
       html = html.replace(new RegExp(key.replace(/[{}]/g, '\\$&'), 'g'), val)

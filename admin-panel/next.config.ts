@@ -24,7 +24,7 @@ const nextConfig: NextConfig = {
   
   experimental: {
     serverActions: {
-      allowedOrigins: ["statiiinfotrafic.ro", "www.statiiinfotrafic.ro"],
+      allowedOrigins: ["qubitpage.com", "www.qubitpage.com"],
       bodySizeLimit: '50mb',
     },
   },

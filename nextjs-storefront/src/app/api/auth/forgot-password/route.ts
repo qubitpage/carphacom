@@ -12,10 +12,10 @@ const pool = new Pool({
 })
 
 const JWT_SECRET = process.env.JWT_SECRET || process.env.MEDUSA_JWT_SECRET || 'carphatian_jwt_secret_2026_demo2'
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://statiiinfotrafic.ro'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://qubitpage.com'
 const BREVO_API_KEY = process.env.BREVO_API_KEY || ''
-const SENDER_EMAIL = 'infotraficstatii@gmail.com'
-const SENDER_NAME = 'Stații InfoTrafic'
+const SENDER_EMAIL = 'contact@qubitpage.com'
+const SENDER_NAME = 'Qubitpage'
 
 function base64url(input: Buffer | string): string {
   const buf = typeof input === 'string' ? Buffer.from(input) : input

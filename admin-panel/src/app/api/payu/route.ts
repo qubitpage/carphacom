@@ -197,11 +197,11 @@ export async function POST(request: NextRequest) {
     const extOrderId = `cart_${cartId}_${Date.now()}`
     
     const orderPayload: any = {
-      notifyUrl: notifyUrl || `https://statiiinfotrafic.ro/app/api/payu/notify`,
-      continueUrl: continueUrl || `https://statiiinfotrafic.ro/ro/checkout/payu-return?cartId=${cartId}`,
+      notifyUrl: notifyUrl || `https://qubitpage.com/app/api/payu/notify`,
+      continueUrl: continueUrl || `https://qubitpage.com/ro/checkout/payu-return?cartId=${cartId}`,
       customerIp: customerIp || '127.0.0.1',
       merchantPosId: config.merchantPosId,
-      description: description || `Comandă statiiinfotrafic.ro`,
+      description: description || `Comandă qubitpage.com`,
       currencyCode: config.currencyCode || 'RON',
       totalAmount: String(totalAmount),
       extOrderId,

@@ -6,7 +6,7 @@
 
 import { NextResponse } from 'next/server'
 
-const SITE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://www.statiiinfotrafic.ro'
+const SITE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://qubitpage.com'
 
 export async function POST(request: Request) {
   try {

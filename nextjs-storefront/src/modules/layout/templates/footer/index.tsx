@@ -25,7 +25,7 @@ export default async function Footer() {
                 </svg>
               </div>
               <div>
-                <span className="text-xl font-bold text-white">Stații InfoTrafic</span>
+                <span className="text-xl font-bold text-white">Qubitpage</span>
                 <span className="block text-xs text-dark-400">Comunicații Radio</span>
               </div>
             </LocalizedClientLink>
@@ -43,19 +43,19 @@ export default async function Footer() {
                 </svg>
                 <span className="font-semibold">0749 040 400</span>
               </a>
-              <a href="mailto:contact@statiiinfotrafic.ro" className="flex items-center gap-3 text-dark-300 hover:text-primary-400 transition-colors">
+              <a href="mailto:contact@qubitpage.com" className="flex items-center gap-3 text-dark-300 hover:text-primary-400 transition-colors">
                 <svg className="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                 </svg>
-                <span>contact@statiiinfotrafic.ro</span>
+                <span>contact@qubitpage.com</span>
               </a>
             </div>
             
             {/* Company legal details */}
             <div className="space-y-1.5 pt-2 border-t border-dark-800">
               <p className="text-dark-400 text-xs font-semibold uppercase tracking-wider mb-2">Date Firmă</p>
-              <p className="text-dark-400 text-xs leading-relaxed">SC STATII INFO TRAFIC SRL</p>
+              <p className="text-dark-400 text-xs leading-relaxed">Qubitpage LIMITED</p>
               <p className="text-dark-400 text-xs">CUI: 40434483</p>
               <p className="text-dark-400 text-xs">Nr. Reg. Com.: J33/146/2019</p>
               <p className="text-dark-400 text-xs">EUID: ROONRC.J33/146/2019</p>
@@ -231,7 +231,7 @@ export default async function Footer() {
           <div className="flex flex-col small:flex-row justify-between items-center gap-4">
             <div className="flex flex-col small:flex-row items-center gap-2 small:gap-4">
               <Text className="text-dark-400 text-sm">
-                © {new Date().getFullYear()} Stații InfoTrafic. Toate drepturile rezervate.
+                © {new Date().getFullYear()} Qubitpage. Toate drepturile rezervate.
               </Text>
               <span className="hidden small:inline text-dark-700">•</span>
               <a 

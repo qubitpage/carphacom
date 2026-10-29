@@ -49,7 +49,7 @@ interface Order {
 }
 
 const SHOP_INFO = {
-  name: "SC STATII INFO TRAFIC SRL",
+  name: "Qubitpage LIMITED",
   cui: "CUI: 40434483",
   regCom: "J33/146/2019",
   address: "Sat Pădureni, Nr. 13",
@@ -57,8 +57,8 @@ const SHOP_INFO = {
   postalCode: "407005",
   country: "România",
   phone: "+40 774 077 860",
-  email: "contact@statiiinfotrafic.ro",
-  website: "statiiinfotrafic.ro",
+  email: "contact@qubitpage.com",
+  website: "qubitpage.com",
 }
 
 const statusConfig: Record<string, { label: string; color: string; icon: any; bg: string }> = {
@@ -126,7 +126,7 @@ body{font-family:'Segoe UI',Arial,sans-serif;font-size:11pt;color:#1a1a1a}
 @media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 </style></head><body>
 <div class="label">
-<div class="hdr">ETICHETĂ LIVRARE &mdash; statiiinfotrafic.ro</div>
+<div class="hdr">ETICHETĂ LIVRARE &mdash; qubitpage.com</div>
 <div class="body">
 <div class="sec left">
 <div class="stitle">Expeditor</div>
@@ -170,7 +170,7 @@ ${isRamburs ? `<div class="ramburs">💰 RAMBURS: ${formatPrice(order.total, ord
         </div>
         <div className="p-6">
           <div className="border-2 border-gray-900 rounded-xl overflow-hidden">
-            <div className="bg-gray-900 text-white text-center py-2 font-bold text-sm tracking-wider">ETICHETĂ LIVRARE — statiiinfotrafic.ro</div>
+            <div className="bg-gray-900 text-white text-center py-2 font-bold text-sm tracking-wider">ETICHETĂ LIVRARE — qubitpage.com</div>
             <div className="grid grid-cols-2 divide-x-2 divide-dashed divide-gray-300">
               <div className="p-4">
                 <p className="text-[10px] uppercase tracking-[3px] text-gray-400 font-semibold mb-2">Expeditor</p>

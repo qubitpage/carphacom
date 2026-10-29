@@ -1,10 +1,10 @@
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Livrare | Stații InfoTrafic",
-  description: "Informații despre livrare - Stații InfoTrafic. Livrare rapidă în toată România.",
+  title: "Livrare | Qubitpage",
+  description: "Informații despre livrare - Qubitpage. Livrare rapidă în toată România.",
   alternates: {
-    canonical: "https://statiiinfotrafic.ro/ro/livrare",
+    canonical: "https://qubitpage.com/ro/livrare",
   },
 }
 

@@ -16,7 +16,7 @@ export async function GET(request: NextRequest) {
     // Handle OAuth errors
     if (error) {
       const protocol = request.headers.get('x-forwarded-proto') || 'https'
-      const host = request.headers.get('x-forwarded-host') || request.headers.get('host') || 'www.statiiinfotrafic.ro'
+      const host = request.headers.get('x-forwarded-host') || request.headers.get('host') || 'qubitpage.com'
       const baseUrl = `${protocol}://${host}`
       
       return NextResponse.redirect(
@@ -40,7 +40,7 @@ export async function GET(request: NextRequest) {
 
     // Redirect to Google integration page with success
     const protocol = request.headers.get('x-forwarded-proto') || 'https'
-    const host = request.headers.get('x-forwarded-host') || request.headers.get('host') || 'www.statiiinfotrafic.ro'
+    const host = request.headers.get('x-forwarded-host') || request.headers.get('host') || 'qubitpage.com'
     const baseUrl = `${protocol}://${host}`
     
     return NextResponse.redirect(
@@ -49,7 +49,7 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.error('OAuth callback error:', error)
     const protocol = request.headers.get('x-forwarded-proto') || 'https'
-    const host = request.headers.get('x-forwarded-host') || request.headers.get('host') || 'www.statiiinfotrafic.ro'
+    const host = request.headers.get('x-forwarded-host') || request.headers.get('host') || 'qubitpage.com'
     const baseUrl = `${protocol}://${host}`
     
     return NextResponse.redirect(

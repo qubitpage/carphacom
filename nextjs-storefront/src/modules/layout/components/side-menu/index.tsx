@@ -151,7 +151,7 @@ const SideMenu = ({ regions, locales, currentLocale }: SideMenuProps) => {
                         />
                       </div>
                       <Text className="flex justify-between txt-compact-small text-dark-500">
-                        © {new Date().getFullYear()} Stații InfoTrafic
+                        © {new Date().getFullYear()} Qubitpage
                       </Text>
                     </div>
                   </div>

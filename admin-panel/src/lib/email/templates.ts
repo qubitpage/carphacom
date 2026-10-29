@@ -10,8 +10,8 @@ import {
 } from './brevo-service';
 
 const STORE_NAME = 'QubitPage Demo Store';
-const STORE_URL = 'https://www.statiiinfotrafic.ro';
-const SUPPORT_EMAIL = 'infotraficstatii@gmail.com';
+const STORE_URL = 'https://qubitpage.com';
+const SUPPORT_EMAIL = 'contact@qubitpage.com';
 
 // Base email wrapper
 function baseTemplate(content: string, title: string): string {

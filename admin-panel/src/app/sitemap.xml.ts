@@ -8,7 +8,7 @@
 
 import { NextResponse } from 'next/server'
 
-const SITE_URL = 'https://www.statiiinfotrafic.ro'
+const SITE_URL = 'https://qubitpage.com'
 const MEDUSA_BACKEND_URL = 'http://localhost:9000'
 
 interface SitemapUrl {

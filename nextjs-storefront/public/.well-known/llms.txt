@@ -1,24 +1,21 @@
-# CarphaCom - https://statiiinfotrafic.ro
-# Magazin online cu stații radio, electronice, securitate și accesorii
-# Romanian e-commerce store
+# Qubitpage LIMITED — https://qubitpage.com
+> Software development, AI agents and robotics company based in Romania. QubitPage® is a registered trademark of Qubitpage LIMITED.
 
-> Site: https://statiiinfotrafic.ro
-> Products: 2475
-> Categories: 78
-> Blog Articles: 226
-> Brands: 74
+## Pages
+- Home: https://qubitpage.com/
+- Projects (all open-source repositories): https://qubitpage.com/projects
+- Robotics (Carpathron, CarphaCom Robotised): https://qubitpage.com/robotics
+- About: https://qubitpage.com/about
+- Contact: https://qubitpage.com/contact
 
-## Main Pages
-- Homepage: https://statiiinfotrafic.ro/ro
-- Store: https://statiiinfotrafic.ro/ro/store
-- Categories: https://statiiinfotrafic.ro/ro/categories
-- Brands: https://statiiinfotrafic.ro/ro/brands
-- Blog: https://statiiinfotrafic.ro/ro/blog
-- Contact: https://statiiinfotrafic.ro/ro/contact
+## Key projects
+- Carpathron — robots you can talk to, drive and become, powered by Meta Muse: https://github.com/qubitpage/carpathron-muse
+- CarphaCom — commerce platform on Medusa, PostgreSQL and Next.js: https://github.com/qubitpage/carphacom
+- QubitPage® OS, QLang, QuBIOS — quantum software on IBM Quantum hardware
+- Sentinel Coder One Studio — bring-your-own-model AI coding agent for VS Code
+- Vultr Atlas + Omniverse — live 3D infrastructure cockpit: https://atlas.qubitpage.com
+- PicoFlow — agentic settlement mesh on Arc: https://picoflow.qubitpage.com
 
-## Sitemaps
-- Products: https://statiiinfotrafic.ro/sitemap-products.xml
-- Categories: https://statiiinfotrafic.ro/sitemap-categories.xml
-- Blog: https://statiiinfotrafic.ro/sitemap-blog.xml
-- Brands: https://statiiinfotrafic.ro/sitemap-brands.xml
-- Pages: https://statiiinfotrafic.ro/sitemap-pages.xml
+## Contact
+- Email: contact@qubitpage.com
+- GitHub: https://github.com/qubitpage

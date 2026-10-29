@@ -5,7 +5,7 @@ import { listOrders } from "@lib/data/orders"
 import OrdersWithTracking from "@modules/account/components/orders-with-tracking"
 
 export const metadata: Metadata = {
-  title: "Comenzi & Urmărire | Stații InfoTrafic",
+  title: "Comenzi & Urmărire | Qubitpage",
   description: "Vizualizează comenzile și urmărește coletele tale.",
 }
 

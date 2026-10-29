@@ -50,15 +50,15 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   try {
     const productCategory = await getCategoryByHandle(params.category)
 
-    const title = productCategory.name + " | Stații InfoTrafic"
+    const title = productCategory.name + " | Qubitpage"
 
-    const description = productCategory.description ?? `Categoria ${productCategory.name} - Stații InfoTrafic`
+    const description = productCategory.description ?? `Categoria ${productCategory.name} - Qubitpage`
 
     return {
       title,
       description,
       alternates: {
-        canonical: `https://statiiinfotrafic.ro/ro/categories/${params.category.join("/")}`,
+        canonical: `https://qubitpage.com/ro/categories/${params.category.join("/")}`,
       },
     }
   } catch (error) {

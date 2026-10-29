@@ -305,7 +305,7 @@ export const ro = {
 
   // Brand
   brand: {
-    storeName: "Stații InfoTrafic",
+    storeName: "Qubitpage",
     tagline: "Calitate premium, prețuri accesibile",
   },
 }

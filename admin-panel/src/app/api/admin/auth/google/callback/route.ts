@@ -10,7 +10,7 @@ import { cookies } from 'next/headers'
 
 // Allowed Google emails that can log in as admin
 const ALLOWED_EMAILS = [
-  'infotraficstatii@gmail.com',
+  'contact@qubitpage.com',
 ]
 
 function getClient() {
@@ -18,13 +18,13 @@ function getClient() {
     clientId: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     redirectUri: process.env.GOOGLE_LOGIN_REDIRECT_URI
-      || `${process.env.NEXTAUTH_URL || 'https://statiiinfotrafic.ro/app'}/api/admin/auth/google/callback`,
+      || `${process.env.NEXTAUTH_URL || 'https://qubitpage.com/app'}/api/admin/auth/google/callback`,
   })
 }
 
 function getBaseUrl(request: NextRequest): string {
   const protocol = request.headers.get('x-forwarded-proto') || 'https'
-  const host = request.headers.get('x-forwarded-host') || request.headers.get('host') || 'statiiinfotrafic.ro'
+  const host = request.headers.get('x-forwarded-host') || request.headers.get('host') || 'qubitpage.com'
   return `${protocol}://${host}`
 }
 

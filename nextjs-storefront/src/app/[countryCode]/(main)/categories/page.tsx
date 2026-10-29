@@ -4,10 +4,10 @@ import { listCategories } from "@lib/data/categories"
 import CategoriesGrid from "@modules/categories/components/categories-grid"
 
 export const metadata: Metadata = {
-  title: "Categorii Produse | Stații InfoTrafic",
+  title: "Categorii Produse | Qubitpage",
   description: "Explorează toate categoriile de produse: stații CB, antene, walkie talkie, accesorii și multe altele.",
   alternates: {
-    canonical: "https://statiiinfotrafic.ro/ro/categories",
+    canonical: "https://qubitpage.com/ro/categories",
   },
 }
 

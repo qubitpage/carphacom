@@ -6,9 +6,9 @@
 import { getPool, GROQ_API_KEY } from './db'
 import { sendEmail } from '../email/brevo-service'
 
-const SENDER_EMAIL = 'contact@statiiinfotrafic.ro'
-const SENDER_NAME = 'StațiiInfoTrafic'
-const UNSUBSCRIBE_BASE = 'https://www.statiiinfotrafic.ro/api/unsubscribe'
+const SENDER_EMAIL = 'contact@qubitpage.com'
+const SENDER_NAME = 'Qubitpage'
+const UNSUBSCRIBE_BASE = 'https://qubitpage.com/api/unsubscribe'
 
 /**
  * Send an email campaign to all contacts in selected lists
@@ -165,14 +165,14 @@ export async function generateSubjectLines(bodyPreview: string): Promise<string[
       }),
     })
 
-    if (!response.ok) return ['Newsletter StațiiInfoTrafic', 'Ofertă specială pentru tine', 'Noutăți și reduceri']
+    if (!response.ok) return ['Newsletter Qubitpage', 'Ofertă specială pentru tine', 'Noutăți și reduceri']
     
     const data = await response.json()
     const text = data.choices?.[0]?.message?.content || ''
     const lines = text.split('\n').map((l: string) => l.replace(/^\d+[\.\)]\s*/, '').trim()).filter((l: string) => l.length > 5 && l.length < 100)
     
-    return lines.length >= 3 ? lines.slice(0, 3) : ['Newsletter StațiiInfoTrafic', 'Ofertă specială pentru tine', 'Noutăți și reduceri']
+    return lines.length >= 3 ? lines.slice(0, 3) : ['Newsletter Qubitpage', 'Ofertă specială pentru tine', 'Noutăți și reduceri']
   } catch {
-    return ['Newsletter StațiiInfoTrafic', 'Ofertă specială pentru tine', 'Noutăți și reduceri']
+    return ['Newsletter Qubitpage', 'Ofertă specială pentru tine', 'Noutăți și reduceri']
   }
 }

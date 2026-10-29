@@ -260,7 +260,7 @@ export async function sendBatchSMS(
  */
 export async function sendTestSMS(message?: string): Promise<{ success: boolean; messageId?: string; error?: string }> {
   const config = await getSMSConfig()
-  const testMsg = message || `Test SMS de la StațiiInfoTrafic - ${new Date().toLocaleString('ro-RO')}`
+  const testMsg = message || `Test SMS de la Qubitpage - ${new Date().toLocaleString('ro-RO')}`
   return sendSMS(config.test_phone, testMsg, true)
 }
 

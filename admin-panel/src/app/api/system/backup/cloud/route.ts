@@ -91,7 +91,7 @@ async function ensureDriveFolder(drive: any, config: CloudBackupConfig): Promise
   const folderMetadata = {
     name: "Carphacom Backups",
     mimeType: "application/vnd.google-apps.folder",
-    description: "Backup-uri automate statiiinfotrafic.ro",
+    description: "Backup-uri automate qubitpage.com",
   }
 
   const folder = await drive.files.create({
@@ -118,7 +118,7 @@ async function uploadToDrive(drive: any, folderId: string, filePath: string, fil
     requestBody: {
       name: filename,
       parents: [folderId],
-      description: `Backup ${new Date().toISOString()} - statiiinfotrafic.ro`,
+      description: `Backup ${new Date().toISOString()} - qubitpage.com`,
     },
     media,
     fields: "id,name,size,webViewLink",

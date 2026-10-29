@@ -17,7 +17,7 @@ export async function sendEmail(options: EmailOptions): Promise<boolean> {
 
   try {
     const fromEmail = options.from || process.env.SMTP_FROM || "covalciuc_ionut@yahoo.com"
-    const fromName = options.fromName || "Stații InfoTrafic"
+    const fromName = options.fromName || "Qubitpage"
     const recipients = Array.isArray(options.to) ? options.to : [options.to]
 
     const body = {
@@ -100,15 +100,15 @@ const emailWrapper = (content: string) => `
   <div style="padding: 20px 10px;">
     <div class="container">
       <div class="header">
-        <h1>STAȚII INFOTRAFIC</h1>
-        <p>statiiinfotrafic.ro</p>
+        <h1>Qubitpage</h1>
+        <p>qubitpage.com</p>
       </div>
       <div class="body">
         ${content}
       </div>
       <div class="footer">
-        <p>Acest email a fost trimis automat de sistemul Stații InfoTrafic.</p>
-        <p>&copy; ${new Date().getFullYear()} statiiinfotrafic.ro</p>
+        <p>Acest email a fost trimis automat de sistemul Qubitpage.</p>
+        <p>&copy; ${new Date().getFullYear()} qubitpage.com</p>
       </div>
     </div>
   </div>
@@ -125,7 +125,7 @@ export function newCustomerEmailHtml(data: {
   const name = [data.firstName, data.lastName].filter(Boolean).join(" ") || "N/A"
   return emailWrapper(`
     <h2>🆕 Client Nou Înregistrat</h2>
-    <p>Un nou client s-a înregistrat pe <strong>statiiinfotrafic.ro</strong>:</p>
+    <p>Un nou client s-a înregistrat pe <strong>qubitpage.com</strong>:</p>
     <table class="info-table">
       <tr><td>Nume</td><td><strong>${name}</strong></td></tr>
       <tr><td>Email</td><td><strong>${data.email}</strong></td></tr>
@@ -133,7 +133,7 @@ export function newCustomerEmailHtml(data: {
       <tr><td>Data</td><td>${data.createdAt || new Date().toLocaleString("ro-RO", { timeZone: "Europe/Bucharest" })}</td></tr>
     </table>
     <p style="margin-top: 20px;">
-      <a href="https://statiiinfotrafic.ro/app/customers" class="btn">Vezi Clienți</a>
+      <a href="https://qubitpage.com/app/customers" class="btn">Vezi Clienți</a>
     </p>
   `)
 }
@@ -227,7 +227,7 @@ export function orderPlacedAdminEmailHtml(data: {
     </table>
     ${itemsHtml}
     <p style="margin-top: 20px;">
-      <a href="https://statiiinfotrafic.ro/app/orders?viewOrder=${data.orderId}" class="btn">Vezi Comanda</a>
+      <a href="https://qubitpage.com/app/orders?viewOrder=${data.orderId}" class="btn">Vezi Comanda</a>
     </p>
   `)
 }
@@ -279,11 +279,11 @@ export function orderConfirmationCustomerEmailHtml(data: {
   return emailWrapper(`
     <h2>✅ Confirmarea Comenzii #${data.displayId || data.orderId.slice(-8)}</h2>
     <p>Bună${data.firstName ? ` ${data.firstName}` : ""},</p>
-    <p>Îți mulțumim pentru comanda plasată pe <strong>statiiinfotrafic.ro</strong>!</p>
+    <p>Îți mulțumim pentru comanda plasată pe <strong>qubitpage.com</strong>!</p>
     <p>Comanda ta a fost înregistrată și va fi procesată în cel mai scurt timp.</p>
     ${itemsHtml}
     <p style="margin-top: 20px;">
-      <a href="https://statiiinfotrafic.ro/ro/account/orders" class="btn">Vezi Comenzile Tale</a>
+      <a href="https://qubitpage.com/ro/account/orders" class="btn">Vezi Comenzile Tale</a>
     </p>
     <p style="color: #666; font-size: 13px; margin-top: 16px;">
       Dacă ai întrebări despre comanda ta, nu ezita să ne contactezi la 

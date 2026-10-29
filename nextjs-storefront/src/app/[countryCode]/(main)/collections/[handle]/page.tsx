@@ -59,10 +59,10 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   }
 
   const metadata = {
-    title: `${collection.title} | Stații InfoTrafic`,
-    description: `Colecția ${collection.title} - Stații InfoTrafic`,
+    title: `${collection.title} | Qubitpage`,
+    description: `Colecția ${collection.title} - Qubitpage`,
     alternates: {
-      canonical: `https://statiiinfotrafic.ro/ro/collections/${params.handle}`,
+      canonical: `https://qubitpage.com/ro/collections/${params.handle}`,
     },
   } as Metadata
 

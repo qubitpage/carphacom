@@ -320,7 +320,7 @@ Scrii articole de blog promoționale care prezintă produse din magazin.
 Scrie DOAR în limba română, cu diacritice corecte (ă, â, î, ș, ț).
 Stilul: profesional, prietenos, convingător, optimizat pentru SEO și Google indexare.
 Scopul: promovarea produselor din magazin prin articole utile și informative.
-Magazinul se numește "StatiiInfoTrafic.ro" - echipamente radio și comunicații.`
+Magazinul se numește "Qubitpage.ro" - echipamente radio și comunicații.`
 
     const userPrompt = `Scrie un articol de blog promoțional pentru următorul produs din magazinul nostru:
 
@@ -329,7 +329,7 @@ BRAND: ${product.brand || "N/A"}
 CATEGORIE: ${product.category_name || "Echipamente electronice"}
 PREȚ: ${priceStr || "Disponibil pe site"}
 DESCRIERE PRODUS: ${cleanDescription || "Produs de calitate din gama " + (product.brand || "noastră")}
-LINK PRODUS: https://statiiinfotrafic.ro${product.product_url}
+LINK PRODUS: https://qubitpage.com${product.product_url}
 
 Cerințe pentru articol:
 1. TITLU: Trebuie să conțină brandul (${product.brand || ""}) și modelul/numele produsului. Să fie atractiv, Google-friendly, max 70 caractere.
@@ -339,8 +339,8 @@ Cerințe pentru articol:
    - Secțiune cu caracteristici tehnice și avantaje principale
    - Secțiune "Pentru cine este recomandat" - publicul țintă
    - Concluzii cu call-to-action către magazin
-   - Include un link HTML către produs: <a href="https://statiiinfotrafic.ro${product.product_url}">Vezi produsul în magazin</a>
-   - IMPORTANT: NU include linkuri către alte website-uri externe. Singurele linkuri permise sunt către https://statiiinfotrafic.ro
+   - Include un link HTML către produs: <a href="https://qubitpage.com${product.product_url}">Vezi produsul în magazin</a>
+   - IMPORTANT: NU include linkuri către alte website-uri externe. Singurele linkuri permise sunt către https://qubitpage.com
 3. Toate câmpurile din JSON trebuie să fie completate
 
 Returnează EXACT acest format JSON (fără text suplimentar):
@@ -403,7 +403,7 @@ IMPORTANT: conținutul HTML trebuie pe o SINGURĂ LINIE, fără \\n. Returnează
         blogPost.tags,
         blogPost.seo_title,
         blogPost.seo_description,
-        "Admin Statii Info Trafic",
+        "Admin Qubitpage",
         "published",
         true,
         [product.id]  // Track which product this blog is about
@@ -511,7 +511,7 @@ export async function saveBlogPost(post: GeneratedBlogPost, category: string): P
     [
       id, post.title, post.slug, post.excerpt, post.content,
       category, post.tags, post.seo_title, post.seo_description,
-      "Admin Statii Info Trafic", "published", true
+      "Admin Qubitpage", "published", true
     ]
   )
   

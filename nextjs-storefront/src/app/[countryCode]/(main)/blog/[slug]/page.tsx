@@ -25,21 +25,21 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
   
   if (!post) {
     return {
-      title: "Articol negăsit | Stații InfoTrafic"
+      title: "Articol negăsit | Qubitpage"
     }
   }
   
   return {
-    title: post.seo_title || `${post.title} | Stații InfoTrafic`,
-    description: post.seo_description || post.excerpt || `Citește ${post.title} pe blogul Stații InfoTrafic`,
+    title: post.seo_title || `${post.title} | Qubitpage`,
+    description: post.seo_description || post.excerpt || `Citește ${post.title} pe blogul Qubitpage`,
     alternates: {
-      canonical: `https://statiiinfotrafic.ro/ro/blog/${params.slug}`,
+      canonical: `https://qubitpage.com/ro/blog/${params.slug}`,
     },
     openGraph: {
       title: post.title,
       description: post.excerpt || "",
       images: post.featured_image ? [post.featured_image] : [],
-      url: `https://statiiinfotrafic.ro/ro/blog/${params.slug}`,
+      url: `https://qubitpage.com/ro/blog/${params.slug}`,
     }
   }
 }
@@ -186,7 +186,7 @@ export default async function BlogPostPage(props: PageProps) {
                 </div>
                 <div>
                   <p className="text-white font-semibold">{post.author}</p>
-                  <p className="text-dark-400 text-sm">Admin Statii Info Trafic</p>
+                  <p className="text-dark-400 text-sm">Admin Qubitpage</p>
                 </div>
               </div>
             </div>

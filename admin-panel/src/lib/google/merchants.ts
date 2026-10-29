@@ -522,19 +522,19 @@ export class GoogleMerchantsService {
           // Fix localhost URLs for images (Google can't access localhost)
           let imageLink = product.thumbnail || ''
           if (imageLink.includes('localhost:9000/uploads/')) {
-            imageLink = imageLink.replace('http://localhost:9000/uploads/', 'https://statiiinfotrafic.ro/static/')
+            imageLink = imageLink.replace('http://localhost:9000/uploads/', 'https://qubitpage.com/static/')
           } else if (imageLink.startsWith('/')) {
-            imageLink = `https://statiiinfotrafic.ro${imageLink}`
+            imageLink = `https://qubitpage.com${imageLink}`
           }
-          // CRITICAL: Strip www. prefix — www.statiiinfotrafic.ro 301-redirects to statiiinfotrafic.ro
+          // CRITICAL: Strip www. prefix — qubitpage.com 301-redirects to qubitpage.com
           // Google's image crawler does NOT follow 301s, causing "Image not processed" disapprovals
-          imageLink = imageLink.replace('https://www.statiiinfotrafic.ro/', 'https://statiiinfotrafic.ro/')
+          imageLink = imageLink.replace('https://qubitpage.com/', 'https://qubitpage.com/')
 
           const merchantProduct: MerchantProduct = {
             id: product.id,
             title: product.title.substring(0, 150),
             description: (product.description || product.title).substring(0, 5000),
-            link: `https://statiiinfotrafic.ro/ro/products/${product.handle}`,
+            link: `https://qubitpage.com/ro/products/${product.handle}`,
             imageLink: imageLink,
             availability: (product.status === 'published' && stock > 0) ? 'in_stock' : 'out_of_stock',
             price: {
