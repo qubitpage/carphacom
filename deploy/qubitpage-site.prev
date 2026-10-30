@@ -96,6 +96,7 @@ bd1c641b518f5fdc22ae0b1256e90cb52697b423 nextjs-storefront/public/sitemap.xml
 bd6f7bb68d04968ecc1c4a37d894cf8195540522 nextjs-storefront/src/app/(site)/contact/page.tsx
 be7c4bf80f5fd30ccd4f49141a2f6ef64f9d9d4a nextjs-storefront/src/app/[countryCode]/(main)/account/@login/page.tsx
 bef5220effa9f0e40c08dd83cdcb2c8faddaa943 nextjs-storefront/src/modules/products/components/product-tabs/index.tsx
+c10631bd6dc7ce88d123324c23c34589f5b7b806 nextjs-storefront/src/app/[countryCode]/(main)/page.tsx
 c1a6e3df6867d4da94786f03d660419f348db7fb nextjs-storefront/src/modules/layout/components/side-menu/index.tsx
 c455eb0df3af77813a5231b00b551fad644b1477 admin-panel/src/app/api/system/backup/cloud/route.ts
 c655dc57d700e9fe00403ab2d10229d943dab06f admin-panel/src/lib/marketing/sms-service.ts
@@ -121,6 +122,7 @@ e5656f5f829d5ecce8a9e327f8b05344a022a72f admin-panel/src/lib/marketing/sms-servi
 e8ca97468c37a724881519f71f30521952bb77c8 admin-panel/src/app/api/messages/route.ts
 e964c048169cd5008abe4f96247af28627473afb admin-panel/src/app/(admin)/marketing/page.tsx
 ea3e7d3332aa0c1cff8e3a230bf6c41d4d900827 nextjs-storefront/src/middleware.ts
+ec7cf18b326c33ee029c90532dc9bbdf562e2a68 nextjs-storefront/src/app/[countryCode]/layout.tsx
 ee0efe5f59d78ad14c78a5fac079c9190dc2a76f medusa-backend/src/lib/email.ts
 f077f383e28bd0c3721585540255fbe5eb54f9dc nextjs-storefront/src/app/api/auth/forgot-password/route.ts
 f0e3d3200c9323eb6b49d96923e563c6401c5859 nextjs-storefront/src/app/[countryCode]/(main)/livrare/page.tsx

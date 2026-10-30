@@ -1167,6 +1167,7 @@ M 4031cb0aac4740967ca384d087ba1fab5e3f3255 nextjs-storefront/src/app/api/auth/re
 M f743c013bbbacd140bd4583ea81a29965640a4fc nextjs-storefront/src/app/api/messages/route.ts
 A - nextjs-storefront/src/app/api/qp-contact/route.ts
 M 19e9ee54d0ad73caff479fed6e0923ded1d93468 nextjs-storefront/src/app/api/unsubscribe/route.ts
+A - nextjs-storefront/src/app/downloads/carpathron/[file]/route.ts
 M 85a298d92b1b959575f80cc0346787aff5bca649 nextjs-storefront/src/app/layout.tsx
 M ece9db8dbf1da345712d84561964d30b057c465b nextjs-storefront/src/app/not-found.tsx
 M 99452966b2a689a7d2d3e694cb6a7184e4e16940 nextjs-storefront/src/app/opengraph-image.jpg
