@@ -114,7 +114,7 @@ stage_medusa() {
 stage_check() {
   say "Checks"
   sleep 3
-  for p in / /projects /projects/carpathron-muse /robotics /about /contact /privacy /robots.txt /sitemap.xml /ro/store /nonexistent; do
+  for p in / /projects /projects/carpathron-muse /robotics /about /contact /privacy /robots.txt /sitemap.xml /ro/store /nonexistent /downloads/carpathron/muse.yml /downloads/carpathron/store.yml; do
     curl -s -o /dev/null -w "storefront %-28{url_effective} %{http_code}\n" "http://127.0.0.1:8000$p"
   done
   curl -s -o /dev/null -w "admin /app %{http_code}\n" http://127.0.0.1:3000/app
